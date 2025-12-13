@@ -314,3 +314,7 @@
 "Ready to Solve" = "Bereit zum Lösen";
 "Problem" = "Problem";
 "Solution" = "Lösung";
+
+"File Too Large" = "Datei zu groß";
+"Please select an image smaller than \(maxSizeMB) MB." = "Bitte wählen Sie ein Bild kleiner als \(maxSizeMB) MB aus.";
+"OK" = "OK";

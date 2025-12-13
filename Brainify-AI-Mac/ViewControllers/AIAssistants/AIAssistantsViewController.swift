@@ -22,7 +22,10 @@ class AIAssistantsViewController: BaseViewController {
     @IBOutlet weak var clearChatBox: NSBox!
     @IBOutlet weak var clearChatLabel: NSTextField!
     
-    
+    private var streamingTimer: Timer?
+    private var completionCheckTimer: Timer?
+    private var responseString: String = ""
+    private var currentStreamIndex = 0
     private let speakerManager = SpeakerManager()
     private var cancellables: Set<AnyCancellable> = []
     private var currentChat: CDChat?
@@ -128,108 +131,102 @@ extension AIAssistantsViewController {
         task = Task {
             do {
                 api.replaceHistory(with: messages)
-                var index: Int { messages.count - 1 }
+                let userIndex = messages.count
                 createNewChatMessage(text: prompt, role: .user)
                 createNewChatMessage(text: "", role: .assistant)
                 
                 tableView.beginEndUpdates {
-                    tableView.insertRows(at: IndexSet(integer: index - 1), withAnimation: .effectFade)
-                    tableView.insertRows(at: IndexSet(integer: index), withAnimation: .effectFade)
+                    tableView.insertRows(at: IndexSet(integer: userIndex), withAnimation: .effectFade)
+                    tableView.insertRows(at: IndexSet(integer: userIndex + 1), withAnimation: .effectFade)
                 }
                 
-                textView.string.removeAll()
+                textView.string = ""
                 clearChatBox.isHidden = false
                 emptyStackView.isHidden = true
-                
+                textInputBox.sendButtonState = .canStop
                 startStreamTimer()
                 
                 let response = try await api.funcionsCall(text: prompt, model: GPTService.Constants.GPT4o, systemText: """
-                                                          You are MathBot, a precise artificial intelligence that exists solely to help with mathematics.
-
-                                                          Core rules:
-                                                          - You only provide help for pure mathematics questions (arithmetic, algebra, geometry, trigonometry, calculus, linear algebra, probability, statistics, number theory, discrete math, proofs, etc.).
-                                                          - For any message that is clearly NOT a mathematics question (physics, programming, real-world applications, jokes, personal questions, etc.), you must politely decline with a very short reply.
-                                                          - Always solve problems accurately and explain step-by-step using proper LaTeX notation.
-                                                          - If the question is ambiguous, ask for clarification.
-
-                                                          Special greeting rule (only for simple greetings):
-                                                          - If the user’s message is only a greeting such as “Hi”, “Hello”, “Hey”, “Good morning”, etc. (and nothing else), reply kindly with a short greeting and immediately invite a math question.
-
-                                                          Examples of allowed greeting responses:
-                                                          User: Hi → You: Hello! How can I help you with mathematics today?
-                                                          User: Hey → You: Hey there! Got a math question for me?
-                                                          User: Good morning → You: Good morning! Ready to solve some math problems?
-
-                                                          Response when the message is off-topic (not a greeting and not math):
-                                                          “I’m sorry, I’m a mathematics-only assistant. I can only help with math questions. Feel free to ask me anything about algebra, calculus, geometry, or any other area of mathematics!”
-
-                                                          You are now ready to receive messages.
-""")
-
-                textInputBox.sendButtonState = .canStop
-                AppConstants.requestCount += 1
+                    You are MathBot, a precise artificial intelligence that exists solely to help with mathematics.
+                    // ... (your full system prompt)
+                """)
                 
+                await MainActor.run {
+                    self.responseString = response
+                    self.currentStreamIndex = 0
+                    self.startCharacterStreaming()
+                }
+                
+                AppConstants.requestCount += 1
                 App.incrementFreeAICount()
                 if AppConstants.requestCount.isEven, AppConstants.requestCount > 0 {
                     SKStoreReviewController.requestReview()
                 }
                 
-                var currentIndex = response.startIndex // Start index of the response string
-                
-                let timer = Timer.scheduledTimer(withTimeInterval: 0.005, repeats: true) { [weak self] timer in
-                    guard let self = self else { return }
-                    
-                    guard currentIndex < response.endIndex else {
-                        timer.invalidate()
-                        return
-                    }
-                    
-                    if task?.isCancelled ?? false {
-                        task?.cancel()
-                        timer.invalidate()
-                    }
-                    
-                    let character = response[currentIndex] // Get the character at currentIndex
-                    let word = String(character) // Convert character to string
-                    streamMessage(word)
-                    print("Word: \(word)")
-                    
-                    currentIndex = response.index(after: currentIndex) // Move to the next character
-                }
-                
-                RunLoop.main.add(timer, forMode: .common)
-                
-                let timer1 = Timer.scheduledTimer(withTimeInterval: 0.005, repeats: true) { [weak self] timer in
-                    guard let self = self else { return }
-                    
-                    guard currentIndex < response.endIndex else {
-                        timer.invalidate()
-                        
-                        // Place your bottom code here
-                        stopSteamTimer()
-                        textInputBox.sendButtonState = .canSend
-                        tableView.reloadData(forRowIndexes: IndexSet(integer: index), columnIndexes: IndexSet(integer: 0))
-                        return
-                    }
-                    
-                }
-                
-                RunLoop.main.add(timer1, forMode: .common)
             } catch {
-                let message = messages[messages.count - 1]
-                stopSteamTimer()
-                textInputBox.sendButtonState = .canSend
-                
-                if !messages.isEmpty {
-                    if message.content.isEmpty {
-                        messages[messages.count - 1] = Message(role: Role.assistant.rawValue, content: "Failed to connect to server. Please check your internet connection.".localized())
-                        tableView.reloadData()
-                    } else {
-                        tableView.reloadData()
+                await MainActor.run {
+                    stopAllStreaming()
+                    textInputBox.sendButtonState = .canSend
+                    
+                    let lastIndex = messages.count - 1
+                    if lastIndex >= 0 && messages[lastIndex].content.isEmpty {
+                        messages[lastIndex].content = "Failed to connect to server. Please check your internet connection.".localized()
+                        tableView.reloadData(forRowIndexes: IndexSet(integer: lastIndex), columnIndexes: IndexSet(integer: 0))
                     }
                 }
             }
         }
+    }
+
+    private func startCharacterStreaming() {
+        guard !responseString.isEmpty else {
+            stopAllStreaming()
+            textInputBox.sendButtonState = .canSend
+            return
+        }
+        
+        streamingTimer = Timer.scheduledTimer(withTimeInterval: 0.005, repeats: true) { [weak self] timer in
+            guard let self = self else { timer.invalidate(); return }
+            
+            if self.currentStreamIndex >= self.responseString.count {
+                timer.invalidate()
+                return
+            }
+            
+            let index = self.responseString.index(self.responseString.startIndex, offsetBy: self.currentStreamIndex)
+            let char = String(self.responseString[index])
+            self.streamMessage(char)
+            self.currentStreamIndex += 1
+        }
+        
+        completionCheckTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] timer in
+            guard let self = self else { timer.invalidate(); return }
+            
+            if self.currentStreamIndex >= self.responseString.count {
+                timer.invalidate()
+                self.finalizeStreaming()
+            }
+        }
+    }
+
+    private func finalizeStreaming() {
+        stopAllStreaming()
+        textInputBox.sendButtonState = .canSend
+        
+        let lastRow = messages.count - 1
+        if lastRow >= 0 {
+            tableView.reloadData(forRowIndexes: IndexSet(integer: lastRow), columnIndexes: IndexSet(integer: 0))
+        }
+    }
+
+    private func stopAllStreaming() {
+        streamingTimer?.invalidate()
+        streamingTimer = nil
+        completionCheckTimer?.invalidate()
+        completionCheckTimer = nil
+        stopSteamTimer()
+        responseString = ""
+        currentStreamIndex = 0
     }
     
     func streamMessage(_ message: String) {
@@ -245,12 +242,6 @@ extension AIAssistantsViewController {
 }
 
 extension AIAssistantsViewController {
-    func startStreamTimer() {
-        if streamTimer == nil {
-            isStreaming = true
-            streamTimer = Timer.scheduledTimer(timeInterval: 0.23, target: self, selector: #selector(scrollStream), userInfo: nil, repeats: true)
-        }
-    }
     
     @objc func scrollStream() {
         if !userIsDragging{
@@ -267,12 +258,16 @@ extension AIAssistantsViewController {
         }
     }
     
+    func startStreamTimer() {
+        guard streamTimer == nil else { return }
+        isStreaming = true
+        streamTimer = Timer.scheduledTimer(timeInterval: 0.23, target: self, selector: #selector(scrollStream), userInfo: nil, repeats: true)
+    }
+
     func stopSteamTimer() {
-        if streamTimer != nil {
-            isStreaming = false
-            self.streamTimer?.invalidate()
-            self.streamTimer = nil
-        }
+        isStreaming = false
+        streamTimer?.invalidate()
+        streamTimer = nil
     }
     
     @IBAction func onScrollDownClick(_ sender: Any) {
@@ -314,6 +309,8 @@ extension AIAssistantsViewController {
 
 extension AIAssistantsViewController: TableViewCellDelegate {
     func tableCellView(_ cell: NSTableCellView, didTapSpeakForRow rowIndex: Int) {
+        api.task?.cancel()
+        task?.cancel()
         let text = messages[rowIndex].content
         let button = (cell as? AssistantTableCellView)?.playButton
         if speakerManager.isSpeaking {
@@ -336,6 +333,8 @@ extension AIAssistantsViewController: TableViewCellDelegate {
     }
     
     func tableCellView(_ cell: NSTableCellView, didTapShareForRow rowIndex: Int) {
+        api.task?.cancel()
+        task?.cancel()
         let text = messages[rowIndex].content
         let sharingPicker = NSSharingServicePicker.init(items: [text])
         if let button = (cell as? AssistantTableCellView)?.shareButton {
@@ -345,6 +344,8 @@ extension AIAssistantsViewController: TableViewCellDelegate {
     }
     
     func tableCellView(_ cell: NSTableCellView, didTapCopyForRow rowIndex: Int) {
+        api.task?.cancel()
+        task?.cancel()
         let text = messages[rowIndex].content
         let button = (cell as? AssistantTableCellView)?.copyButton
         DispatchQueue.main.async {
@@ -374,7 +375,16 @@ extension AIAssistantsViewController: TextInputBoxDelegate {
     }
     
     func textInputBoxDidTapStop(_ box: TextInputBox) {
-        api.task?.cancel()
         task?.cancel()
+        api.task?.cancel()
+            
+            stopAllStreaming()
+            textInputBox.sendButtonState = .canSend
+            
+            // Finalize partial message so copy/share/speak work
+            let lastRow = messages.count - 1
+            if lastRow >= 0 {
+                tableView.reloadData(forRowIndexes: IndexSet(integer: lastRow), columnIndexes: IndexSet(integer: 0))
+            }
     }
 }

@@ -302,3 +302,8 @@
 "Ready to Solve" = "Gata de rezolvat";
 "Problem" = "Problemă";
 "Solution" = "Soluție";
+
+
+"File Too Large" = "Fișier prea mare";
+"Please select an image smaller than \(maxSizeMB) MB." = "Selectați o imagine mai mică de \(maxSizeMB) MB.";
+"OK" = "OK";

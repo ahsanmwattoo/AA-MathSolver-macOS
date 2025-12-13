@@ -306,3 +306,8 @@
 "Ready to Solve" = "Kész a megoldásra";
 "Problem" = "Probléma";
 "Solution" = "Megoldás";
+
+
+"File Too Large" = "A fájl túl nagy";
+"Please select an image smaller than \(maxSizeMB) MB." = "Kérjük, válasszon \(maxSizeMB) MB-nál kisebb képet.";
+"OK" = "OK";

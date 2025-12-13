@@ -43,7 +43,11 @@ class TextInputBox: NSBox {
     private var calculatorWindow: NSPopover?
     
     var sendButtonState: SendButtonState = .canSend {
-        didSet { updateSendButtonState() }
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.updateSendButtonState()
+            }
+        }
     }
     
     var isRecording: Bool = false {
@@ -104,10 +108,12 @@ class TextInputBox: NSBox {
     
     func updateSendButtonEnabled(_ enabled: Bool) {
         guard sendButtonState == .canSend else {
+            self.borderColor = .brand
             sendButton.isEnabled = true
             return
         }
         sendButton.isEnabled = enabled
+        self.borderColor = enabled ? .brand : .stroke
         sendBox?.alphaValue = enabled ? 1 : 0.5
     }
     
@@ -121,9 +127,10 @@ class TextInputBox: NSBox {
     }
     
     
-    @IBAction func didTapStop(_ sender: NSButton) {
+    @IBAction func stopButtonTapped(_ sender: NSButton) {
         delegate?.textInputBoxDidTapStop(self)
     }
+    
     @IBAction func didTapAttachments(_ sender: NSButton) {
         let menu = NSMenu()
         let selectPhotoItem = NSMenuItem(title: "Select Photo".localized(), action: #selector(didTapSelectPhotoAttachment), keyEquivalent: "")

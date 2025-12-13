@@ -21,7 +21,6 @@ class BaseViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        didChangeLanguage()
         appProStatusDidChange()
         NotificationCenter.default.addObserver(self,
             selector: #selector(appProStatusDidChange),
@@ -37,8 +36,6 @@ class BaseViewController: NSViewController {
     func didChangeAppearance() {}
     
     @objc func didChangeLanguage() {
-//        LocalizationUtility.resetToLocalizationKeys(view: view)
-//        LocalizationUtility.localizeViewHierarchy(view: view)
         view.localizeSubviews()
     }
 

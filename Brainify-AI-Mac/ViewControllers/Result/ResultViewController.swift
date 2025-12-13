@@ -10,6 +10,7 @@ import Lottie
 
 protocol ResultViewControllerDelegate: AnyObject {
     func resultViewControllerDidSolve(_ controller: ResultViewController, image: NSImage)
+    func resultViewControllerDidTapBack(_ controller: ResultViewController)
 }
 
 class ResultViewController: BaseViewController {
@@ -19,6 +20,7 @@ class ResultViewController: BaseViewController {
     @IBOutlet weak var animationView: LottieAnimationView!
     @IBOutlet weak var solveButton: NSButton!
     @IBOutlet weak var readyToSolveLabel: NSTextField!
+    @IBOutlet weak var backButton: NSButton!
     
     var image: NSImage?
     weak var delegate: ResultViewControllerDelegate?
@@ -33,17 +35,22 @@ class ResultViewController: BaseViewController {
     }
     
     override func didChangeLanguage() {
-        readyToSolveLabel.stringValue = "Ready to Solve".localized()
-        
+        DispatchQueue.main.async {
+            [weak self] in
+            guard let self else { return }
+            readyToSolveLabel.stringValue = "Ready to Solve".localized()
+        }
     }
     
     @IBAction func didTapBack(_ sender: NSButton) {
         animationView.stop()
         dismiss(nil)
-        delegate = nil
+        delegate?.resultViewControllerDidTapBack(self)
+       
     }
     
     @IBAction func didTapSolve(_ sender: NSButton) {
+        backButton.isEnabled = false
         if isNetConnected {
             animationView.isHidden = false
             animationView.play()
@@ -52,6 +59,7 @@ class ResultViewController: BaseViewController {
             }
             solveButton.isEnabled = false
         } else {
+            backButton.isEnabled = true
             showNoInternetAlert()
         }
     }

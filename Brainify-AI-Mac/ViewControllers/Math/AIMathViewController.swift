@@ -25,19 +25,22 @@ class AIMathViewController: BaseViewController {
     @IBOutlet weak var supportedFormatLabel: NSTextField!
     @IBOutlet weak var offerViewWidth: NSLayoutConstraint!
     @IBOutlet weak var textInputBox: TextInputBox!
-    @IBOutlet var textView: PlaceHolderTextView!
+    @IBOutlet weak var textView: PlaceHolderTextView!
     @IBOutlet weak var solveLabel: NSTextField!
     @IBOutlet weak var solveBoxWidth: NSLayoutConstraint!
     @IBOutlet weak var solveBox: NSBox!
     @IBOutlet weak var solveButton: NSButton!
     
     private let service = GPTService()
+    private var task: Task<(), Never>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         setupDragView()
         textInputBox.delegate = self
+        textView.placeholderString = "Ask anything...".localized()
+
     }
     
     func configureUI() {
@@ -75,12 +78,18 @@ class AIMathViewController: BaseViewController {
     
     private func setupDragView() {
         uploadView.fileUrlCallback = { [weak self] url in
+            guard let self = self else { return }
+            
+            // Check file size first (10 MB = 10 * 1024 * 1024 bytes)
+            if !self.isFileSizeValid(url: url, maxSizeMB: 10) {
+                return
+            }
+            
             if let image = NSImage(contentsOf: url) {
-                guard let self else { return }
                 let resultVC = ResultViewController(nibName: ResultViewController.identifier, bundle: nil)
                 resultVC.image = image
                 resultVC.delegate = self
-                presentAsSheet(resultVC)
+                self.presentAsSheet(resultVC)
             }
         }
     }
@@ -92,6 +101,7 @@ class AIMathViewController: BaseViewController {
     
     @IBAction func didTapChooseFile(_ sender: Any) {
         guard let window = view.window else { return }
+            
         let openPanel = NSOpenPanel()
         openPanel.title = "Select Image".localized()
         openPanel.prompt = "Choose".localized()
@@ -99,18 +109,67 @@ class AIMathViewController: BaseViewController {
         openPanel.canChooseFiles = true
         openPanel.canChooseDirectories = false
         openPanel.allowedContentTypes = [.jpeg, .png, .heic, .heif]
-    
-        openPanel.beginSheetModal(for: window) { result in
-            guard result == .OK,
-                    let url = openPanel.url,
-                  let image = NSImage(contentsOf: url) else { return }
             
-            DispatchQueue.main.async { [weak self] in
+        openPanel.beginSheetModal(for: window) { [weak self] result in
+            guard let self = self else { return }
+                
+            guard result == .OK,
+                    let url = openPanel.url else { return }
+                
+                // Size check before loading image
+            if !self.isFileSizeValid(url: url, maxSizeMB: 10) {
+                return
+            }
+                
+            guard let image = NSImage(contentsOf: url) else {
+                Utility.showAlert(
+                    title: "Error".localized(),
+                    message: "Unable to load the selected image.".localized(),
+                    okTitle: "OK".localized(),
+                    window: window
+                )
+                return
+            }
+                
+            DispatchQueue.main.async {
                 let resultVC = ResultViewController(nibName: "ResultViewController", bundle: nil)
                 resultVC.image = image
                 resultVC.delegate = self
-                self?.presentAsSheet(resultVC)
+                self.presentAsSheet(resultVC)
             }
+        }
+    }
+    
+    private func isFileSizeValid(url: URL, maxSizeMB: Int) -> Bool {
+        do {
+            let attributes = try FileManager.default.attributesOfItem(atPath: url.path)
+            if let fileSize = attributes[.size] as? NSNumber {
+                let fileSizeMB = fileSize.doubleValue / (1024 * 1024)
+                if fileSizeMB > Double(maxSizeMB) {
+                    DispatchQueue.main.async { [weak self] in
+                        guard let window = self?.view.window else { return }
+                        Utility.showAlert(
+                            title: "File Too Large".localized(),
+                            message: "Please select an image smaller than \(maxSizeMB) MB.".localized(),
+                            okTitle: "OK".localized(),
+                            window: window
+                        )
+                    }
+                    return false
+                }
+            }
+            return true
+        } catch {
+            DispatchQueue.main.async { [weak self] in
+                guard let window = self?.view.window else { return }
+                Utility.showAlert(
+                    title: "Error".localized(),
+                    message: "Unable to check file size.".localized(),
+                    okTitle: "OK".localized(),
+                    window: window
+                )
+            }
+            return false
         }
     }
     
@@ -119,7 +178,7 @@ class AIMathViewController: BaseViewController {
             return
         }
         if isNetConnected {
-            Task {
+            task = Task {
                 do {
                     let input: InputOutput = .init(
                         role: .user,
@@ -232,6 +291,14 @@ class AIMathViewController: BaseViewController {
 }
 
 extension AIMathViewController: ResultViewControllerDelegate {
+    func resultViewControllerDidTapBack(_ controller: ResultViewController) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            task?.cancel()
+            service.task?.cancel()
+        }
+    }
+    
     func resultViewControllerDidSolve(_ controller: ResultViewController, image: NSImage) {
         guard App.isPro || App.canSendQuery else {
             // TODO: Show Premium Screen Here

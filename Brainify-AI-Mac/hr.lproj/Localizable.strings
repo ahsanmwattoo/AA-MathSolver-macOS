@@ -315,3 +315,9 @@
 "Ready to Solve" = "Spreman za rješavanje";
 "Problem" = "Problem";
 "Solution" = "Rješenje";
+
+
+
+"File Too Large" = "Datoteka je prevelika";
+"Please select an image smaller than \(maxSizeMB) MB." = "Odaberite sliku manju od \(maxSizeMB) MB.";
+"OK" = "U redu";

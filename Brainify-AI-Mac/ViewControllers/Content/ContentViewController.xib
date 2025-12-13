@@ -12,11 +12,16 @@
                 <outlet property="collectionView" destination="xFA-DC-DN4" id="LwA-tp-ylF"/>
                 <outlet property="gradientBorderBox" destination="6Jj-eS-QL7" id="I68-0v-Kte"/>
                 <outlet property="hideAbleBox" destination="FH9-72-u7s" id="AX2-00-ff1"/>
+                <outlet property="limitedAccessLabel" destination="8gX-Nv-nSM" id="syw-pJ-SHJ"/>
                 <outlet property="premiumViewBox" destination="FH9-72-u7s" id="6vd-9l-yGa"/>
                 <outlet property="showSidebarButton" destination="ZHO-28-AdA" id="dq2-Rr-ZZz"/>
                 <outlet property="sidebarWidthConstraint" destination="xeY-Kq-ZRZ" id="g2m-qJ-7MX"/>
+                <outlet property="subtitleLabel" destination="U2Z-e7-3Kp" id="N39-m3-sD9"/>
                 <outlet property="tabView" destination="a98-lo-u8n" id="foX-U0-bYH"/>
+                <outlet property="titleLabel" destination="wql-9u-4qy" id="i9m-XA-xle"/>
                 <outlet property="toggleButton" destination="t20-DZ-XPV" id="UY4-T4-Yzv"/>
+                <outlet property="unlockLabel" destination="UdU-nU-mPt" id="fRs-YB-zJb"/>
+                <outlet property="upgradeLabel" destination="Gbp-Ca-Ubw" id="lpo-pd-CYn"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -94,6 +99,9 @@
                                     <color key="textColor" name="secondaryTextColor"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="AI Math Solver"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="t20-DZ-XPV">
                                 <rect key="frame" x="190" y="670" width="30" height="30"/>

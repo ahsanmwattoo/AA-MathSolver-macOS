@@ -86,6 +86,7 @@ class HistoryViewController: BaseViewController {
         historyCollectionView.delegate = self
         historyCollectionView.isSelectable = true
         historyCollectionView.allowsMultipleSelection = false
+        historyCollectionView.hideScrollers()
         historyCollectionView.register(HistoryCollectionViewItem.self, forItemWithIdentifier: HistoryCollectionViewItem.identifier)
 //        tabsCollectionView.isSelectable = true
 //        tabsCollectionView.allowsMultipleSelection = false

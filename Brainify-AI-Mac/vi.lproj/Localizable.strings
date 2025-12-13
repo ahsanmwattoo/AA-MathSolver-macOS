@@ -269,3 +269,7 @@
 "Ready to Solve" = "Sẵn sàng giải";
 "Problem" = "Bài toán";
 "Solution" = "Lời giải";
+
+"File Too Large" = "Tệp quá lớn";
+"Please select an image smaller than \(maxSizeMB) MB." = "Vui lòng chọn hình ảnh nhỏ hơn \(maxSizeMB) MB.";
+"OK" = "OK";

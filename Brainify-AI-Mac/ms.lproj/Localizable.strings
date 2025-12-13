@@ -303,3 +303,8 @@
 "Ready to Solve" = "Sedia untuk Selesai";
 "Problem" = "Masalah";
 "Solution" = "Penyelesaian";
+
+
+"File Too Large" = "Fail Terlalu Besar";
+"Please select an image smaller than \(maxSizeMB) MB." = "Sila pilih imej yang lebih kecil daripada \(maxSizeMB) MB.";
+"OK" = "OK";

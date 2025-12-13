@@ -153,7 +153,7 @@
                                                 <constraint firstAttribute="width" constant="59" id="qaH-yT-JFS"/>
                                             </constraints>
                                             <connections>
-                                                <action selector="didTapStop:" target="-1" id="cR5-Wv-HtU"/>
+                                                <action selector="stopButtonTapped:" target="cQL-eZ-EAw" id="Tdj-ZP-X1h"/>
                                             </connections>
                                         </button>
                                     </subviews>

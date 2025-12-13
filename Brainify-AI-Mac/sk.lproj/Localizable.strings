@@ -303,3 +303,7 @@
 "Ready to Solve" = "Pripravený na riešenie";
 "Problem" = "Problém";
 "Solution" = "Riešenie";
+
+"File Too Large" = "Súbor je príliš veľký";
+"Please select an image smaller than \(maxSizeMB) MB." = "Vyberte obrázok menší ako \(maxSizeMB) MB.";
+"OK" = "OK";

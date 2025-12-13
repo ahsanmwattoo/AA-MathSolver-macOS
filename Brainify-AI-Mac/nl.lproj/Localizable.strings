@@ -315,3 +315,8 @@
 "Ready to Solve" = "Klaar om op te lossen";
 "Problem" = "Probleem";
 "Solution" = "Oplossing";
+
+
+"File Too Large" = "Bestand te groot";
+"Please select an image smaller than \(maxSizeMB) MB." = "Selecteer een afbeelding kleiner dan \(maxSizeMB) MB.";
+"OK" = "OK";

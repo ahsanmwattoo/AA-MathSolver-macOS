@@ -77,9 +77,10 @@ class InputBox: NSBox {
     func updateSendButtonEnabled(_ enabled: Bool) {
         guard sendButtonState == .canSend else {
             sendButton.isEnabled = true
-            borderColor = .brand
+            self.borderColor = .brand
             return
         }
+        self.borderColor = enabled ? .brand : .stroke
         sendButton.isEnabled = enabled
     }
     

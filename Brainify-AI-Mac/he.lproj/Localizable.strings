@@ -303,3 +303,8 @@
 "Ready to Solve" = "מוכן לפתור";
 "Problem" = "בעיה";
 "Solution" = "פתרון";
+
+
+"File Too Large" = "הקובץ גדול מדי";
+"Please select an image smaller than \(maxSizeMB) MB." = "אנא בחר תמונה קטנה מ-\(maxSizeMB) MB.";
+"OK" = "אישור";

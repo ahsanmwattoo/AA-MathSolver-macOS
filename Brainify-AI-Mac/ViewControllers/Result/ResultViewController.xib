@@ -10,6 +10,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="ResultViewController" customModule="Brainify_AI_Mac" customModuleProvider="target">
             <connections>
                 <outlet property="animationView" destination="hPR-RN-LSo" id="5dd-ZN-chk"/>
+                <outlet property="backButton" destination="WVD-m0-Cih" id="Iaf-rt-QgJ"/>
                 <outlet property="imageView" destination="Z2o-Ct-pQG" id="jBa-Wl-9uw"/>
                 <outlet property="readyToSolveLabel" destination="PlB-0o-yoa" id="t1Z-VW-JDp"/>
                 <outlet property="solveButton" destination="sbh-ma-aRD" id="wUy-mJ-nEx"/>

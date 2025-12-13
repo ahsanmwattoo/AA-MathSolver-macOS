@@ -272,3 +272,7 @@
 "Ready to Solve" = "พร้อมแก้โจทย์";
 "Problem" = "โจทย์";
 "Solution" = "วิธีทำ";
+
+"File Too Large" = "ไฟล์ใหญ่เกินไป";
+"Please select an image smaller than \(maxSizeMB) MB." = "กรุณาเลือกภาพที่มีขนาดเล็กกว่า \(maxSizeMB) MB";
+"OK" = "ตกลง";

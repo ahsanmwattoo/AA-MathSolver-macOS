@@ -66,6 +66,9 @@
                                                         <color key="textColor" name="brandColor"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Why Choose Premium?"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wfw-ft-JS2">
                                                     <rect key="frame" x="0.0" y="0.0" width="363" height="219"/>
@@ -88,6 +91,9 @@
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Unlimited Snap &amp; Solve Math Problems"/>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </textField>
                                                             </subviews>
                                                             <visibilityPriorities>
@@ -117,6 +123,9 @@
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Write Math Easily with a Smart Calculator"/>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </textField>
                                                             </subviews>
                                                             <visibilityPriorities>
@@ -146,6 +155,9 @@
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Instant Access to All Math Formulas"/>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </textField>
                                                             </subviews>
                                                             <visibilityPriorities>
@@ -175,6 +187,9 @@
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Ask the Math Assistant Anything"/>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </textField>
                                                             </subviews>
                                                             <visibilityPriorities>
@@ -271,7 +286,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="68" id="VE1-rI-sTo"/>
                                             </constraints>
-                                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="GET UNLIMITED ACCESS" id="AAF-FS-QG4">
+                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" alignment="center" title="GET UNLIMITED ACCESS" id="AAF-FS-QG4">
                                                 <font key="font" metaFont="systemBold" size="52"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -287,6 +302,9 @@
                                                 <color key="textColor" name="secondaryTextColor"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Upgrade to Pro and solve math like a genius!"/>
+                                            </userDefinedRuntimeAttributes>
                                         </textField>
                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iMR-ec-b3H">
                                             <rect key="frame" x="11" y="136" width="620" height="13"/>
@@ -295,6 +313,9 @@
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="No Commitment,Cancel Anytime"/>
+                                            </userDefinedRuntimeAttributes>
                                         </textField>
                                         <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="10" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="cJZ-3s-51b">
                                             <rect key="frame" x="178" y="154" width="303" height="47"/>
@@ -347,6 +368,9 @@
                                                         <font key="font" metaFont="systemSemibold" size="14"/>
                                                     </buttonCell>
                                                     <color key="contentTintColor" name="brandColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Terms of Use"/>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="termsButtonTapped:" target="-2" id="Iba-7z-zfO"/>
                                                     </connections>
@@ -360,11 +384,14 @@
                                                 </box>
                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="KRf-Jw-dfo">
                                                     <rect key="frame" x="130" y="0.0" width="111" height="17"/>
-                                                    <buttonCell key="cell" type="bevel" title="Privacy Policy" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="1hz-8i-xzw">
+                                                    <buttonCell key="cell" type="bevel" title="Privacy Policy" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="1hz-8i-xzw">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="systemSemibold" size="14"/>
                                                     </buttonCell>
                                                     <color key="contentTintColor" name="brandColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Privacy Policy"/>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="privacyPolicyButtonTapped:" target="-2" id="2cf-BU-c1n"/>
                                                     </connections>
@@ -383,6 +410,9 @@
                                                         <font key="font" metaFont="systemSemibold" size="14"/>
                                                     </buttonCell>
                                                     <color key="contentTintColor" name="brandColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Continue with Free Plan"/>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="limitedVersionTapped:" target="-2" id="IVe-yA-gG9"/>
                                                     </connections>
@@ -401,6 +431,9 @@
                                                         <font key="font" metaFont="systemSemibold" size="14"/>
                                                     </buttonCell>
                                                     <color key="contentTintColor" name="brandColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Restore Purchase"/>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="didTapRestore:" target="-2" id="6Te-zO-CJZ"/>
                                                     </connections>
@@ -470,6 +503,11 @@
                                                 <color key="textColor" name="secondaryTextColor"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey">
+                                                    <string key="value">Your subscription will automatically renew unless auto-renew is turned off at least 24-hours before the end of the current subscription period. Payment will be charged to your iTunes account at confirmation of purchase.</string>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </textField>
                                     </subviews>
                                     <constraints>

@@ -19,6 +19,11 @@ class ContentViewController: BaseViewController {
     @IBOutlet weak var sidebarWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var showSidebarButton: NSButton!
     @IBOutlet weak var hideAbleBox: NSBox!
+    @IBOutlet weak var titleLabel: NSTextField!
+    @IBOutlet weak var subtitleLabel: NSTextField!
+    @IBOutlet weak var unlockLabel: NSTextField!
+    @IBOutlet weak var limitedAccessLabel: NSTextField!
+    @IBOutlet weak var upgradeLabel: NSTextField!
     
     var menuItems: [String] = []
     var menuIcons: [NSImage] = []
@@ -52,6 +57,11 @@ class ContentViewController: BaseViewController {
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
             collectionView.selectItem(index: selectedIndex, section: 0)
+            titleLabel.stringValue = "Brainify".localized()
+            subtitleLabel.stringValue = "AI Math Solver".localized()
+            unlockLabel.stringValue = "Unlock all features of your AI companion.".localized()
+            limitedAccessLabel.stringValue = "Get Unlimited Access".localized()
+            upgradeLabel.stringValue = "Upgrade to PRO".localized()
         }
     }
     

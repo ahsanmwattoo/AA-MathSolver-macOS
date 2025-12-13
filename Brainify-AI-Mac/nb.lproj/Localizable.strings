@@ -304,3 +304,8 @@
 "Ready to Solve" = "Klar til å løse";
 "Problem" = "Problem";
 "Solution" = "Løsning";
+
+
+"File Too Large" = "Filen er for stor";
+"Please select an image smaller than \(maxSizeMB) MB." = "Velg et bilde mindre enn \(maxSizeMB) MB.";
+"OK" = "OK";

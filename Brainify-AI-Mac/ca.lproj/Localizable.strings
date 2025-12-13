@@ -311,3 +311,8 @@
 "Ready to Solve" = "Preparat per resoldre";
 "Problem" = "Problema";
 "Solution" = "Solució";
+
+
+"File Too Large" = "Fitxer massa gran";
+"Please select an image smaller than \(maxSizeMB) MB." = "Seleccioneu una imatge més petita que \(maxSizeMB) MB.";
+"OK" = "D'acord";

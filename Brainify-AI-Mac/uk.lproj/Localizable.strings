@@ -270,3 +270,8 @@
 "Ready to Solve" = "Готовий розв'язати";
 "Problem" = "Задача";
 "Solution" = "Розв'язання";
+
+
+"File Too Large" = "Файл занадто великий";
+"Please select an image smaller than \(maxSizeMB) MB." = "Будь ласка, виберіть зображення менше \(maxSizeMB) МБ.";
+"OK" = "ОК";

@@ -306,3 +306,8 @@
 "Ready to Solve" = "हल करने के लिए तैयार";
 "Problem" = "समस्या";
 "Solution" = "समाधान";
+
+
+"File Too Large" = "फ़ाइल बहुत बड़ी है";
+"Please select an image smaller than \(maxSizeMB) MB." = "कृपया \(maxSizeMB) MB से छोटी इमेज चुनें।";
+"OK" = "ठीक है";

@@ -14,14 +14,14 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="217" height="131"/>
+        <customView misplaced="YES" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="216" height="131"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="16" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="1Bx-xk-OfD">
-                    <rect key="frame" x="0.0" y="0.0" width="217" height="131"/>
+                    <rect key="frame" x="0.0" y="0.0" width="215" height="131"/>
                     <view key="contentView" id="rY6-jd-pg7">
-                        <rect key="frame" x="0.0" y="0.0" width="217" height="131"/>
+                        <rect key="frame" x="0.0" y="0.0" width="215" height="131"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ab-zj-ljE">
@@ -33,7 +33,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="CalculusIcon" id="hvB-gx-wio"/>
                             </imageView>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Z6w-7I-5wM">
-                                <rect key="frame" x="10" y="58" width="197" height="21"/>
+                                <rect key="frame" x="9" y="58" width="197" height="21"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Algebra" id="MQl-Q5-Fq8">
                                     <font key="font" metaFont="systemBold" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -41,19 +41,19 @@
                                 </textFieldCell>
                             </textField>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="52J-tb-hy4">
-                                <rect key="frame" x="10" y="12" width="197" height="40"/>
+                                <rect key="frame" x="9" y="12" width="197" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="193" id="8fN-AE-n1y"/>
                                     <constraint firstAttribute="height" constant="40" id="LJR-U4-uWm"/>
                                 </constraints>
-                                <textFieldCell key="cell" title="Comprehensive step-by-step solutions for algebra problems." id="PBO-Pa-aBG">
+                                <textFieldCell key="cell" alignment="left" title="Comprehensive step-by-step solutions for algebra problems." id="PBO-Pa-aBG">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="secondaryTextColor"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQb-qK-Jbr">
-                                <rect key="frame" x="189" y="103" width="16" height="16"/>
+                                <rect key="frame" x="187" y="103" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="cHU-By-4xU"/>
                                     <constraint firstAttribute="height" constant="16" id="esX-8g-ue8"/>
@@ -62,15 +62,15 @@
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="52J-tb-hy4" firstAttribute="leading" secondItem="rY6-jd-pg7" secondAttribute="leading" constant="12" id="2Bx-qR-gmk"/>
+                            <constraint firstItem="52J-tb-hy4" firstAttribute="leading" secondItem="rY6-jd-pg7" secondAttribute="leading" constant="11" id="2Bx-qR-gmk"/>
                             <constraint firstItem="2Ab-zj-ljE" firstAttribute="leading" secondItem="rY6-jd-pg7" secondAttribute="leading" constant="12" id="Byp-Ak-an7"/>
                             <constraint firstItem="52J-tb-hy4" firstAttribute="top" secondItem="Z6w-7I-5wM" secondAttribute="bottom" constant="6" id="CIo-oy-7O0"/>
-                            <constraint firstItem="Z6w-7I-5wM" firstAttribute="leading" secondItem="rY6-jd-pg7" secondAttribute="leading" constant="12" id="EIN-pC-U4v"/>
+                            <constraint firstItem="Z6w-7I-5wM" firstAttribute="leading" secondItem="rY6-jd-pg7" secondAttribute="leading" constant="11" id="EIN-pC-U4v"/>
                             <constraint firstItem="Z6w-7I-5wM" firstAttribute="top" secondItem="2Ab-zj-ljE" secondAttribute="bottom" constant="6" id="Jug-l7-8mA"/>
-                            <constraint firstAttribute="trailing" secondItem="Z6w-7I-5wM" secondAttribute="trailing" constant="12" id="b2L-AC-7fw"/>
+                            <constraint firstAttribute="trailing" secondItem="Z6w-7I-5wM" secondAttribute="trailing" constant="11" id="b2L-AC-7fw"/>
                             <constraint firstAttribute="bottom" secondItem="52J-tb-hy4" secondAttribute="bottom" constant="12" id="cBt-oQ-zpT"/>
                             <constraint firstItem="2Ab-zj-ljE" firstAttribute="top" secondItem="rY6-jd-pg7" secondAttribute="top" constant="12" id="cVY-9e-e6l"/>
-                            <constraint firstAttribute="trailing" secondItem="52J-tb-hy4" secondAttribute="trailing" constant="12" id="e3A-RO-KGD"/>
+                            <constraint firstAttribute="trailing" secondItem="52J-tb-hy4" secondAttribute="trailing" constant="11" id="e3A-RO-KGD"/>
                             <constraint firstItem="JQb-qK-Jbr" firstAttribute="top" secondItem="rY6-jd-pg7" secondAttribute="top" constant="12" id="eVT-8Q-iFm"/>
                             <constraint firstAttribute="trailing" secondItem="JQb-qK-Jbr" secondAttribute="trailing" constant="12" id="sat-60-QhC"/>
                         </constraints>

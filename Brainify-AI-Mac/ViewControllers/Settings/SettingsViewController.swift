@@ -42,13 +42,13 @@ class SettingsViewController: BaseViewController {
     }
     
     override func appProStatusDidChange() {
-        upgardeBox.isHidden = App.isPro
+        upgardeBox?.isHidden = App.isPro
         headingLabel.stringValue = App.isPro ? "Brainify".localized() : "Unlock Premium Features".localized()
         headingLabel.font = App.isPro ? .systemFont(ofSize: 22, weight: .bold) : .systemFont(ofSize: 16, weight: .bold)
         subHeadingLabel.stringValue = App.isPro ? "AI Math Solver".localized() : "Get unlimited access to Brainify features".localized()
         subHeadingLabel.font = App.isPro ? .systemFont(ofSize: 16, weight: .regular) : .systemFont(ofSize: 10, weight: .regular)
-        hideAbleBox.isHidden = App.isPro
-        imageViewPro.isHidden = !App.isPro
+        hideAbleBox?.isHidden = App.isPro
+        imageViewPro?.isHidden = !App.isPro
         settingsCollectionView.reloadData()
     }
         

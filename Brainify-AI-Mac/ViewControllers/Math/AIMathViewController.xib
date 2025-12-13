@@ -203,11 +203,9 @@
                                                         <size key="minSize" width="1074" height="30"/>
                                                         <size key="maxSize" width="1074" height="10000000"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderStringKey" value="Ask Anything"/>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
                                                                 <color key="value" name="secondaryTextColor"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderString" value="Ask Anything"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textView>
                                                 </subviews>

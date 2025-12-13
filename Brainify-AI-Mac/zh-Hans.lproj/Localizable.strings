@@ -313,3 +313,8 @@
 "Ready to Solve" = "准备好求解";
 "Problem" = "问题";
 "Solution" = "解法";
+
+
+"File Too Large" = "文件太大";
+"Please select an image smaller than \(maxSizeMB) MB." = "请选择小于 \(maxSizeMB) MB 的图片。";
+"OK" = "好";

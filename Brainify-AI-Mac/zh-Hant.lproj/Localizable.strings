@@ -312,3 +312,8 @@
 "Ready to Solve" = "準備好求解";
 "Problem" = "問題";
 "Solution" = "解答";
+
+
+"File Too Large" = "檔案太大";
+"Please select an image smaller than \(maxSizeMB) MB." = "請選擇小於 \(maxSizeMB) MB 的圖片。";
+"OK" = "好";
