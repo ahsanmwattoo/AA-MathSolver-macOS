@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="AssistantTableCellView" customModule="Brainify_AI_Mac" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="670" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="16" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="t41-fL-QkE">
+                    <rect key="frame" x="0.0" y="42" width="500" height="51"/>
+                    <view key="contentView" id="spL-Zd-OTM">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="51"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="pTy-cX-5GA">
+                                <rect key="frame" x="18" y="16" width="464" height="19"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="left" id="MTN-zx-hBc">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="XKn-lz-gr5">
+                                <rect key="frame" x="20" y="11" width="24" height="24"/>
+                                <view key="contentView" hidden="YES" id="G8A-Ai-Ayl" customClass="LottieAnimationView" customModule="Lottie">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="1KQ-jB-f2p"/>
+                                    <constraint firstAttribute="height" constant="24" id="gFA-ef-h7v"/>
+                                </constraints>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="XKn-lz-gr5" firstAttribute="leading" secondItem="spL-Zd-OTM" secondAttribute="leading" constant="20" id="1qe-QX-FXW"/>
+                            <constraint firstItem="XKn-lz-gr5" firstAttribute="top" secondItem="spL-Zd-OTM" secondAttribute="top" constant="16" id="7oy-BJ-7WY"/>
+                            <constraint firstAttribute="trailing" secondItem="pTy-cX-5GA" secondAttribute="trailing" constant="20" id="ZAI-xb-g63"/>
+                            <constraint firstAttribute="bottom" secondItem="pTy-cX-5GA" secondAttribute="bottom" constant="16" id="cVW-cW-hzi"/>
+                            <constraint firstItem="pTy-cX-5GA" firstAttribute="leading" secondItem="spL-Zd-OTM" secondAttribute="leading" constant="20" id="utu-UK-eYr"/>
+                            <constraint firstItem="pTy-cX-5GA" firstAttribute="top" secondItem="spL-Zd-OTM" secondAttribute="top" constant="16" id="vi3-Ep-ATu"/>
+                        </constraints>
+                    </view>
+                    <color key="fillColor" name="sideBarColor"/>
+                </box>
+                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5me-jD-a6E">
+                    <rect key="frame" x="0.0" y="0.0" width="112" height="32"/>
+                    <subviews>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="uIr-Xz-QEC">
+                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="copychat" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="qsC-Cc-OCV">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="didTapCopy:" target="c22-O7-iKe" id="f7P-ah-jcR"/>
+                            </connections>
+                        </button>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="5Xd-13-0uZ">
+                            <rect key="frame" x="40" y="0.0" width="32" height="32"/>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="speak" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="ftF-57-GHw">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="didTapPlay:" target="c22-O7-iKe" id="6V8-eh-Evg"/>
+                            </connections>
+                        </button>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="ta8-AL-9DO">
+                            <rect key="frame" x="80" y="0.0" width="32" height="32"/>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="assistantExport" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="Axg-gt-mdr">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="didTapShare:" target="c22-O7-iKe" id="4b4-mp-hjm"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="k28-Cl-9Ny"/>
+                    </constraints>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="5me-jD-a6E" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="D0i-7C-hts"/>
+                <constraint firstItem="5me-jD-a6E" firstAttribute="top" secondItem="t41-fL-QkE" secondAttribute="bottom" constant="10" id="ELr-B9-K9U"/>
+                <constraint firstItem="t41-fL-QkE" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="Qom-BW-4NJ"/>
+                <constraint firstAttribute="bottom" secondItem="5me-jD-a6E" secondAttribute="bottom" id="cLv-Ru-5Tx"/>
+                <constraint firstItem="t41-fL-QkE" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="hBp-eE-Waz"/>
+                <constraint firstAttribute="trailing" secondItem="t41-fL-QkE" secondAttribute="trailing" constant="170" id="yb1-jN-56t"/>
+            </constraints>
+            <connections>
+                <outlet property="copyButton" destination="uIr-Xz-QEC" id="udj-tS-73m"/>
+                <outlet property="playButton" destination="5Xd-13-0uZ" id="O9d-ig-S2I"/>
+                <outlet property="processingAnimationView" destination="G8A-Ai-Ayl" id="Cgj-XS-ihc"/>
+                <outlet property="shareButton" destination="ta8-AL-9DO" id="Fc5-oG-CjU"/>
+                <outlet property="streamLabel" destination="pTy-cX-5GA" id="ea6-IM-Xrh"/>
+            </connections>
+            <point key="canvasLocation" x="234" y="219.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="assistantExport" width="32" height="32"/>
+        <image name="copychat" width="32" height="32"/>
+        <image name="speak" width="32" height="32"/>
+        <namedColor name="sideBarColor">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

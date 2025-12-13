@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="AssistantResultTableCellView" customModule="Brainify_AI_Mac" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="670" height="143"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="16" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="t41-fL-QkE">
+                    <rect key="frame" x="0.0" y="42" width="670" height="101"/>
+                    <view key="contentView" id="spL-Zd-OTM">
+                        <rect key="frame" x="0.0" y="0.0" width="670" height="101"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="pTy-cX-5GA">
+                                <rect key="frame" x="18" y="16" width="634" height="19"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="left" id="MTN-zx-hBc">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="zA2-zJ-Paf">
+                                <rect key="frame" x="20" y="10" width="24" height="24"/>
+                                <view key="contentView" hidden="YES" id="lcA-RV-8kd" customClass="LottieAnimationView" customModule="Lottie">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="iAo-BL-u7d"/>
+                                    <constraint firstAttribute="height" constant="24" id="tif-mH-Hpu"/>
+                                </constraints>
+                            </box>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eof-0a-tLI">
+                                <rect key="frame" x="20" y="51" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Zj9-F8-4Ph"/>
+                                    <constraint firstAttribute="height" constant="30" id="kjk-rF-gJf"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="solution" id="6Ny-Sq-vX6"/>
+                            </imageView>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rrM-R8-afK">
+                                <rect key="frame" x="52" y="55" width="85" height="26"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Solution" id="fMt-rf-0E6">
+                                    <font key="font" metaFont="systemMedium" size="22"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Solution"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="eof-0a-tLI" firstAttribute="leading" secondItem="spL-Zd-OTM" secondAttribute="leading" constant="20" id="1HT-ed-I97"/>
+                            <constraint firstItem="rrM-R8-afK" firstAttribute="leading" secondItem="eof-0a-tLI" secondAttribute="trailing" constant="4" id="3em-FQ-Cgu"/>
+                            <constraint firstItem="zA2-zJ-Paf" firstAttribute="leading" secondItem="spL-Zd-OTM" secondAttribute="leading" constant="20" id="7eF-cS-OT5"/>
+                            <constraint firstItem="rrM-R8-afK" firstAttribute="top" secondItem="spL-Zd-OTM" secondAttribute="top" constant="20" id="Avx-Di-R2E"/>
+                            <constraint firstAttribute="bottom" secondItem="zA2-zJ-Paf" secondAttribute="bottom" constant="10" id="KZS-wd-nw2"/>
+                            <constraint firstItem="eof-0a-tLI" firstAttribute="top" secondItem="spL-Zd-OTM" secondAttribute="top" constant="20" id="Nuh-1M-jgj"/>
+                            <constraint firstAttribute="trailing" secondItem="pTy-cX-5GA" secondAttribute="trailing" constant="20" id="ZAI-xb-g63"/>
+                            <constraint firstAttribute="bottom" secondItem="pTy-cX-5GA" secondAttribute="bottom" constant="16" id="cVW-cW-hzi"/>
+                            <constraint firstItem="pTy-cX-5GA" firstAttribute="leading" secondItem="spL-Zd-OTM" secondAttribute="leading" constant="20" id="utu-UK-eYr"/>
+                            <constraint firstItem="pTy-cX-5GA" firstAttribute="top" secondItem="rrM-R8-afK" secondAttribute="bottom" constant="20" id="vi3-Ep-ATu"/>
+                        </constraints>
+                    </view>
+                    <color key="fillColor" name="sideBarColor"/>
+                </box>
+                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gCn-NJ-fbJ">
+                    <rect key="frame" x="0.0" y="0.0" width="112" height="32"/>
+                    <subviews>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="G6x-Y1-668">
+                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="copychat" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="PXy-Gz-Pfa">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="didTapCopy:" target="c22-O7-iKe" id="Xae-Ex-sCl"/>
+                            </connections>
+                        </button>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="tQE-gT-wJC">
+                            <rect key="frame" x="40" y="0.0" width="32" height="32"/>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="speak" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="Igu-c0-hZJ">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="didTapSpeak:" target="c22-O7-iKe" id="wlh-nV-HFx"/>
+                            </connections>
+                        </button>
+                        <button translatesAutoresizingMaskIntoConstraints="NO" id="U9b-Gz-Qc6">
+                            <rect key="frame" x="80" y="0.0" width="32" height="32"/>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="assistantExport" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="tJu-Pu-54T">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="didTapShare:" target="c22-O7-iKe" id="SA6-fD-LDz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Bdu-sI-kJn"/>
+                    </constraints>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="t41-fL-QkE" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="Qom-BW-4NJ"/>
+                <constraint firstItem="gCn-NJ-fbJ" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="fLk-zC-k8F"/>
+                <constraint firstItem="t41-fL-QkE" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="hBp-eE-Waz"/>
+                <constraint firstAttribute="bottom" secondItem="gCn-NJ-fbJ" secondAttribute="bottom" id="jWB-sT-bSD"/>
+                <constraint firstItem="gCn-NJ-fbJ" firstAttribute="top" secondItem="t41-fL-QkE" secondAttribute="bottom" constant="10" id="xbW-cC-700"/>
+                <constraint firstAttribute="trailing" secondItem="t41-fL-QkE" secondAttribute="trailing" id="yb1-jN-56t"/>
+            </constraints>
+            <connections>
+                <outlet property="copyButton" destination="G6x-Y1-668" id="g1X-Vl-6hT"/>
+                <outlet property="lottieAnimationView" destination="lcA-RV-8kd" id="iVP-yH-GtW"/>
+                <outlet property="playButton" destination="tQE-gT-wJC" id="VZ8-wh-WxO"/>
+                <outlet property="shareButton" destination="U9b-Gz-Qc6" id="dKH-mq-E73"/>
+                <outlet property="solutionLabel" destination="rrM-R8-afK" id="SKj-gM-PqF"/>
+                <outlet property="streamLabel" destination="pTy-cX-5GA" id="V4Z-DS-xGe"/>
+            </connections>
+            <point key="canvasLocation" x="234" y="256"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="assistantExport" width="32" height="32"/>
+        <image name="copychat" width="32" height="32"/>
+        <image name="solution" width="30" height="30"/>
+        <image name="speak" width="32" height="32"/>
+        <namedColor name="sideBarColor">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

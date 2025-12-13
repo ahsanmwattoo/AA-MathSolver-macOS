@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="FormulaCell" id="c22-O7-iKe" customClass="FormulaCell" customModule="Brainify_AI_Mac" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="466"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="17" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="T59-OY-t7k">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="466"/>
+                    <view key="contentView" id="5Tl-Fn-cPy">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="466"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XCX-aS-gdI">
+                                <rect key="frame" x="10" y="427" width="44" height="19"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="pdP-qX-Y0a">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LOt-jd-qZL">
+                                <rect key="frame" x="444" y="430" width="16" height="16"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="arrow-down" id="o5g-fp-6WY"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="XCX-aS-gdI" firstAttribute="leading" secondItem="5Tl-Fn-cPy" secondAttribute="leading" constant="12" id="3UP-1G-rd5"/>
+                            <constraint firstAttribute="trailing" secondItem="LOt-jd-qZL" secondAttribute="trailing" constant="20" id="G9M-Gn-v48"/>
+                            <constraint firstItem="XCX-aS-gdI" firstAttribute="top" secondItem="5Tl-Fn-cPy" secondAttribute="top" constant="20" id="Mnx-cv-1fa"/>
+                            <constraint firstItem="LOt-jd-qZL" firstAttribute="top" secondItem="5Tl-Fn-cPy" secondAttribute="top" constant="20" id="hPh-gq-WOJ"/>
+                        </constraints>
+                    </view>
+                    <color key="fillColor" name="sideBarColor"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="T59-OY-t7k" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="0ew-UO-CRL"/>
+                <constraint firstAttribute="bottom" secondItem="T59-OY-t7k" secondAttribute="bottom" id="4nL-6i-474"/>
+                <constraint firstAttribute="trailing" secondItem="T59-OY-t7k" secondAttribute="trailing" id="RGB-8b-Luz"/>
+                <constraint firstItem="T59-OY-t7k" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="l2c-Qr-zpr"/>
+            </constraints>
+            <accessibility identifier="DataCell"/>
+            <connections>
+                <outlet property="imageIcon" destination="LOt-jd-qZL" id="DBR-IA-XRS"/>
+                <outlet property="nameLabel" destination="XCX-aS-gdI" id="69e-FQ-hea"/>
+            </connections>
+            <point key="canvasLocation" x="4" y="251"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="arrow-down" width="16" height="16"/>
+        <namedColor name="sideBarColor">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

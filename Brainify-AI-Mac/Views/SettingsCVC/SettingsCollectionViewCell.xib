@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SettingsCollectionViewCell" customModule="Brainify_AI_Mac" customModuleProvider="target">
+            <connections>
+                <outlet property="imageIcon" destination="ynL-mv-R9L" id="gY7-Tr-rpC"/>
+                <outlet property="imageRightSide" destination="KfW-L5-JwP" id="2ZH-6s-8XO"/>
+                <outlet property="popUpBox" destination="l92-k7-RdH" id="Rd0-oQ-DjN"/>
+                <outlet property="popUpButton" destination="Bef-pe-0lM" id="QzC-RJ-7HN"/>
+                <outlet property="premiumLabel" destination="gLT-iZ-u7X" id="wSd-cK-2Uj"/>
+                <outlet property="settingLabel" destination="kJe-FQ-m5F" id="Ft1-ir-tMi"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="HEQ-vl-0y8"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="x61-Og-U2E">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="40"/>
+                    <view key="contentView" id="wCh-aA-vQF">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="40"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ynL-mv-R9L">
+                                <rect key="frame" x="12" y="9" width="22" height="22"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="SettingIcon1" id="Cq2-4K-E3H"/>
+                            </imageView>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kJe-FQ-m5F">
+                                <rect key="frame" x="42" y="11" width="117" height="19"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Upgrade to Pro" id="5UT-Jy-tvo">
+                                    <font key="font" metaFont="systemMedium" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gLT-iZ-u7X">
+                                <rect key="frame" x="393" y="11" width="73" height="19"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Free Plan" drawsBackground="YES" id="Iax-mS-PE0">
+                                    <font key="font" metaFont="systemMedium" size="16"/>
+                                    <color key="textColor" name="brandColor"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Free Plan"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KfW-L5-JwP">
+                                <rect key="frame" x="446" y="10" width="20" height="20"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="arrow-right" id="8Ma-TY-mcG"/>
+                            </imageView>
+                            <box hidden="YES" boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="6" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="l92-k7-RdH">
+                                <rect key="frame" x="364" y="8" width="102" height="24"/>
+                                <view key="contentView" id="laY-S1-6Ld">
+                                    <rect key="frame" x="0.0" y="0.0" width="102" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <popUpButton hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bef-pe-0lM" customClass="CustomSettingsPopUpButton" customModule="Brainify_AI_Mac" customModuleProvider="target">
+                                            <rect key="frame" x="7" y="-4" width="99" height="29"/>
+                                            <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="EsR-hg-HTu" id="5nQ-Og-ZVv">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="message"/>
+                                                <menu key="menu" id="sQM-28-49j">
+                                                    <items>
+                                                        <menuItem title="Item 1" state="on" id="EsR-hg-HTu"/>
+                                                        <menuItem title="Item 2" id="KHU-eN-FkI"/>
+                                                        <menuItem title="Item 3" id="5iH-NR-jcL"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                        </popUpButton>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Bef-pe-0lM" firstAttribute="top" secondItem="laY-S1-6Ld" secondAttribute="top" id="5K5-3i-UEp"/>
+                                        <constraint firstAttribute="trailing" secondItem="Bef-pe-0lM" secondAttribute="trailing" id="LV1-YN-64f"/>
+                                        <constraint firstItem="Bef-pe-0lM" firstAttribute="leading" secondItem="laY-S1-6Ld" secondAttribute="leading" constant="10" id="VQe-9X-ujF"/>
+                                        <constraint firstAttribute="bottom" secondItem="Bef-pe-0lM" secondAttribute="bottom" id="hD4-by-rSX"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="102" id="awy-3x-Abi"/>
+                                    <constraint firstAttribute="height" constant="24" id="icC-jg-Mvq"/>
+                                </constraints>
+                                <color key="fillColor" name="buttonFilleColor"/>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gLT-iZ-u7X" secondAttribute="trailing" constant="14" id="5hc-ZA-35g"/>
+                            <constraint firstItem="KfW-L5-JwP" firstAttribute="centerY" secondItem="wCh-aA-vQF" secondAttribute="centerY" id="Cnw-zj-ykY"/>
+                            <constraint firstAttribute="trailing" secondItem="l92-k7-RdH" secondAttribute="trailing" constant="14" id="Otw-GT-kwq"/>
+                            <constraint firstItem="kJe-FQ-m5F" firstAttribute="leading" secondItem="ynL-mv-R9L" secondAttribute="trailing" constant="10" id="ToS-A7-emV"/>
+                            <constraint firstItem="gLT-iZ-u7X" firstAttribute="centerY" secondItem="wCh-aA-vQF" secondAttribute="centerY" id="VuL-rv-fJ0"/>
+                            <constraint firstItem="ynL-mv-R9L" firstAttribute="centerY" secondItem="wCh-aA-vQF" secondAttribute="centerY" id="deH-zs-h66"/>
+                            <constraint firstAttribute="trailing" secondItem="KfW-L5-JwP" secondAttribute="trailing" constant="14" id="egf-DU-XfI"/>
+                            <constraint firstItem="l92-k7-RdH" firstAttribute="centerY" secondItem="wCh-aA-vQF" secondAttribute="centerY" id="gi3-Qh-QMN"/>
+                            <constraint firstItem="kJe-FQ-m5F" firstAttribute="centerY" secondItem="wCh-aA-vQF" secondAttribute="centerY" id="nvF-BF-AnM"/>
+                            <constraint firstItem="ynL-mv-R9L" firstAttribute="leading" secondItem="wCh-aA-vQF" secondAttribute="leading" constant="12" id="qkT-k6-t5a"/>
+                        </constraints>
+                    </view>
+                    <color key="fillColor" name="sideBarColor"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="x61-Og-U2E" secondAttribute="trailing" id="eor-d7-To3"/>
+                <constraint firstAttribute="bottom" secondItem="x61-Og-U2E" secondAttribute="bottom" id="qNm-gu-aCl"/>
+                <constraint firstItem="x61-Og-U2E" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="yeT-HD-egH"/>
+                <constraint firstItem="x61-Og-U2E" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="zrf-8T-gYD"/>
+            </constraints>
+            <point key="canvasLocation" x="4" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="SettingIcon1" width="22" height="22"/>
+        <image name="arrow-right" width="20" height="20"/>
+        <namedColor name="brandColor">
+            <color red="0.58431372549019611" green="0.23529411764705882" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonFilleColor">
+            <color red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="sideBarColor">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

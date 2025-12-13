@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SplashViewController" customModule="Brainify_AI_Mac" customModuleProvider="target">
+            <connections>
+                <outlet property="subtitleLabel" destination="VaU-Br-tPW" id="RXy-3A-8oN"/>
+                <outlet property="titleLabel" destination="Yiu-Yg-jO1" id="BSd-hK-ybN"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="1200" height="750"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="hlS-qm-4u4">
+                    <rect key="frame" x="0.0" y="0.0" width="1200" height="750"/>
+                    <view key="contentView" clipsToBounds="YES" id="GlU-mz-LGK">
+                        <rect key="frame" x="0.0" y="0.0" width="1200" height="750"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="i4l-RX-5Vf">
+                                <rect key="frame" x="529" y="283" width="143" height="185"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="TBc-xl-PFo">
+                                        <rect key="frame" x="-595" y="80" width="1332" height="105"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="eGi-nC-G4u"/>
+                                    </imageView>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Yiu-Yg-jO1">
+                                        <rect key="frame" x="-2" y="28" width="147" height="40"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Brainify" id="uUC-1m-Ctr">
+                                            <font key="font" metaFont="systemBold" size="34"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Brainify"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VaU-Br-tPW">
+                                        <rect key="frame" x="-2" y="0.0" width="147" height="26"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="AI Math Solver" id="oqR-Er-2ck">
+                                            <font key="font" metaFont="system" size="22"/>
+                                            <color key="textColor" name="secondaryTextColor"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="AI Math Solver"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VaU-Br-tPW" secondAttribute="bottom" id="0Io-88-jFL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yiu-Yg-jO1" secondAttribute="trailing" id="0rX-GF-mT1"/>
+                                    <constraint firstItem="VaU-Br-tPW" firstAttribute="leading" secondItem="i4l-RX-5Vf" secondAttribute="leading" id="1iC-Bz-Trx"/>
+                                    <constraint firstItem="TBc-xl-PFo" firstAttribute="top" secondItem="i4l-RX-5Vf" secondAttribute="top" id="6sr-l7-Arx"/>
+                                    <constraint firstItem="TBc-xl-PFo" firstAttribute="centerX" secondItem="i4l-RX-5Vf" secondAttribute="centerX" id="Bn6-p0-05d"/>
+                                    <constraint firstItem="Yiu-Yg-jO1" firstAttribute="leading" secondItem="i4l-RX-5Vf" secondAttribute="leading" id="DbK-9I-fVa"/>
+                                    <constraint firstAttribute="trailing" secondItem="VaU-Br-tPW" secondAttribute="trailing" id="EOm-Ze-GpP"/>
+                                    <constraint firstItem="Yiu-Yg-jO1" firstAttribute="top" secondItem="TBc-xl-PFo" secondAttribute="bottom" constant="12" id="F2F-K5-PTa"/>
+                                    <constraint firstAttribute="height" constant="185" id="FQX-3a-946"/>
+                                    <constraint firstItem="VaU-Br-tPW" firstAttribute="top" secondItem="Yiu-Yg-jO1" secondAttribute="bottom" constant="2" id="J43-o9-CYZ"/>
+                                    <constraint firstAttribute="width" constant="143" id="UFg-YK-sKT"/>
+                                </constraints>
+                            </customView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Fy-Kf-puS">
+                                <rect key="frame" x="0.0" y="0.0" width="1200" height="750"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="backgroundSplash" id="GcQ-RK-t6A"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="0Fy-Kf-puS" firstAttribute="top" secondItem="GlU-mz-LGK" secondAttribute="top" id="6Aj-QK-wKs"/>
+                            <constraint firstAttribute="bottom" secondItem="0Fy-Kf-puS" secondAttribute="bottom" id="Hzc-da-U2x"/>
+                            <constraint firstItem="i4l-RX-5Vf" firstAttribute="centerX" secondItem="GlU-mz-LGK" secondAttribute="centerX" id="Rv2-7N-9uq"/>
+                            <constraint firstItem="0Fy-Kf-puS" firstAttribute="leading" secondItem="GlU-mz-LGK" secondAttribute="leading" id="awp-Tl-ohw"/>
+                            <constraint firstItem="i4l-RX-5Vf" firstAttribute="centerY" secondItem="GlU-mz-LGK" secondAttribute="centerY" id="ayB-H3-sMN"/>
+                            <constraint firstAttribute="trailing" secondItem="0Fy-Kf-puS" secondAttribute="trailing" id="ipq-ki-pmY"/>
+                        </constraints>
+                    </view>
+                    <color key="fillColor" name="backgroundColor"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="hlS-qm-4u4" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="3Bq-C9-FVg"/>
+                <constraint firstItem="hlS-qm-4u4" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="EUl-Qs-RNd"/>
+                <constraint firstAttribute="bottom" secondItem="hlS-qm-4u4" secondAttribute="bottom" id="TjT-dz-yMp"/>
+                <constraint firstAttribute="trailing" secondItem="hlS-qm-4u4" secondAttribute="trailing" id="VCX-DI-kaw"/>
+            </constraints>
+            <point key="canvasLocation" x="114" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="backgroundSplash" width="1200" height="750"/>
+        <image name="logo" width="1332" height="928"/>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryTextColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

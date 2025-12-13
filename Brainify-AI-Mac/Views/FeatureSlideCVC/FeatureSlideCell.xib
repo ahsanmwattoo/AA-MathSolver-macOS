@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="FeatureSlideCell" customModule="Brainify_AI_Mac" customModuleProvider="target">
+            <connections>
+                <outlet property="featureImage" destination="MkZ-mG-PM9" id="05m-0n-Ii8"/>
+                <outlet property="featureTitle" destination="1h0-Gz-0Xw" id="nne-fC-BxL"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="286"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MkZ-mG-PM9">
+                    <rect key="frame" x="62" y="86" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="7XJ-fi-hhM"/>
+                        <constraint firstAttribute="width" constant="200" id="PSO-P6-gGD"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="FeatureIcon1" id="86g-vc-JEv"/>
+                </imageView>
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1h0-Gz-0Xw">
+                    <rect key="frame" x="-2" y="0.0" width="328" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="JEJ-LT-6NP"/>
+                        <constraint firstAttribute="width" constant="324" id="eCC-uA-x1j"/>
+                    </constraints>
+                    <textFieldCell key="cell" alignment="center" title="Solve your Math Problems Instantly with Advanced Features" id="9Rf-Zb-6SU">
+                        <font key="font" metaFont="systemBold" size="19"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="1h0-Gz-0Xw" firstAttribute="top" secondItem="MkZ-mG-PM9" secondAttribute="bottom" constant="30" id="EEc-2o-uKt"/>
+                <constraint firstItem="MkZ-mG-PM9" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="ISr-vF-nHc"/>
+                <constraint firstAttribute="trailing" secondItem="1h0-Gz-0Xw" secondAttribute="trailing" id="O2Z-qc-i7C"/>
+                <constraint firstItem="1h0-Gz-0Xw" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="dYS-6F-uGd"/>
+                <constraint firstItem="MkZ-mG-PM9" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="jDZ-x8-DCN"/>
+            </constraints>
+            <point key="canvasLocation" x="4" y="154"/>
+        </customView>
+        <collectionViewItem id="LPf-IN-F4n" customClass="FeatureSlideCell" customModule="Brainify_AI_Mac" customModuleProvider="target">
+            <connections>
+                <outlet property="featureImage" destination="MkZ-mG-PM9" id="vot-jE-t3j"/>
+                <outlet property="featureTitle" destination="1h0-Gz-0Xw" id="3T3-6r-XM0"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="Amh-tZ-ADn"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+    <resources>
+        <image name="FeatureIcon1" width="200" height="200"/>
+    </resources>
+</document>

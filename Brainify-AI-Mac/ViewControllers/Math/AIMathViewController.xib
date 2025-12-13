@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AIMathViewController" customModule="Brainify_AI_Mac" customModuleProvider="target">
+            <connections>
+                <outlet property="chooseFileLabel" destination="Eai-AJ-koX" id="A0d-gO-wKf"/>
+                <outlet property="dragBox" destination="2TN-Uy-5ne" id="Kff-6b-HRX"/>
+                <outlet property="dragLabel" destination="5Lk-aS-AyQ" id="0EY-JK-Gbh"/>
+                <outlet property="dragLabelTwo" destination="hSd-1n-gL8" id="Fdt-cw-jR5"/>
+                <outlet property="offerBox" destination="d1k-DT-KgG" id="wEM-Cr-UEM"/>
+                <outlet property="offerLabel" destination="Q9r-oK-Cuh" id="uk9-Tr-NFM"/>
+                <outlet property="offerLabelPortion" destination="HYg-z2-n21" id="08R-gN-pY6"/>
+                <outlet property="offerViewWidth" destination="oBU-tp-SnN" id="dQB-ve-gpd"/>
+                <outlet property="solveBox" destination="NWh-fj-dc2" id="aoP-hn-pWc"/>
+                <outlet property="solveBoxWidth" destination="h6M-gp-G5P" id="iR2-hZ-QbL"/>
+                <outlet property="solveLabel" destination="Okv-O5-gwI" id="WlK-8y-Pt0"/>
+                <outlet property="supportedFormatLabel" destination="FPs-M1-9Tc" id="q2G-gr-TxG"/>
+                <outlet property="textInputBox" destination="XeH-64-ftx" id="pJn-X3-srC"/>
+                <outlet property="textView" destination="iRI-vj-tUg" id="SJa-7R-SPR"/>
+                <outlet property="titleLabel" destination="fau-Y6-yBJ" id="LL0-ZQ-5Ih"/>
+                <outlet property="uploadView" destination="EzB-hH-60a" id="Mch-ni-Pg5"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="1156" height="750"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="22" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="xad-I2-Oy6">
+                    <rect key="frame" x="0.0" y="0.0" width="1156" height="750"/>
+                    <view key="contentView" id="txh-1W-L0k">
+                        <rect key="frame" x="0.0" y="0.0" width="1156" height="750"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Coh-5q-MIo">
+                                <rect key="frame" x="22" y="697" width="338" height="33"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Solve your Math Problem!" id="fau-Y6-yBJ">
+                                    <font key="font" metaFont="systemBold" size="28"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Solve your Math Problem!"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <box boxType="custom" borderType="none" cornerRadius="22" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="2TN-Uy-5ne">
+                                <rect key="frame" x="24" y="20" width="1108" height="519"/>
+                                <view key="contentView" id="EzB-hH-60a" customClass="DragView" customModule="Brainify_AI_Mac" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="1108" height="519"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="hw8-Ms-AdD">
+                                            <rect key="frame" x="270" y="133" width="568" height="253"/>
+                                            <view key="contentView" id="SI6-ta-fT2">
+                                                <rect key="frame" x="0.0" y="0.0" width="568" height="253"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="KwW-YJ-5an">
+                                                        <rect key="frame" x="103" y="9" width="362" height="236"/>
+                                                        <subviews>
+                                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kZq-m7-UWs">
+                                                                <rect key="frame" x="136" y="177" width="91" height="59"/>
+                                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="image" id="bDk-aH-0iL"/>
+                                                            </imageView>
+                                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Lk-aS-AyQ">
+                                                                <rect key="frame" x="60" y="136" width="243" height="21"/>
+                                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Drag and drop your file here" id="sbl-ah-lIa">
+                                                                    <font key="font" metaFont="systemBold" size="18"/>
+                                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Drag and drop your file here"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hSd-1n-gL8">
+                                                                <rect key="frame" x="3" y="107" width="356" height="17"/>
+                                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="or choose a file from finder" id="sn7-Mb-OfJ">
+                                                                    <font key="font" metaFont="system" size="14"/>
+                                                                    <color key="textColor" name="secondaryTextColor"/>
+                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="or choose a file from finder"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="10" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="KmL-0W-eXk">
+                                                                <rect key="frame" x="59" y="43" width="245" height="40"/>
+                                                                <view key="contentView" id="N5X-pW-Xv2">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="245" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Eai-AJ-koX">
+                                                                            <rect key="frame" x="77" y="10" width="91" height="19"/>
+                                                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Choose File" id="CZI-Lm-vdZ">
+                                                                                <font key="font" metaFont="systemMedium" size="16"/>
+                                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Choose File"/>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </textField>
+                                                                        <button translatesAutoresizingMaskIntoConstraints="NO" id="NQf-SG-HOH">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="245" height="40"/>
+                                                                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="VIw-Yc-v1A">
+                                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                                <font key="font" metaFont="system"/>
+                                                                            </buttonCell>
+                                                                            <connections>
+                                                                                <action selector="didTapChooseFile:" target="-2" id="h3d-06-wDi"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="NQf-SG-HOH" secondAttribute="bottom" id="2SD-BH-tKY"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="NQf-SG-HOH" secondAttribute="trailing" id="6UB-A6-g89"/>
+                                                                        <constraint firstItem="Eai-AJ-koX" firstAttribute="centerX" secondItem="N5X-pW-Xv2" secondAttribute="centerX" id="R3f-qg-vtp"/>
+                                                                        <constraint firstItem="NQf-SG-HOH" firstAttribute="top" secondItem="N5X-pW-Xv2" secondAttribute="top" id="Uxt-YC-rGN"/>
+                                                                        <constraint firstItem="Eai-AJ-koX" firstAttribute="centerY" secondItem="N5X-pW-Xv2" secondAttribute="centerY" id="atZ-bi-cbx"/>
+                                                                        <constraint firstItem="NQf-SG-HOH" firstAttribute="leading" secondItem="N5X-pW-Xv2" secondAttribute="leading" id="ktm-JZ-ysO"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="CKD-jR-2Gx"/>
+                                                                    <constraint firstAttribute="width" constant="245" id="qWX-HF-rER"/>
+                                                                </constraints>
+                                                                <color key="fillColor" name="brandColor"/>
+                                                            </box>
+                                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FPs-M1-9Tc">
+                                                                <rect key="frame" x="3" y="0.0" width="356" height="17"/>
+                                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Supported formats: JPG, PNG. Maximum size: 10 MB" id="fRj-gb-USE">
+                                                                    <font key="font" metaFont="system" size="14"/>
+                                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Supported formats: JPG, PNG. Maximum size: 10 MB"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="236" id="26Q-Mp-OFz"/>
+                                                            <constraint firstAttribute="trailing" secondItem="FPs-M1-9Tc" secondAttribute="trailing" constant="5" id="6aR-af-Jm0"/>
+                                                            <constraint firstItem="kZq-m7-UWs" firstAttribute="top" secondItem="KwW-YJ-5an" secondAttribute="top" id="8PT-aj-Xjp"/>
+                                                            <constraint firstAttribute="width" constant="362" id="8zK-5V-qEQ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="hSd-1n-gL8" secondAttribute="trailing" constant="5" id="CAi-52-6JJ"/>
+                                                            <constraint firstItem="kZq-m7-UWs" firstAttribute="centerX" secondItem="KwW-YJ-5an" secondAttribute="centerX" id="He5-NJ-6cQ"/>
+                                                            <constraint firstItem="KmL-0W-eXk" firstAttribute="top" secondItem="hSd-1n-gL8" secondAttribute="bottom" constant="24" id="NVK-Rg-0xw"/>
+                                                            <constraint firstItem="5Lk-aS-AyQ" firstAttribute="centerX" secondItem="KwW-YJ-5an" secondAttribute="centerX" id="UsJ-T3-jOZ"/>
+                                                            <constraint firstAttribute="bottom" secondItem="FPs-M1-9Tc" secondAttribute="bottom" id="WKy-3s-Aqs"/>
+                                                            <constraint firstItem="KmL-0W-eXk" firstAttribute="centerX" secondItem="KwW-YJ-5an" secondAttribute="centerX" id="czx-ZJ-3SY"/>
+                                                            <constraint firstItem="hSd-1n-gL8" firstAttribute="leading" secondItem="KwW-YJ-5an" secondAttribute="leading" constant="5" id="hBq-Nz-xZf"/>
+                                                            <constraint firstItem="hSd-1n-gL8" firstAttribute="top" secondItem="5Lk-aS-AyQ" secondAttribute="bottom" constant="12" id="qGi-Vl-KqZ"/>
+                                                            <constraint firstItem="5Lk-aS-AyQ" firstAttribute="top" secondItem="kZq-m7-UWs" secondAttribute="bottom" constant="20" id="s0t-oS-SId"/>
+                                                            <constraint firstItem="FPs-M1-9Tc" firstAttribute="leading" secondItem="KwW-YJ-5an" secondAttribute="leading" constant="5" id="vI5-fg-IuZ"/>
+                                                        </constraints>
+                                                    </customView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="KwW-YJ-5an" firstAttribute="centerX" secondItem="SI6-ta-fT2" secondAttribute="centerX" id="MQT-bU-Ci2"/>
+                                                    <constraint firstItem="KwW-YJ-5an" firstAttribute="centerY" secondItem="SI6-ta-fT2" secondAttribute="centerY" id="QVa-j1-UUZ"/>
+                                                </constraints>
+                                            </view>
+                                        </box>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hw8-Ms-AdD" firstAttribute="centerX" secondItem="EzB-hH-60a" secondAttribute="centerX" id="0Xh-Al-umL"/>
+                                        <constraint firstItem="hw8-Ms-AdD" firstAttribute="leading" secondItem="EzB-hH-60a" secondAttribute="leading" constant="270" id="1Pq-aE-4KK"/>
+                                        <constraint firstAttribute="bottom" secondItem="hw8-Ms-AdD" secondAttribute="bottom" constant="133" id="OzE-qg-ou5"/>
+                                        <constraint firstItem="hw8-Ms-AdD" firstAttribute="centerY" secondItem="EzB-hH-60a" secondAttribute="centerY" id="Rvy-I3-Wry"/>
+                                        <constraint firstItem="hw8-Ms-AdD" firstAttribute="top" secondItem="EzB-hH-60a" secondAttribute="top" constant="133" id="VHf-fo-MM2"/>
+                                    </constraints>
+                                </view>
+                                <color key="borderColor" name="brandColor"/>
+                                <color key="fillColor" name="sideBarColor"/>
+                            </box>
+                            <box boxType="custom" cornerRadius="16" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="XeH-64-ftx" customClass="TextInputBox" customModule="Brainify_AI_Mac" customModuleProvider="target">
+                                <rect key="frame" x="24" y="559" width="1108" height="118"/>
+                                <view key="contentView" id="LgQ-JS-3wn">
+                                    <rect key="frame" x="1" y="1" width="1106" height="116"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF8-Bl-nsJ" customClass="GrowingTextScrollView" customModule="Brainify_AI_Mac" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="70" width="1074" height="30"/>
+                                            <clipView key="contentView" drawsBackground="NO" id="8q8-Fj-Pbi">
+                                                <rect key="frame" x="0.0" y="0.0" width="1074" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textView wantsLayer="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="iRI-vj-tUg" customClass="PlaceHolderTextView" customModule="Brainify_AI_Mac" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="1074" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <size key="minSize" width="1074" height="30"/>
+                                                        <size key="maxSize" width="1074" height="10000000"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderStringKey" value="Ask Anything"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                                <color key="value" name="secondaryTextColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderString" value="Ask Anything"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </clipView>
+                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="knl-gc-nri">
+                                                <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Q0N-4b-2ar">
+                                                <rect key="frame" x="1058" y="0.0" width="16" height="30"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                        </scrollView>
+                                        <button translatesAutoresizingMaskIntoConstraints="NO" id="m5c-wS-2Kr">
+                                            <rect key="frame" x="889" y="16" width="59" height="40"/>
+                                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="record" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="Nan-El-ujd">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="hDK-ec-dc4"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="didTapRecord:" target="XeH-64-ftx" id="oAY-dz-1MD"/>
+                                            </connections>
+                                        </button>
+                                        <button translatesAutoresizingMaskIntoConstraints="NO" id="HtP-JE-cC3">
+                                            <rect key="frame" x="16" y="14" width="59" height="40"/>
+                                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="attach" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="3pZ-Sw-J5b">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="59" id="3Ts-gi-LPA"/>
+                                                <constraint firstAttribute="height" constant="40" id="9a2-Kn-Bsf"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="didTapAttachments:" target="XeH-64-ftx" id="U9l-me-suj"/>
+                                            </connections>
+                                        </button>
+                                        <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="20" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="NWh-fj-dc2">
+                                            <rect key="frame" x="1031" y="16" width="59" height="40"/>
+                                            <view key="contentView" id="2UD-xE-yju">
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Okv-O5-gwI">
+                                                        <rect key="frame" x="2" y="11" width="55" height="19"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Solve" id="hju-Zg-RUo">
+                                                            <font key="font" metaFont="systemSemibold" size="16"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Solve"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="Bnd-pi-UUq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="40"/>
+                                                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="5SE-nj-N3I">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="sendButtonTapped:" target="XeH-64-ftx" id="hYt-5H-J7E"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Bnd-pi-UUq" secondAttribute="trailing" id="3OF-aP-fih"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Okv-O5-gwI" secondAttribute="trailing" constant="4" id="4we-7f-E3i"/>
+                                                    <constraint firstItem="Bnd-pi-UUq" firstAttribute="top" secondItem="2UD-xE-yju" secondAttribute="top" id="FDx-Iz-NHe"/>
+                                                    <constraint firstItem="Okv-O5-gwI" firstAttribute="centerY" secondItem="2UD-xE-yju" secondAttribute="centerY" id="ZJD-uf-ddH"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Bnd-pi-UUq" secondAttribute="bottom" id="cQQ-nX-gXc"/>
+                                                    <constraint firstItem="Okv-O5-gwI" firstAttribute="leading" secondItem="2UD-xE-yju" secondAttribute="leading" constant="4" id="lvU-PK-eVx"/>
+                                                    <constraint firstItem="Bnd-pi-UUq" firstAttribute="leading" secondItem="2UD-xE-yju" secondAttribute="leading" id="y2f-8u-jkk"/>
+                                                </constraints>
+                                            </view>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="RkO-1K-CcL"/>
+                                                <constraint firstAttribute="width" constant="59" id="h6M-gp-G5P"/>
+                                                <constraint firstAttribute="height" constant="40" id="hv8-X5-F7I"/>
+                                            </constraints>
+                                            <color key="fillColor" name="brandColor"/>
+                                        </box>
+                                        <button translatesAutoresizingMaskIntoConstraints="NO" id="osF-Io-rh4">
+                                            <rect key="frame" x="960" y="16" width="59" height="40"/>
+                                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="equation" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="ieE-w4-Vk7">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="0eB-VE-SJW"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="didTapCalculator:" target="XeH-64-ftx" id="8TB-cg-98d"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="osF-Io-rh4" firstAttribute="leading" secondItem="m5c-wS-2Kr" secondAttribute="trailing" constant="12" id="0DJ-fj-lgk"/>
+                                        <constraint firstItem="wF8-Bl-nsJ" firstAttribute="leading" secondItem="LgQ-JS-3wn" secondAttribute="leading" constant="16" id="7Vn-Ea-4V0"/>
+                                        <constraint firstAttribute="trailing" secondItem="NWh-fj-dc2" secondAttribute="trailing" constant="16" id="ATH-uv-z2V"/>
+                                        <constraint firstItem="wF8-Bl-nsJ" firstAttribute="top" secondItem="LgQ-JS-3wn" secondAttribute="top" constant="16" id="CB1-1H-8Pd"/>
+                                        <constraint firstAttribute="bottom" secondItem="m5c-wS-2Kr" secondAttribute="bottom" constant="16" id="Nbt-zt-cru"/>
+                                        <constraint firstItem="HtP-JE-cC3" firstAttribute="top" secondItem="wF8-Bl-nsJ" secondAttribute="bottom" constant="16" id="bDd-E9-OW7"/>
+                                        <constraint firstItem="HtP-JE-cC3" firstAttribute="leading" secondItem="LgQ-JS-3wn" secondAttribute="leading" constant="16" id="caI-wl-1Cc"/>
+                                        <constraint firstAttribute="bottom" secondItem="HtP-JE-cC3" secondAttribute="bottom" constant="14" id="eKS-iu-UZe"/>
+                                        <constraint firstAttribute="bottom" secondItem="osF-Io-rh4" secondAttribute="bottom" constant="16" id="oj0-cE-or9"/>
+                                        <constraint firstItem="NWh-fj-dc2" firstAttribute="leading" secondItem="osF-Io-rh4" secondAttribute="trailing" constant="12" id="uIs-CE-F35"/>
+                                        <constraint firstAttribute="bottom" secondItem="NWh-fj-dc2" secondAttribute="bottom" constant="16" id="ut3-6K-PJN"/>
+                                        <constraint firstAttribute="trailing" secondItem="wF8-Bl-nsJ" secondAttribute="trailing" constant="16" id="vgI-9D-bD0"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="OD1-5f-VSj"/>
+                                </constraints>
+                                <color key="borderColor" name="strokeColor"/>
+                                <connections>
+                                    <outlet property="attachmentsButton" destination="HtP-JE-cC3" id="h4n-bu-g81"/>
+                                    <outlet property="calculator" destination="osF-Io-rh4" id="0ZV-EL-A06"/>
+                                    <outlet property="microphoneButton" destination="m5c-wS-2Kr" id="Rev-y5-Gb5"/>
+                                    <outlet property="placeholderTextView" destination="iRI-vj-tUg" id="kqO-Lm-nu8"/>
+                                    <outlet property="sendBox" destination="NWh-fj-dc2" id="X9H-zD-qbm"/>
+                                    <outlet property="sendButton" destination="Bnd-pi-UUq" id="1sE-ME-a5U"/>
+                                </connections>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2TN-Uy-5ne" secondAttribute="bottom" constant="20" id="2fY-bb-hgh"/>
+                            <constraint firstItem="XeH-64-ftx" firstAttribute="leading" secondItem="txh-1W-L0k" secondAttribute="leading" constant="24" id="ObY-B9-dvd"/>
+                            <constraint firstItem="XeH-64-ftx" firstAttribute="top" secondItem="Coh-5q-MIo" secondAttribute="bottom" constant="20" id="QYl-Kg-4Zu"/>
+                            <constraint firstItem="Coh-5q-MIo" firstAttribute="top" secondItem="txh-1W-L0k" secondAttribute="top" constant="20" id="Wwm-AT-shs"/>
+                            <constraint firstItem="2TN-Uy-5ne" firstAttribute="top" secondItem="XeH-64-ftx" secondAttribute="bottom" constant="20" id="gGE-2S-F4N"/>
+                            <constraint firstItem="2TN-Uy-5ne" firstAttribute="leading" secondItem="txh-1W-L0k" secondAttribute="leading" constant="24" id="gp2-x0-TIz"/>
+                            <constraint firstItem="Coh-5q-MIo" firstAttribute="leading" secondItem="txh-1W-L0k" secondAttribute="leading" constant="24" id="k8n-3l-VIH"/>
+                            <constraint firstAttribute="trailing" secondItem="XeH-64-ftx" secondAttribute="trailing" constant="24" id="maz-EM-uYH"/>
+                            <constraint firstAttribute="trailing" secondItem="2TN-Uy-5ne" secondAttribute="trailing" constant="24" id="qQC-ql-lA7"/>
+                        </constraints>
+                    </view>
+                    <color key="fillColor" name="backgroundColor"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xad-I2-Oy6" secondAttribute="bottom" id="52v-Bp-scq"/>
+                <constraint firstAttribute="trailing" secondItem="xad-I2-Oy6" secondAttribute="trailing" id="DU9-aD-R7k"/>
+                <constraint firstItem="xad-I2-Oy6" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="m9s-PI-zcZ"/>
+                <constraint firstItem="xad-I2-Oy6" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="oxe-FV-kX6"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cRadius">
+                    <real key="value" value="22"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="114" y="154"/>
+        </customView>
+        <box hidden="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="d1k-DT-KgG">
+            <rect key="frame" x="0.0" y="0.0" width="952" height="43"/>
+            <view key="contentView" id="MhL-8J-ucS" customClass="OfferBox" customModule="Brainify_AI_Mac" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="952" height="43"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="keg-GE-EVv">
+                        <rect key="frame" x="200" y="0.0" width="552" height="43"/>
+                        <subviews>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q9r-oK-Cuh">
+                                <rect key="frame" x="10" y="13" width="350" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Unlock 75% OFF! Don’t miss out, only 9m 47s left!" id="qC3-bV-uNh">
+                                    <font key="font" metaFont="systemBold" size="14"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Unlock 75% OFF! Don’t miss out, only 9m 47s left!"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HYg-z2-n21">
+                                <rect key="frame" x="359" y="13" width="183" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Upgrade to Premium now!" id="jqr-WL-oZS">
+                                    <font key="font" metaFont="systemBold" size="14"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Upgrade to Premium now!"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="67i-b0-KqE">
+                                <rect key="frame" x="361" y="13" width="179" height="17"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="vfr-uj-LZk">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="didTapOffer:" target="-2" id="2Qy-XO-bbu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="HYg-z2-n21" firstAttribute="leading" secondItem="Q9r-oK-Cuh" secondAttribute="trailing" constant="3" id="4yq-xJ-V28"/>
+                            <constraint firstItem="67i-b0-KqE" firstAttribute="top" secondItem="HYg-z2-n21" secondAttribute="top" id="6at-OF-H8U"/>
+                            <constraint firstItem="67i-b0-KqE" firstAttribute="trailing" secondItem="HYg-z2-n21" secondAttribute="trailing" id="IWs-NV-0Gg"/>
+                            <constraint firstItem="67i-b0-KqE" firstAttribute="leading" secondItem="HYg-z2-n21" secondAttribute="leading" id="ME6-1w-9qT"/>
+                            <constraint firstItem="Q9r-oK-Cuh" firstAttribute="leading" secondItem="keg-GE-EVv" secondAttribute="leading" constant="12" id="MZd-9M-cCI"/>
+                            <constraint firstItem="67i-b0-KqE" firstAttribute="top" secondItem="keg-GE-EVv" secondAttribute="top" constant="13" id="TH0-SD-THk"/>
+                            <constraint firstItem="67i-b0-KqE" firstAttribute="bottom" secondItem="HYg-z2-n21" secondAttribute="bottom" id="UtZ-56-m0P"/>
+                            <constraint firstAttribute="bottom" secondItem="Q9r-oK-Cuh" secondAttribute="bottom" constant="13" id="X1f-S1-2y4"/>
+                            <constraint firstItem="Q9r-oK-Cuh" firstAttribute="top" secondItem="keg-GE-EVv" secondAttribute="top" constant="13" id="dww-Pb-tSt"/>
+                            <constraint firstItem="HYg-z2-n21" firstAttribute="leading" secondItem="Q9r-oK-Cuh" secondAttribute="trailing" constant="3" id="iL2-UD-oT1"/>
+                            <constraint firstAttribute="trailing" secondItem="67i-b0-KqE" secondAttribute="trailing" constant="12" id="mFh-i4-UUK"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="568" id="oBU-tp-SnN"/>
+                            <constraint firstAttribute="bottom" secondItem="67i-b0-KqE" secondAttribute="bottom" constant="13" id="tzR-kI-NeP"/>
+                        </constraints>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="keg-GE-EVv" firstAttribute="centerX" secondItem="MhL-8J-ucS" secondAttribute="centerX" id="06K-8A-ipS"/>
+                    <constraint firstItem="keg-GE-EVv" firstAttribute="top" secondItem="MhL-8J-ucS" secondAttribute="top" id="RBg-Mt-8gy"/>
+                    <constraint firstItem="keg-GE-EVv" firstAttribute="centerY" secondItem="MhL-8J-ucS" secondAttribute="centerY" id="mHU-D0-mWg"/>
+                    <constraint firstAttribute="bottom" secondItem="keg-GE-EVv" secondAttribute="bottom" id="wZo-pT-pzK"/>
+                </constraints>
+            </view>
+            <constraints>
+                <constraint firstAttribute="height" constant="43" id="tdw-R7-6Gh"/>
+            </constraints>
+            <point key="canvasLocation" x="237" y="-361"/>
+        </box>
+    </objects>
+    <resources>
+        <image name="attach" width="59" height="40"/>
+        <image name="equation" width="59" height="40"/>
+        <image name="image" width="91" height="59"/>
+        <image name="record" width="59" height="40"/>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="brandColor">
+            <color red="0.58431372549019611" green="0.23529411764705882" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryTextColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="sideBarColor">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="strokeColor">
+            <color red="0.90196078431372551" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

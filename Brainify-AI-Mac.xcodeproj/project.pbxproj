@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D865C8A12EEAB08400C8AE9B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D865C8A02EEAB08400C8AE9B /* Lottie */; };
+		D886C2382ED82EE500594C26 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = D886C2372ED82EE500594C26 /* SwiftyStoreKit */; };
+		D886C2412ED830E200594C26 /* Localization_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = D886C2402ED830E200594C26 /* Localization_Swift */; };
+		D892DB9D2EDEAE0300CBECD2 /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = D892DB9C2EDEAE0300CBECD2 /* Markdown */; };
+		D892DBA02EDEAEA600CBECD2 /* Highlighter in Frameworks */ = {isa = PBXBuildFile; productRef = D892DB9F2EDEAEA600CBECD2 /* Highlighter */; };
+		D8C6081B2EE6CB5A00979BC7 /* MathParser in Frameworks */ = {isa = PBXBuildFile; productRef = D8C6081A2EE6CB5A00979BC7 /* MathParser */; };
+		D8C609322EE7311000979BC7 /* Expression in Frameworks */ = {isa = PBXBuildFile; productRef = D8C609312EE7311000979BC7 /* Expression */; };
+		D8ED79652EEAA55C007DB36C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D8ED79642EEAA55C007DB36C /* FirebaseAnalytics */; };
+		D8ED79672EEAA55C007DB36C /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = D8ED79662EEAA55C007DB36C /* FirebaseAppCheck */; };
+		D8ED79692EEAA55C007DB36C /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = D8ED79682EEAA55C007DB36C /* FirebaseCore */; };
+		D8ED796B2EEAA55C007DB36C /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D8ED796A2EEAA55C007DB36C /* FirebaseCrashlytics */; };
+		D8ED796D2EEAA55C007DB36C /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = D8ED796C2EEAA55C007DB36C /* FirebaseFunctions */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D886BB052ED6284900594C26 /* Brainify-AI-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brainify-AI-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D892DBAA2EDEBFAB00CBECD2 /* Exceptions for "Brainify-AI-Mac" folder in "Brainify-AI-Mac" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D886BB042ED6284900594C26 /* Brainify-AI-Mac */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D886BB072ED6284900594C26 /* Brainify-AI-Mac */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D892DBAA2EDEBFAB00CBECD2 /* Exceptions for "Brainify-AI-Mac" folder in "Brainify-AI-Mac" target */,
+			);
+			path = "Brainify-AI-Mac";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D886BB022ED6284900594C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D892DB9D2EDEAE0300CBECD2 /* Markdown in Frameworks */,
+				D8ED79652EEAA55C007DB36C /* FirebaseAnalytics in Frameworks */,
+				D8ED796D2EEAA55C007DB36C /* FirebaseFunctions in Frameworks */,
+				D886C2382ED82EE500594C26 /* SwiftyStoreKit in Frameworks */,
+				D892DBA02EDEAEA600CBECD2 /* Highlighter in Frameworks */,
+				D8ED796B2EEAA55C007DB36C /* FirebaseCrashlytics in Frameworks */,
+				D886C2412ED830E200594C26 /* Localization_Swift in Frameworks */,
+				D8ED79692EEAA55C007DB36C /* FirebaseCore in Frameworks */,
+				D8C609322EE7311000979BC7 /* Expression in Frameworks */,
+				D8ED79672EEAA55C007DB36C /* FirebaseAppCheck in Frameworks */,
+				D8C6081B2EE6CB5A00979BC7 /* MathParser in Frameworks */,
+				D865C8A12EEAB08400C8AE9B /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D886BAFC2ED6284900594C26 = {
+			isa = PBXGroup;
+			children = (
+				D886BB072ED6284900594C26 /* Brainify-AI-Mac */,
+				D886BB062ED6284900594C26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D886BB062ED6284900594C26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D886BB052ED6284900594C26 /* Brainify-AI-Mac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D886BB042ED6284900594C26 /* Brainify-AI-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D886BB142ED6284B00594C26 /* Build configuration list for PBXNativeTarget "Brainify-AI-Mac" */;
+			buildPhases = (
+				D886BB012ED6284900594C26 /* Sources */,
+				D886BB022ED6284900594C26 /* Frameworks */,
+				D886BB032ED6284900594C26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D886BB072ED6284900594C26 /* Brainify-AI-Mac */,
+			);
+			name = "Brainify-AI-Mac";
+			packageProductDependencies = (
+				D886C2372ED82EE500594C26 /* SwiftyStoreKit */,
+				D886C2402ED830E200594C26 /* Localization_Swift */,
+				D892DB9C2EDEAE0300CBECD2 /* Markdown */,
+				D892DB9F2EDEAEA600CBECD2 /* Highlighter */,
+				D8C6081A2EE6CB5A00979BC7 /* MathParser */,
+				D8C609312EE7311000979BC7 /* Expression */,
+				D8ED79642EEAA55C007DB36C /* FirebaseAnalytics */,
+				D8ED79662EEAA55C007DB36C /* FirebaseAppCheck */,
+				D8ED79682EEAA55C007DB36C /* FirebaseCore */,
+				D8ED796A2EEAA55C007DB36C /* FirebaseCrashlytics */,
+				D8ED796C2EEAA55C007DB36C /* FirebaseFunctions */,
+				D865C8A02EEAB08400C8AE9B /* Lottie */,
+			);
+			productName = "Brainify-AI-Mac";
+			productReference = D886BB052ED6284900594C26 /* Brainify-AI-Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D886BAFD2ED6284900594C26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					D886BB042ED6284900594C26 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = D886BB002ED6284900594C26 /* Build configuration list for PBXProject "Brainify-AI-Mac" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ar,
+				ca,
+				"zh-Hans",
+				"zh-Hant",
+				hr,
+				cs,
+				da,
+				nl,
+				fi,
+				"fr-CA",
+				de,
+				el,
+				he,
+				hi,
+				hu,
+				id,
+				it,
+				ja,
+				ko,
+				ms,
+				nb,
+				pl,
+				"pt-BR",
+				"pt-PT",
+				ro,
+				ru,
+				sk,
+				sl,
+				es,
+				sv,
+				th,
+				tr,
+				uk,
+				vi,
+			);
+			mainGroup = D886BAFC2ED6284900594C26;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D886C2362ED82EE500594C26 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
+				D886C23F2ED830E200594C26 /* XCRemoteSwiftPackageReference "LocalizationSPM" */,
+				D892DB9B2EDEAE0300CBECD2 /* XCRemoteSwiftPackageReference "swift-markdown" */,
+				D892DB9E2EDEAEA600CBECD2 /* XCRemoteSwiftPackageReference "HighlighterSwift" */,
+				D8C608192EE6CB5A00979BC7 /* XCRemoteSwiftPackageReference "DDMathParser" */,
+				D8C609302EE7311000979BC7 /* XCRemoteSwiftPackageReference "Expression" */,
+				D8ED79632EEAA55C007DB36C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D865C89F2EEAB08400C8AE9B /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D886BB062ED6284900594C26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D886BB042ED6284900594C26 /* Brainify-AI-Mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D886BB032ED6284900594C26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D886BB012ED6284900594C26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D886BB122ED6284B00594C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D886BB132ED6284B00594C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		D886BB152ED6284B00594C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Brainify-AI-Mac/Brainify_AI_Mac.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KST42287LW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Brainify-AI-Mac/Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to the microphone to capture your voice for speech-to-text functionality.";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Please allow access to speech recognition to convert your voice into text.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.ai.math.solver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D886BB162ED6284B00594C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Brainify-AI-Mac/Brainify_AI_Mac.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KST42287LW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Brainify-AI-Mac/Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to the microphone to capture your voice for speech-to-text functionality.";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Please allow access to speech recognition to convert your voice into text.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.ai.math.solver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D886BB002ED6284900594C26 /* Build configuration list for PBXProject "Brainify-AI-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D886BB122ED6284B00594C26 /* Debug */,
+				D886BB132ED6284B00594C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D886BB142ED6284B00594C26 /* Build configuration list for PBXNativeTarget "Brainify-AI-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D886BB152ED6284B00594C26 /* Debug */,
+				D886BB162ED6284B00594C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D865C89F2EEAB08400C8AE9B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
+		D886C2362ED82EE500594C26 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.16.4;
+			};
+		};
+		D886C23F2ED830E200594C26 /* XCRemoteSwiftPackageReference "LocalizationSPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Waleedsa465/LocalizationSPM.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		D892DB9B2EDEAE0300CBECD2 /* XCRemoteSwiftPackageReference "swift-markdown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftlang/swift-markdown";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.3;
+			};
+		};
+		D892DB9E2EDEAEA600CBECD2 /* XCRemoteSwiftPackageReference "HighlighterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/smittytone/HighlighterSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		D8C608192EE6CB5A00979BC7 /* XCRemoteSwiftPackageReference "DDMathParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davedelong/DDMathParser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+		D8C609302EE7311000979BC7 /* XCRemoteSwiftPackageReference "Expression" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nicklockwood/Expression";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.13.9;
+			};
+		};
+		D8ED79632EEAA55C007DB36C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D865C8A02EEAB08400C8AE9B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D865C89F2EEAB08400C8AE9B /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		D886C2372ED82EE500594C26 /* SwiftyStoreKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D886C2362ED82EE500594C26 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
+			productName = SwiftyStoreKit;
+		};
+		D886C2402ED830E200594C26 /* Localization_Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D886C23F2ED830E200594C26 /* XCRemoteSwiftPackageReference "LocalizationSPM" */;
+			productName = Localization_Swift;
+		};
+		D892DB9C2EDEAE0300CBECD2 /* Markdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D892DB9B2EDEAE0300CBECD2 /* XCRemoteSwiftPackageReference "swift-markdown" */;
+			productName = Markdown;
+		};
+		D892DB9F2EDEAEA600CBECD2 /* Highlighter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D892DB9E2EDEAEA600CBECD2 /* XCRemoteSwiftPackageReference "HighlighterSwift" */;
+			productName = Highlighter;
+		};
+		D8C6081A2EE6CB5A00979BC7 /* MathParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8C608192EE6CB5A00979BC7 /* XCRemoteSwiftPackageReference "DDMathParser" */;
+			productName = MathParser;
+		};
+		D8C609312EE7311000979BC7 /* Expression */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8C609302EE7311000979BC7 /* XCRemoteSwiftPackageReference "Expression" */;
+			productName = Expression;
+		};
+		D8ED79642EEAA55C007DB36C /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8ED79632EEAA55C007DB36C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D8ED79662EEAA55C007DB36C /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8ED79632EEAA55C007DB36C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		D8ED79682EEAA55C007DB36C /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8ED79632EEAA55C007DB36C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		D8ED796A2EEAA55C007DB36C /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8ED79632EEAA55C007DB36C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		D8ED796C2EEAA55C007DB36C /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8ED79632EEAA55C007DB36C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D886BAFD2ED6284900594C26 /* Project object */;
+}

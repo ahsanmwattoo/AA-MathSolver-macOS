@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CalculatorCollectionViewCell" customModule="Brainify_AI_Mac" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" cornerRadius="10" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Yac-h1-4c0">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                    <view key="contentView" id="8Q9-2H-OPz">
+                        <rect key="frame" x="1" y="1" width="478" height="270"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zj1-g2-xa4">
+                                <rect key="frame" x="3" y="126" width="472" height="19"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Basic Calculator" id="ALF-LS-2Nz">
+                                    <font key="font" metaFont="systemMedium" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Zj1-g2-xa4" firstAttribute="centerX" secondItem="8Q9-2H-OPz" secondAttribute="centerX" id="HI5-9s-FAb"/>
+                            <constraint firstItem="Zj1-g2-xa4" firstAttribute="centerY" secondItem="8Q9-2H-OPz" secondAttribute="centerY" id="IfH-am-QSV"/>
+                            <constraint firstItem="Zj1-g2-xa4" firstAttribute="leading" secondItem="8Q9-2H-OPz" secondAttribute="leading" constant="5" id="P5l-FX-jeE"/>
+                            <constraint firstAttribute="trailing" secondItem="Zj1-g2-xa4" secondAttribute="trailing" constant="5" id="YMr-fa-WEI"/>
+                        </constraints>
+                    </view>
+                    <color key="borderColor" name="strokeColor"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Yac-h1-4c0" secondAttribute="bottom" id="0Te-P9-Z4n"/>
+                <constraint firstAttribute="trailing" secondItem="Yac-h1-4c0" secondAttribute="trailing" id="36M-Ta-hkP"/>
+                <constraint firstItem="Yac-h1-4c0" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Mvw-Se-7Tg"/>
+                <constraint firstItem="Yac-h1-4c0" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Nq5-ja-KFW"/>
+            </constraints>
+            <point key="canvasLocation" x="114" y="154"/>
+        </customView>
+        <collectionViewItem id="uoD-Oa-W4q" customClass="CalculatorCollectionViewCell" customModule="Brainify_AI_Mac" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundBox" destination="Yac-h1-4c0" id="Nuh-2i-69t"/>
+                <outlet property="titleLabel" destination="Zj1-g2-xa4" id="cAv-Cj-NcE"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="Cje-nB-p9r"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+    <resources>
+        <namedColor name="strokeColor">
+            <color red="0.90196078431372551" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

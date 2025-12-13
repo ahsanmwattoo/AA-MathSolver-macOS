@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MathTopicsViewController" customModule="Brainify_AI_Mac" customModuleProvider="target">
+            <connections>
+                <outlet property="titleLabel" destination="q63-bJ-mCa" id="Tx9-wL-Dql"/>
+                <outlet property="topicsCollectionView" destination="WxT-Hh-WKg" id="1K9-Gb-fdv"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="1000" height="750"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="RF6-Zw-i3g">
+                    <rect key="frame" x="0.0" y="0.0" width="1000" height="750"/>
+                    <view key="contentView" id="mZu-hu-mHe">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="750"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q63-bJ-mCa">
+                                <rect key="frame" x="22" y="697" width="508" height="33"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Master Math from Basics to Advanced!" id="hxy-BN-fam">
+                                    <font key="font" metaFont="systemBold" size="28"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Master Math from Basics to Advanced!"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seP-wo-Xxn">
+                                <rect key="frame" x="24" y="30" width="952" height="637"/>
+                                <clipView key="contentView" drawsBackground="NO" id="VEw-Eu-Ds7">
+                                    <rect key="frame" x="0.0" y="0.0" width="952" height="637"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView id="WxT-Hh-WKg">
+                                            <rect key="frame" x="0.0" y="0.0" width="952" height="637"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="yhl-BR-3bX">
+                                                <size key="itemSize" width="50" height="50"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="C5d-pb-ulW">
+                                    <rect key="frame" x="-100" y="-100" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="dTE-XM-DRq">
+                                    <rect key="frame" x="936" y="0.0" width="16" height="637"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="seP-wo-Xxn" secondAttribute="trailing" constant="24" id="5Lw-Wq-swo"/>
+                            <constraint firstItem="seP-wo-Xxn" firstAttribute="leading" secondItem="mZu-hu-mHe" secondAttribute="leading" constant="24" id="Kna-A1-3Dl"/>
+                            <constraint firstItem="q63-bJ-mCa" firstAttribute="leading" secondItem="mZu-hu-mHe" secondAttribute="leading" constant="24" id="QVN-8h-ior"/>
+                            <constraint firstItem="seP-wo-Xxn" firstAttribute="top" secondItem="q63-bJ-mCa" secondAttribute="bottom" constant="30" id="cAa-qh-aBa"/>
+                            <constraint firstAttribute="bottom" secondItem="seP-wo-Xxn" secondAttribute="bottom" constant="30" id="xIk-0p-FV5"/>
+                            <constraint firstItem="q63-bJ-mCa" firstAttribute="top" secondItem="mZu-hu-mHe" secondAttribute="top" constant="20" id="zsP-Nm-jhv"/>
+                        </constraints>
+                    </view>
+                    <color key="fillColor" name="backgroundColor"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="RF6-Zw-i3g" secondAttribute="bottom" id="UmG-99-uIL"/>
+                <constraint firstAttribute="trailing" secondItem="RF6-Zw-i3g" secondAttribute="trailing" id="YLH-Kn-Suz"/>
+                <constraint firstItem="RF6-Zw-i3g" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="iu1-sn-iDt"/>
+                <constraint firstItem="RF6-Zw-i3g" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="jcA-eq-x2r"/>
+            </constraints>
+            <point key="canvasLocation" x="114" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

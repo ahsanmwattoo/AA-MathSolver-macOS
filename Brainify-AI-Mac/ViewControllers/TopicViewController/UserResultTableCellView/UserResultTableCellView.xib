@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="UserResultTableCellView" customModule="Brainify_AI_Mac" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="145" height="1336"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="16" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="NB7-gB-FNc">
+                    <rect key="frame" x="0.0" y="0.0" width="145" height="1336"/>
+                    <view key="contentView" id="ih6-gS-jFc">
+                        <rect key="frame" x="0.0" y="0.0" width="145" height="1336"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="QSA-Cz-weR">
+                                <rect key="frame" x="18" y="16" width="109" height="1254"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="left" id="THW-Wi-3CD">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <string key="title">Printers in the 1500s scrambled the words from Cicero's "De Finibus Bonorum et Malorum'' after mixing the words in each sentence. The familiar "lorem ipsum dolor sit amet" text emerged when 16th-century printers adapted Cicero's original work, beginning with the phrase "dolor sit amet consectetur."
+They abbreviated "dolorem" (meaning "pain") to "lorem," which carries no meaning in Latin. "Ipsum" translates to "itself," and the text frequently includes phrases such as "consectetur adipiscing elit" and "ut labore et dolore." These Latin fragments, derived from Cicero's philosophical treatise, were rearranged to create the standard dummy text that has become a fundamental tool in design and typography across.</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MjA-U7-ts1">
+                                <rect key="frame" x="20" y="1286" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="4Zi-vC-I4G"/>
+                                    <constraint firstAttribute="height" constant="30" id="OqU-Pr-4kh"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="question" id="9dG-EE-eGK"/>
+                            </imageView>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rSZ-kc-NAt">
+                                <rect key="frame" x="52" y="1290" width="86" height="26"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Problem" id="UHB-7v-iiy">
+                                    <font key="font" metaFont="systemMedium" size="22"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Problem"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="rSZ-kc-NAt" firstAttribute="leading" secondItem="MjA-U7-ts1" secondAttribute="trailing" constant="4" id="3X7-gw-3D1"/>
+                            <constraint firstItem="rSZ-kc-NAt" firstAttribute="top" secondItem="ih6-gS-jFc" secondAttribute="top" constant="20" id="EDN-4H-cR7"/>
+                            <constraint firstItem="QSA-Cz-weR" firstAttribute="top" secondItem="rSZ-kc-NAt" secondAttribute="bottom" constant="20" id="MiQ-65-G5F"/>
+                            <constraint firstItem="QSA-Cz-weR" firstAttribute="leading" secondItem="ih6-gS-jFc" secondAttribute="leading" constant="20" id="RQZ-xk-0c3"/>
+                            <constraint firstItem="MjA-U7-ts1" firstAttribute="top" secondItem="ih6-gS-jFc" secondAttribute="top" constant="20" id="caz-9x-Q0t"/>
+                            <constraint firstItem="MjA-U7-ts1" firstAttribute="leading" secondItem="ih6-gS-jFc" secondAttribute="leading" constant="20" id="eqk-PV-cjj"/>
+                            <constraint firstAttribute="bottom" secondItem="QSA-Cz-weR" secondAttribute="bottom" constant="16" id="rpS-sq-SOy"/>
+                            <constraint firstAttribute="trailing" secondItem="QSA-Cz-weR" secondAttribute="trailing" constant="20" id="xxH-RH-Nlo"/>
+                        </constraints>
+                    </view>
+                    <color key="fillColor" name="sideBarColor"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="NB7-gB-FNc" secondAttribute="bottom" id="6Ap-j8-upe"/>
+                <constraint firstAttribute="trailing" secondItem="NB7-gB-FNc" secondAttribute="trailing" id="9k3-cX-JxC"/>
+                <constraint firstItem="NB7-gB-FNc" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="hEA-gz-8il"/>
+                <constraint firstItem="NB7-gB-FNc" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="jKz-J7-zeA"/>
+            </constraints>
+            <connections>
+                <outlet property="problemLabel" destination="rSZ-kc-NAt" id="ND1-bW-zeI"/>
+                <outlet property="textField" destination="QSA-Cz-weR" id="6vD-bZ-slC"/>
+            </connections>
+            <point key="canvasLocation" x="262.5" y="153.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="question" width="30" height="30"/>
+        <namedColor name="sideBarColor">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

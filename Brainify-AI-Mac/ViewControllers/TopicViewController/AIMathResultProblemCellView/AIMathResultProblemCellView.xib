@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView misplaced="YES" id="c22-O7-iKe" customClass="AIMathResultProblemCellView" customModule="Brainify_AI_Mac" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="406"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="16" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="SPX-1J-7La">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="416"/>
+                    <view key="contentView" id="686-bF-Oxh">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sBV-wu-Pei">
+                                <rect key="frame" x="20" y="366" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="XdR-wI-mbT"/>
+                                    <constraint firstAttribute="height" constant="30" id="sJS-MS-epM"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="question" id="keU-uh-Woa"/>
+                            </imageView>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8UQ-cR-Dmg">
+                                <rect key="frame" x="52" y="370" width="86" height="26"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Problem" id="d8V-e6-vAN">
+                                    <font key="font" metaFont="systemMedium" size="22"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Problem"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2c1-IK-KAK">
+                                <rect key="frame" x="20" y="16" width="440" height="334"/>
+                                <subviews>
+                                    <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="DjV-oW-FxX">
+                                        <rect key="frame" x="-2" y="68" width="444" height="266"/>
+                                        <textFieldCell key="cell" selectable="YES" alignment="left" id="HRQ-aH-aBk">
+                                            <font key="font" metaFont="system" size="16"/>
+                                            <string key="title">Printers in the 1500s scrambled the words from Cicero's "De Finibus Bonorum et Malorum'' after mixing the words in each sentence. The familiar "lorem ipsum dolor sit amet" text emerged when 16th-century printers adapted Cicero's original work, beginning with the phrase "dolor sit amet consectetur."
+They abbreviated "dolorem" (meaning "pain") to "lorem," which carries no meaning in Latin. "Ipsum" translates to "itself," and the text frequently includes phrases such as "consectetur adipiscing elit" and "ut labore et dolore." These Latin fragments, derived from Cicero's philosophical treatise, were rearranged to create the standard dummy text that has become a fundamental tool in design and typography across.</string>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ad-Nh-xNN">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="4EV-mi-pOj"/>
+                                            <constraint firstAttribute="width" constant="124" id="nzr-nR-39g"/>
+                                        </constraints>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="fFY-6X-OdR"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DjV-oW-FxX" secondAttribute="trailing" id="3tF-p2-JQg"/>
+                                    <constraint firstItem="DjV-oW-FxX" firstAttribute="leading" secondItem="2c1-IK-KAK" secondAttribute="leading" id="9Rw-eD-nMh"/>
+                                    <constraint firstItem="5ad-Nh-xNN" firstAttribute="leading" secondItem="2c1-IK-KAK" secondAttribute="leading" id="KdS-WN-jYf"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="8UQ-cR-Dmg" firstAttribute="top" secondItem="686-bF-Oxh" secondAttribute="top" constant="20" id="ao9-5h-LL1"/>
+                            <constraint firstAttribute="trailing" secondItem="2c1-IK-KAK" secondAttribute="trailing" constant="20" symbolic="YES" id="cGJ-VF-pu6"/>
+                            <constraint firstItem="sBV-wu-Pei" firstAttribute="top" secondItem="686-bF-Oxh" secondAttribute="top" constant="20" id="dYq-xW-Gkk"/>
+                            <constraint firstItem="2c1-IK-KAK" firstAttribute="top" secondItem="sBV-wu-Pei" secondAttribute="bottom" constant="16" id="kR6-cf-iz0"/>
+                            <constraint firstItem="sBV-wu-Pei" firstAttribute="leading" secondItem="686-bF-Oxh" secondAttribute="leading" constant="20" id="l0w-f0-dXC"/>
+                            <constraint firstItem="2c1-IK-KAK" firstAttribute="leading" secondItem="686-bF-Oxh" secondAttribute="leading" constant="20" symbolic="YES" id="rrn-ju-05b"/>
+                            <constraint firstItem="8UQ-cR-Dmg" firstAttribute="leading" secondItem="sBV-wu-Pei" secondAttribute="trailing" constant="4" id="stQ-jJ-1Yn"/>
+                            <constraint firstAttribute="bottom" secondItem="2c1-IK-KAK" secondAttribute="bottom" constant="16" id="xeR-9Z-JXZ"/>
+                        </constraints>
+                    </view>
+                    <color key="fillColor" name="sideBarColor"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="SPX-1J-7La" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="ZKU-QT-XNO"/>
+                <constraint firstAttribute="trailing" secondItem="SPX-1J-7La" secondAttribute="trailing" id="iIi-jO-85d"/>
+                <constraint firstAttribute="bottom" secondItem="SPX-1J-7La" secondAttribute="bottom" id="nOI-lt-uGA"/>
+                <constraint firstItem="SPX-1J-7La" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="qir-8E-GdP"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="5ad-Nh-xNN" id="gwp-Hl-4Ri"/>
+                <outlet property="problemLabel" destination="8UQ-cR-Dmg" id="9fd-rA-8LL"/>
+                <outlet property="textField" destination="DjV-oW-FxX" id="xg6-zB-g86"/>
+                <outlet property="textView" destination="DjV-oW-FxX" id="dd4-X0-LSc"/>
+            </connections>
+            <point key="canvasLocation" x="-37" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="question" width="30" height="30"/>
+        <namedColor name="sideBarColor">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
