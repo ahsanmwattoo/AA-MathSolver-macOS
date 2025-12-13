@@ -318,3 +318,8 @@
 "File Too Large" = "Το αρχείο είναι πολύ μεγάλο";
 "Please select an image smaller than \(maxSizeMB) MB." = "Επιλέξτε μια εικόνα μικρότερη από \(maxSizeMB) MB.";
 "OK" = "Εντάξει";
+
+
+"System" = "Σύστημα";
+"Light" = "Φωτεινό";
+"Dark" = "Σκοτεινό";

@@ -270,3 +270,8 @@
 "File Too Large" = "Dosya Çok Büyük";
 "Please select an image smaller than \(maxSizeMB) MB." = "Lütfen \(maxSizeMB) MB'den küçük bir resim seçin.";
 "OK" = "Tamam";
+
+
+"System" = "Sistem";
+"Light" = "Açık";
+"Dark" = "Koyu";

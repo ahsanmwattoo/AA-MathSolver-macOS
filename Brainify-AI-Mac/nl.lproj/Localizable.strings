@@ -320,3 +320,8 @@
 "File Too Large" = "Bestand te groot";
 "Please select an image smaller than \(maxSizeMB) MB." = "Selecteer een afbeelding kleiner dan \(maxSizeMB) MB.";
 "OK" = "OK";
+
+
+"System" = "Systeem";
+"Light" = "Licht";
+"Dark" = "Donker";

@@ -298,3 +298,8 @@
 "File Too Large" = "Filen är för stor";
 "Please select an image smaller than \(maxSizeMB) MB." = "Välj en bild mindre än \(maxSizeMB) MB.";
 "OK" = "OK";
+
+
+"System" = "System";
+"Light" = "Ljus";
+"Dark" = "Mörk";

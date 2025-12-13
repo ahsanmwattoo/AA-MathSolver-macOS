@@ -307,3 +307,8 @@
 "File Too Large" = "Fișier prea mare";
 "Please select an image smaller than \(maxSizeMB) MB." = "Selectați o imagine mai mică de \(maxSizeMB) MB.";
 "OK" = "OK";
+
+
+"System" = "Sistem";
+"Light" = "Deschis";
+"Dark" = "Întunecat";

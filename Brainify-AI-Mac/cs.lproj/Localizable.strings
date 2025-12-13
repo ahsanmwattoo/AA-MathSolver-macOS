@@ -320,3 +320,8 @@
 "File Too Large" = "Soubor je příliš velký";
 "Please select an image smaller than \(maxSizeMB) MB." = "Vyberte obrázek menší než \(maxSizeMB) MB.";
 "OK" = "OK";
+
+
+"System" = "Systém";
+"Light" = "Světlý";
+"Dark" = "Tmavý";

@@ -311,3 +311,8 @@
 "File Too Large" = "फ़ाइल बहुत बड़ी है";
 "Please select an image smaller than \(maxSizeMB) MB." = "कृपया \(maxSizeMB) MB से छोटी इमेज चुनें।";
 "OK" = "ठीक है";
+
+
+"System" = "सिस्टम";
+"Light" = "हल्का";
+"Dark" = "डार्क";

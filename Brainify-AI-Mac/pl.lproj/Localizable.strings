@@ -307,3 +307,7 @@
 "File Too Large" = "Plik jest za duży";
 "Please select an image smaller than \(maxSizeMB) MB." = "Wybierz obraz mniejszy niż \(maxSizeMB) MB.";
 "OK" = "OK";
+
+"System" = "System";
+"Light" = "Jasny";
+"Dark" = "Ciemny";

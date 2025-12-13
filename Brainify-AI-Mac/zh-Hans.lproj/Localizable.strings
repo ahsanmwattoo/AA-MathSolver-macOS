@@ -318,3 +318,8 @@
 "File Too Large" = "文件太大";
 "Please select an image smaller than \(maxSizeMB) MB." = "请选择小于 \(maxSizeMB) MB 的图片。";
 "OK" = "好";
+
+
+"System" = "系统";
+"Light" = "浅色";
+"Dark" = "深色";

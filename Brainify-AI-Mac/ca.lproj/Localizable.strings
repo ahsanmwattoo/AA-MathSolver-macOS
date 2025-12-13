@@ -316,3 +316,8 @@
 "File Too Large" = "Fitxer massa gran";
 "Please select an image smaller than \(maxSizeMB) MB." = "Seleccioneu una imatge més petita que \(maxSizeMB) MB.";
 "OK" = "D'acord";
+
+
+"System" = "Sistema";
+"Light" = "Clar";
+"Dark" = "Fosc";

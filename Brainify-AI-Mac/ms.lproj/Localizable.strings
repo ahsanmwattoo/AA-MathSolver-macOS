@@ -308,3 +308,8 @@
 "File Too Large" = "Fail Terlalu Besar";
 "Please select an image smaller than \(maxSizeMB) MB." = "Sila pilih imej yang lebih kecil daripada \(maxSizeMB) MB.";
 "OK" = "OK";
+
+
+"System" = "Sistem";
+"Light" = "Cerah";
+"Dark" = "Gelap";

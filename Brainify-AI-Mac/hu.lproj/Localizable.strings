@@ -311,3 +311,8 @@
 "File Too Large" = "A fájl túl nagy";
 "Please select an image smaller than \(maxSizeMB) MB." = "Kérjük, válasszon \(maxSizeMB) MB-nál kisebb képet.";
 "OK" = "OK";
+
+
+"System" = "Rendszer";
+"Light" = "Világos";
+"Dark" = "Sötét";

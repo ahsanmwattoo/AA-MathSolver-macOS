@@ -18,6 +18,7 @@ class SettingsViewController: BaseViewController {
     @IBOutlet weak var subHeadingLabel: NSTextField!
     @IBOutlet weak var hideAbleBox: NSBox!
     @IBOutlet weak var imageViewPro: NSImageView!
+    @IBOutlet weak var upgardeLabel: NSTextField!
     
     var displayedSections: [SettingsSection] {
         App.isPro
@@ -59,6 +60,7 @@ class SettingsViewController: BaseViewController {
             guard let self else { return }
             headingLabel.stringValue = App.isPro ? "Brainify".localized() : "Unlock Premium Features".localized()
             subHeadingLabel.stringValue = App.isPro ? "AI Math Solver".localized() : "Get unlimited access to Brainify features".localized()
+            upgardeLabel.stringValue = "Upgrade to PRO".localized()
         }
     }
     

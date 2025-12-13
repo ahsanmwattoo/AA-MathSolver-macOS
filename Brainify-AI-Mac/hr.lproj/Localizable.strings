@@ -321,3 +321,8 @@
 "File Too Large" = "Datoteka je prevelika";
 "Please select an image smaller than \(maxSizeMB) MB." = "Odaberite sliku manju od \(maxSizeMB) MB.";
 "OK" = "U redu";
+
+
+"System" = "Sustav";
+"Light" = "Svijetlo";
+"Dark" = "Tamno";

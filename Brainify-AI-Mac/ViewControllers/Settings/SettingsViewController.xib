@@ -16,6 +16,7 @@
                 <outlet property="settingsCollectionView" destination="4If-n3-44L" id="VjE-S5-E7l"/>
                 <outlet property="subHeadingLabel" destination="aKd-Aa-FvX" id="B6z-3w-dET"/>
                 <outlet property="upgardeBox" destination="zva-Pb-NZx" id="GDX-dS-KZK"/>
+                <outlet property="upgardeLabel" destination="iyD-wi-nNn" id="MQ4-e7-APU"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>

@@ -320,3 +320,7 @@
 "File Too Large" = "Tiedosto on liian suuri";
 "Please select an image smaller than \(maxSizeMB) MB." = "Valitse kuva, joka on pienempi kuin \(maxSizeMB) MB.";
 "OK" = "OK";
+
+"System" = "Järjestelmä";
+"Light" = "Vaalea";
+"Dark" = "Tumma";

@@ -275,3 +275,8 @@
 "File Too Large" = "Файл занадто великий";
 "Please select an image smaller than \(maxSizeMB) MB." = "Будь ласка, виберіть зображення менше \(maxSizeMB) МБ.";
 "OK" = "ОК";
+
+
+"System" = "Система";
+"Light" = "Світла";
+"Dark" = "Темна";

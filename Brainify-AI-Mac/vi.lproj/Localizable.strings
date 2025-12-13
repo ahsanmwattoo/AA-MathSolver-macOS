@@ -273,3 +273,8 @@
 "File Too Large" = "Tệp quá lớn";
 "Please select an image smaller than \(maxSizeMB) MB." = "Vui lòng chọn hình ảnh nhỏ hơn \(maxSizeMB) MB.";
 "OK" = "OK";
+
+
+"System" = "Hệ thống";
+"Light" = "Sáng";
+"Dark" = "Tối";

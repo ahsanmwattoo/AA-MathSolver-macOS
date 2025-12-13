@@ -276,3 +276,7 @@
 "File Too Large" = "ไฟล์ใหญ่เกินไป";
 "Please select an image smaller than \(maxSizeMB) MB." = "กรุณาเลือกภาพที่มีขนาดเล็กกว่า \(maxSizeMB) MB";
 "OK" = "ตกลง";
+
+"System" = "ระบบ";
+"Light" = "สว่าง";
+"Dark" = "มืด";
