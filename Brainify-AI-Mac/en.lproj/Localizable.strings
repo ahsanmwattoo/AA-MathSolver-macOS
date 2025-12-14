@@ -110,12 +110,6 @@
 "Exponential Function with Different Growth Rates:" = "Exponential Function with Different Growth Rates:";
 "Differential Equation for Exponential Growth/Decay:" = "Differential Equation for Exponential Growth/Decay:";
 "Exponential Decay with Half-Life:" = "Exponential Decay with Half-Life:";
-"If P(x) and Q(x) share a common factor, then there is a hole at x=a.\\text{If } P(x) \\text{ and } Q(x) \\text{ share a common factor, then there is a hole at } x = a.If P(x) and Q(x) share a common factor, then there is a hole at x=a." = "If P(x) and Q(x) share a common factor, then there is a hole at x=a.\\text{If } P(x) \\text{ and } Q(x) \\text{ share a common factor, then there is a hole at } x = a.If P(x) and Q(x) share a common factor, then there is a hole at x=a.";
-"If deg⁡(P)>deg⁡(Q),the function has an oblique asymptote.\\text{If } \\deg(P) > \\deg(Q), \\quad \\text{the function has an oblique asymptote}.If deg(P)>deg(Q),the function has an oblique asymptote." = "If deg⁡(P)>deg⁡(Q),the function has an oblique asymptote.\\text{If } \\deg(P) > \\deg(Q), \\quad \\text{the function has an oblique asymptote}.If deg(P)>deg(Q),the function has an oblique asymptote.";
-"f(x)=P(x)Q(x)can be simplified by canceling common factors in P(x) and Q(x).f(x) = \\{P(x)}{Q(x)} \\quad \\text{can be simplified by canceling common factors in } P(x) \\text{ and } Q(x).f(x)=Q(x)P(x)​can be simplified by canceling common factors in P(x) and Q(x)." = "f(x)=P(x)Q(x)can be simplified by canceling common factors in P(x) and Q(x).f(x) = \\frac{P(x)}{Q(x)} \\quad \\text{can be simplified by canceling common factors in } P(x) \\text{ and } Q(x).f(x)=Q(x)P(x)​can be simplified by canceling common factors in P(x) and Q(x).";
-"If degree of P(x)=degree of Q(x)+1,y=P(x)Q(x)\\text{If degree of } P(x) = \\text{degree of } Q(x) + 1, \\quad y = \\frac{P(x)}{Q(x)}If degree of P(x)=degree of Q(x)+1,y=Q(x)P(x)" = "If degree of P(x)=degree of Q(x)+1,y=P(x)Q(x)\\text{If degree of } P(x) = \\text{degree of } Q(x) + 1, \\quad y = \\frac{P(x)}{Q(x)}If degree of P(x)=degree of Q(x)+1,y=Q(x)P(x)";
-" If degree of P(x)<Q(x),y=0\\text{If degree of } P(x) < Q(x), \\quad y = 0If degree of P(x)<Q(x),y=0If degree of P(x)=Q(x),y=ab\\text{If degree of } P(x) = Q(x), \\quad y = \\frac{a}{b}If degree of P(x)=Q(x),y=ba" = " If degree of P(x)<Q(x),y=0\\text{If degree of } P(x) < Q(x), \\quad y = 0If degree of P(x)<Q(x),y=0If degree of P(x)=Q(x),y=ab\\text{If degree of } P(x) = Q(x), \\quad y = \\frac{a}{b}If degree of P(x)=Q(x),y=ba";
-"If Q(x)=0, the function has a vertical asymptote at x=a.\\text{If } Q(x) = 0, \\text{ the function has a vertical asymptote at } x = a.If Q(x)=0, the function has a vertical asymptote at x=a." = "If Q(x)=0, the function has a vertical asymptote at x=a.\\text{If } Q(x) = 0, \\text{ the function has a vertical asymptote at } x = a.If Q(x)=0, the function has a vertical asymptote at x=a.";
 
 "Calculus" = "Calculus";
 "Mastering derivatives and integrals." = "Mastering derivatives and integrals.";
@@ -235,7 +229,7 @@
 "or choose a file from finder" = "or choose a file from finder";
 "Choose File" = "Choose File";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Supported formats: JPG, PNG. Maximum size: 10 MB";
-"Keep Track of Activity" = "Keep Track of Activity";
+"Keep Track of Activity!" = "Keep Track of Activity!";
 "No activity yet, let's get started!" = "No activity yet, let's get started!";
 "Start Now" = "Start Now";
 "Brainify" = "Brainify";
@@ -325,3 +319,7 @@
 "System" = "System";
 "Light" = "Light";
 "Dark" = "Dark";
+
+
+"Today" = "Today";
+"Yesterday" = "Yesterday";

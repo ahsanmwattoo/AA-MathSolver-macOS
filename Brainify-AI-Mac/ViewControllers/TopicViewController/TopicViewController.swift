@@ -24,6 +24,7 @@ class TopicViewController: BaseViewController {
     @IBOutlet weak var copyButton: NSButton!
     @IBOutlet weak var playButton: NSButton!
     @IBOutlet weak var shareButton: NSButton!
+    @IBOutlet weak var clearChatBox: NSBox!
     
     var image: NSImage?
     var titleText: String?
@@ -31,6 +32,10 @@ class TopicViewController: BaseViewController {
     var placeholder: String?
     var systemText: String?
     
+    private var streamingTimer: Timer?
+    private var completionCheckTimer: Timer?
+    private var responseString: String = ""
+    private var currentStreamIndex = 0
     private let speakerManager = SpeakerManager()
     private var cancellables: Set<AnyCancellable> = []
     private var currentChat: CDChat?
@@ -86,6 +91,13 @@ class TopicViewController: BaseViewController {
 
     }
     
+    @IBAction func didTapClear(_ sender: Any) {
+        clearChatBox.isHidden = true
+        messages = []
+        emptyStackView.isHidden = false
+        tableView.reloadData()
+    }
+    
     @IBAction func didTapBack(_ sender: Any) {
         removeChildFromNavigation()
     }
@@ -131,90 +143,105 @@ extension TopicViewController {
         messages.append(message)
         return message
     }
+
     
     func sendMessage(prompt: String) {
         task = Task {
             do {
                 api.replaceHistory(with: messages)
-                var index: Int { messages.count - 1 }
+                let userIndex = messages.count
                 createNewChatMessage(text: prompt, role: .user)
                 createNewChatMessage(text: "", role: .assistant)
                 
                 tableView.beginEndUpdates {
-                    tableView.insertRows(at: IndexSet(integer: index - 1), withAnimation: .effectFade)
-                    tableView.insertRows(at: IndexSet(integer: index), withAnimation: .effectFade)
+                    tableView.insertRows(at: IndexSet(integer: userIndex), withAnimation: .effectFade)
+                    tableView.insertRows(at: IndexSet(integer: userIndex + 1), withAnimation: .effectFade)
                 }
                 
-                textView.string.removeAll()
-                
+                textView.string = ""
+                clearChatBox.isHidden = false
                 emptyStackView.isHidden = true
+                textInputBox.sendButtonState = .canStop
                 startStreamTimer()
                 
                 let response = try await api.funcionsCall(text: prompt, model: GPTService.Constants.GPT4o, systemText: systemText ?? "You are an expert mathematics assistant. Solve any math problem accurately with clear, step-by-step explanations using proper LaTeX notation. Stay focused only on mathematics.")
-
-                textInputBox.sendButtonState = .canStop
-
-                AppConstants.requestCount += 1
                 
-                App.incrementFreeTopicCount()
+                await MainActor.run {
+                    self.responseString = response
+                    self.currentStreamIndex = 0
+                    self.startCharacterStreaming()
+                }
+                
+                AppConstants.requestCount += 1
+                App.incrementFreeAICount()
                 if AppConstants.requestCount.isEven, AppConstants.requestCount > 0 {
                     SKStoreReviewController.requestReview()
                 }
                 
-                var currentIndex = response.startIndex // Start index of the response string
-                
-                let timer = Timer.scheduledTimer(withTimeInterval: 0.005, repeats: true) { [weak self] timer in
-                    guard let self = self else { return }
-                    
-                    guard currentIndex < response.endIndex else {
-                        timer.invalidate()
-                        return
-                    }
-                    
-                    if task?.isCancelled ?? false {
-                        task?.cancel()
-                        timer.invalidate()
-                    }
-                    
-                    let character = response[currentIndex]
-                    let word = String(character)
-                    streamMessage(word)
-                    
-                    currentIndex = response.index(after: currentIndex)
-                }
-                
-                RunLoop.main.add(timer, forMode: .common)
-                
-                let timer1 = Timer.scheduledTimer(withTimeInterval: 0.005, repeats: true) { [weak self] timer in
-                    guard let self = self else { return }
-                    
-                    guard currentIndex < response.endIndex else {
-                        timer.invalidate()
-                        
-                        stopSteamTimer()
-                        textInputBox.sendButtonState = .canSend
-                        tableView.reloadData(forRowIndexes: IndexSet(integer: index), columnIndexes: IndexSet(integer: 0))
-                        return
-                    }
-                    
-                }
-                
-                RunLoop.main.add(timer1, forMode: .common)
             } catch {
-                let message = messages[messages.count - 1]
-                stopSteamTimer()
-                textInputBox.sendButtonState = .canSend
-                
-                if !messages.isEmpty {
-                    if message.content.isEmpty {
-                        messages[messages.count - 1] = Message(role: Role.assistant.rawValue, content: "Failed to connect to server. Please check your internet connection.".localized())
-                        tableView.reloadData()
-                    } else {
-                        tableView.reloadData()
+                await MainActor.run {
+                    stopAllStreaming()
+                    textInputBox.sendButtonState = .canSend
+                    
+                    let lastIndex = messages.count - 1
+                    if lastIndex >= 0 && messages[lastIndex].content.isEmpty {
+                        messages[lastIndex].content = "Failed to connect to server. Please check your internet connection.".localized()
+                        tableView.reloadData(forRowIndexes: IndexSet(integer: lastIndex), columnIndexes: IndexSet(integer: 0))
                     }
                 }
             }
         }
+    }
+
+    private func startCharacterStreaming() {
+        guard !responseString.isEmpty else {
+            stopAllStreaming()
+            textInputBox.sendButtonState = .canSend
+            return
+        }
+        
+        streamingTimer = Timer.scheduledTimer(withTimeInterval: 0.005, repeats: true) { [weak self] timer in
+            guard let self = self else { timer.invalidate(); return }
+            
+            if self.currentStreamIndex >= self.responseString.count {
+                timer.invalidate()
+                return
+            }
+            
+            let index = self.responseString.index(self.responseString.startIndex, offsetBy: self.currentStreamIndex)
+            let char = String(self.responseString[index])
+            self.streamMessage(char)
+            self.currentStreamIndex += 1
+        }
+        
+        completionCheckTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] timer in
+            guard let self = self else { timer.invalidate(); return }
+            
+            if self.currentStreamIndex >= self.responseString.count {
+                timer.invalidate()
+                self.finalizeStreaming()
+            }
+        }
+    }
+
+    private func finalizeStreaming() {
+        stopAllStreaming()
+        textInputBox.sendButtonState = .canSend
+        
+        let lastRow = messages.count - 1
+        if lastRow >= 0 {
+            tableView.reloadData(forRowIndexes: IndexSet(integer: lastRow), columnIndexes: IndexSet(integer: 0))
+        }
+    }
+
+    private func stopAllStreaming() {
+        streamingTimer?.invalidate()
+        streamingTimer = nil
+        completionCheckTimer?.invalidate()
+        completionCheckTimer = nil
+        stopSteamTimer()
+        responseString = ""
+        currentStreamIndex = 0
     }
     
     func streamMessage(_ message: String) {
@@ -231,10 +258,9 @@ extension TopicViewController {
 
 extension TopicViewController {
     func startStreamTimer() {
-        if streamTimer == nil {
-            isStreaming = true
-            streamTimer = Timer.scheduledTimer(timeInterval: 0.23, target: self, selector: #selector(scrollStream), userInfo: nil, repeats: true)
-        }
+        guard streamTimer == nil else { return }
+        isStreaming = true
+        streamTimer = Timer.scheduledTimer(timeInterval: 0.23, target: self, selector: #selector(scrollStream), userInfo: nil, repeats: true)
     }
     
     @objc func scrollStream() {
@@ -253,11 +279,9 @@ extension TopicViewController {
     }
     
     func stopSteamTimer() {
-        if streamTimer != nil {
-            isStreaming = false
-            self.streamTimer?.invalidate()
-            self.streamTimer = nil
-        }
+        isStreaming = false
+        streamTimer?.invalidate()
+        streamTimer = nil
     }
     
     @IBAction func onScrollDownClick(_ sender: Any) {
@@ -313,13 +337,27 @@ extension TopicViewController : InputBoxDelegate {
     }
     
     func textInputBoxDidTapStop(_ box: InputBox) {
-        api.task?.cancel()
         task?.cancel()
+        api.task?.cancel()
+        
+        DispatchQueue.main.async {
+            self.stopAllStreaming()
+            box.sendButtonState = .canSend
+            
+            let lastIndex = self.messages.count - 1
+            if lastIndex >= 0 {
+                let cell = self.tableView.view(atColumn: 0, row: lastIndex, makeIfNecessary: true) as? AssistantTableCellView
+                cell?.hideAndStop()
+                self.tableView.reloadData(forRowIndexes: IndexSet(integer: lastIndex), columnIndexes: IndexSet(integer: 0))
+            }
+        }
     }
 }
 
 extension TopicViewController : TableResultViewCellDelegate {
     func tableCellView(_ cell: NSTableCellView, didTapCopyForRow row: Int) {
+        api.task?.cancel()
+        task?.cancel()
         let text = messages[row].content
         let button = (cell as? AssistantResultTableCellView)?.copyButton
         DispatchQueue.main.async {
@@ -337,6 +375,8 @@ extension TopicViewController : TableResultViewCellDelegate {
     }
     
     func tableCellView(_ cell: NSTableCellView, didTapShareForRow row: Int) {
+        api.task?.cancel()
+        task?.cancel()
         let text = messages[row].content
         let sharingPicker = NSSharingServicePicker.init(items: [text])
         if let button = (cell as? AssistantResultTableCellView)?.shareButton {
@@ -346,6 +386,8 @@ extension TopicViewController : TableResultViewCellDelegate {
     }
     
     func tableCellView(_ cell: NSTableCellView, didTapSpeakForRow row: Int) {
+        api.task?.cancel()
+        task?.cancel()
         let text = messages[row].content
         let button = (cell as? AssistantResultTableCellView)?.playButton
         if speakerManager.isSpeaking {

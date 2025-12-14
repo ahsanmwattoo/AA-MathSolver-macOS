@@ -11,6 +11,7 @@ class SettingsViewController: BaseViewController {
 
     static var identifier = "SettingsViewController"
     
+    @IBOutlet weak var titleLabel: NSTextField!
     @IBOutlet weak var gradientBorderBox: NSBox!
     @IBOutlet weak var settingsCollectionView: NSCollectionView!
     @IBOutlet weak var upgardeBox: NSBox!
@@ -19,6 +20,10 @@ class SettingsViewController: BaseViewController {
     @IBOutlet weak var hideAbleBox: NSBox!
     @IBOutlet weak var imageViewPro: NSImageView!
     @IBOutlet weak var upgardeLabel: NSTextField!
+    @IBOutlet weak var customView: NSView!
+    @IBOutlet weak var proHeadinglLabel: NSTextField!
+    @IBOutlet weak var proSubheadingLabel: NSTextField!
+    @IBOutlet weak var stackView: NSStackView!
     
     var displayedSections: [SettingsSection] {
         App.isPro
@@ -43,14 +48,11 @@ class SettingsViewController: BaseViewController {
     }
     
     override func appProStatusDidChange() {
-        upgardeBox?.isHidden = App.isPro
-        headingLabel.stringValue = App.isPro ? "Brainify".localized() : "Unlock Premium Features".localized()
-        headingLabel.font = App.isPro ? .systemFont(ofSize: 22, weight: .bold) : .systemFont(ofSize: 16, weight: .bold)
-        subHeadingLabel.stringValue = App.isPro ? "AI Math Solver".localized() : "Get unlimited access to Brainify features".localized()
-        subHeadingLabel.font = App.isPro ? .systemFont(ofSize: 16, weight: .regular) : .systemFont(ofSize: 10, weight: .regular)
         hideAbleBox?.isHidden = App.isPro
         imageViewPro?.isHidden = !App.isPro
         settingsCollectionView.reloadData()
+        customView.isHidden = !App.isPro
+        stackView.isHidden = App.isPro
     }
         
     override func didChangeLanguage() {
@@ -58,8 +60,11 @@ class SettingsViewController: BaseViewController {
         DispatchQueue.main.async {
             [weak self] in
             guard let self else { return }
-            headingLabel.stringValue = App.isPro ? "Brainify".localized() : "Unlock Premium Features".localized()
-            subHeadingLabel.stringValue = App.isPro ? "AI Math Solver".localized() : "Get unlimited access to Brainify features".localized()
+            titleLabel.stringValue = "Settings".localized()
+            headingLabel.stringValue = "Unlock Premium Features".localized()
+            proHeadinglLabel.stringValue = "Brainify".localized()
+            proSubheadingLabel.stringValue = "AI Math Solver".localized()
+            subHeadingLabel.stringValue = "Get unlimited access to Brainify features".localized()
             upgardeLabel.stringValue = "Upgrade to PRO".localized()
         }
     }
@@ -165,11 +170,11 @@ extension SettingsViewController: SettingsCellDelegate {
     
     func didChangeAppearance(to title: String) {
         switch title {
-        case "Light":
+        case "Light".localized():
             App.appearance = .Light
-        case "Dark":
+        case "Dark".localized():
             App.appearance = .Dark
-        case "System":
+        case "System".localized():
             App.appearance = .System
         default: return
         }

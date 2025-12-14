@@ -192,7 +192,7 @@
 "or choose a file from finder" = "หรือเลือกไฟล์จาก Finder";
 "Choose File" = "เลือกไฟล์";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "รองรับรูปแบบ: JPG, PNG ขนาดสูงสุด: 10 MB";
-"Keep Track of Activity" = "ติดตามกิจกรรม";
+"Keep Track of Activity!" = "ติดตามกิจกรรม";
 "No activity yet, let's get started!" = "ยังไม่มีการดำเนินการ เริ่มต้นกันเลย!";
 "Start Now" = "เริ่มเลย";
 "Brainify" = "Brainify";
@@ -280,3 +280,6 @@
 "System" = "ระบบ";
 "Light" = "สว่าง";
 "Dark" = "มืด";
+
+"Today" = "วันนี้";
+"Yesterday" = "เมื่อวาน";

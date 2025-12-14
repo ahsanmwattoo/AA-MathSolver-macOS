@@ -225,7 +225,7 @@
 "or choose a file from finder" = "vagy válassz fájlt";
 "Choose File" = "Fájl kiválasztása";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Támogatott formátumok: JPG, PNG. Max. méret: 10 MB";
-"Keep Track of Activity" = "Tevékenység követése";
+"Keep Track of Activity!" = "Tevékenység követése";
 "No activity yet, let's get started!" = "Még nincs tevékenység – kezdjük el!";
 "Start Now" = "Kezdjük most";
 "Brainify" = "Brainify";
@@ -316,3 +316,6 @@
 "System" = "Rendszer";
 "Light" = "Világos";
 "Dark" = "Sötét";
+
+"Today" = "Ma";
+"Yesterday" = "Tegnap";

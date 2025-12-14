@@ -224,7 +224,7 @@
 "or choose a file from finder" = "lub wybierz plik z urządzenia";
 "Choose File" = "Wybierz plik";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Obsługiwane formaty: JPG, PNG. Maks. rozmiar: 10 MB";
-"Keep Track of Activity" = "Śledź aktywność";
+"Keep Track of Activity!" = "Śledź aktywność";
 "No activity yet, let's get started!" = "Brak aktywności – zaczynamy!";
 "Start Now" = "Zacznij teraz";
 "Brainify" = "Brainify";
@@ -311,3 +311,5 @@
 "System" = "System";
 "Light" = "Jasny";
 "Dark" = "Ciemny";
+"Today" = "Dzisiaj";
+"Yesterday" = "Wczoraj";

@@ -37,15 +37,22 @@ class HistoryCollectionViewItem: NSCollectionViewItem {
             if let imageData = math.problemImage, let image = NSImage(data: imageData) {
                 problemImageView.image = image
                 problemText.isHidden = true
+                problemImageView.isHidden = false
             } else {
                 problemImageView.image = nil
                 problemText.isHidden = false
+                problemImageView.isHidden = true
             }
             
-            let formatter = DateFormatter()
-            formatter.dateStyle = .medium
-            formatter.timeStyle = .short
-            dateLabel.stringValue = formatter.string(from: math.date ?? Date())
+        guard let date = math.date else {
+                dateLabel.stringValue = ""
+                return
+            }
+            
+            let dayPart = date.relativeDayString()
+            let timePart = date.timeString()
+            
+            dateLabel.stringValue = "\(dayPart), \(timePart)"
         SolutionText.stringValue = math.solution ?? "No Solution"
         
         }

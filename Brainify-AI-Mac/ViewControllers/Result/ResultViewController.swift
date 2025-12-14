@@ -50,7 +50,7 @@ class ResultViewController: BaseViewController {
     }
     
     @IBAction func didTapSolve(_ sender: NSButton) {
-        backButton.isEnabled = false
+       // backButton.isEnabled = false
         if isNetConnected {
             animationView.isHidden = false
             animationView.play()
@@ -59,7 +59,7 @@ class ResultViewController: BaseViewController {
             }
             solveButton.isEnabled = false
         } else {
-            backButton.isEnabled = true
+           // backButton.isEnabled = true
             showNoInternetAlert()
         }
     }

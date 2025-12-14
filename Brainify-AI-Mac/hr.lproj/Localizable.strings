@@ -236,7 +236,7 @@
 "or choose a file from finder" = "ili odaberi datoteku iz preglednika";
 "Choose File" = "Odaberi datoteku";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Podržani formati: JPG, PNG. Maksimalna veličina: 10 MB";
-"Keep Track of Activity" = "Prati aktivnost";
+"Keep Track of Activity!" = "Prati aktivnost";
 "No activity yet, let's get started!" = "Još nema aktivnosti – krenimo!";
 "Start Now" = "Kreni odmah";
 "Brainify" = "Brainify";
@@ -326,3 +326,7 @@
 "System" = "Sustav";
 "Light" = "Svijetlo";
 "Dark" = "Tamno";
+
+
+"Today" = "Danas";
+"Yesterday" = "Jučer";

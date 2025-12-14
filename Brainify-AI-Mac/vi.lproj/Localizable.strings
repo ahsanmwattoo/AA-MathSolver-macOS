@@ -188,7 +188,7 @@
 "or choose a file from finder" = "hoặc chọn file từ máy";
 "Choose File" = "Chọn file";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Định dạng hỗ trợ: JPG, PNG. Kích thước tối đa: 10 MB";
-"Keep Track of Activity" = "Theo dõi hoạt động";
+"Keep Track of Activity!" = "Theo dõi hoạt động";
 "No activity yet, let's get started!" = "Chưa có hoạt động nào, bắt đầu thôi nào!";
 "Start Now" = "Bắt đầu ngay";
 "Brainify" = "Brainify";
@@ -278,3 +278,7 @@
 "System" = "Hệ thống";
 "Light" = "Sáng";
 "Dark" = "Tối";
+
+
+"Today" = "Hôm nay";
+"Yesterday" = "Hôm qua";

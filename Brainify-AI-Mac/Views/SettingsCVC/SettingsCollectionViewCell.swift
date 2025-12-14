@@ -96,7 +96,7 @@ class SettingsCollectionViewCell: NSCollectionViewItem {
                 let options = Appearance.allCases
                 
                 for option in options {
-                    let item = NSMenuItem(title: option.rawValue, action: nil, keyEquivalent: "")
+                    let item = NSMenuItem(title: option.rawValue.localized(), action: nil, keyEquivalent: "")
                     
                     if option == App.appearance {
                         item.state = .on

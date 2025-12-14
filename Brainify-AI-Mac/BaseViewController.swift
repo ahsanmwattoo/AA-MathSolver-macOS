@@ -38,7 +38,12 @@ class BaseViewController: NSViewController {
     @objc func didChangeLanguage() {
         view.localizeSubviews()
     }
-
+        func removeAllChildViewControllers() {
+            for child in children {
+                child.view.removeFromSuperview()
+                child.removeFromParent()
+            }
+        }
     // MARK: - Loading
     func showLoading() { LoadingManager.shared.show(on: self) }
     func hideLoading(completion: (() -> Void)? = nil) { LoadingManager.shared.hide(completion: completion) }

@@ -45,8 +45,12 @@ class PremiumViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.headingLabel.setText(
+            ["UNLIMITED".localized()],
+            color: .brand,
+            font: NSFont.systemFont(ofSize: 54, weight: .bold)
+        )
         didChangeLanguage()
-        headingLabel.setText(["UNLIMITED".localized()],color: .brand, font: NSFont.systemFont(ofSize: 54, weight: .bold))
         setupCollectionView()
         storeManager.$products
                     .receive(on: DispatchQueue.main)
@@ -58,7 +62,6 @@ class PremiumViewController: BaseViewController {
                         self.buyPlanButtonLabel.stringValue = self.selectedProduct?.haveFreeTrial ?? false ? "Start Free Trial".localized() : "C O N T I N U E".localized()
                         self.planInfoLabel.stringValue = self.selectedProduct?.haveFreeTrial ?? false ? "3 Days Free Trial, then".localized() + " \(self.selectedProduct?.displayPrice ?? "--") " + "per month".localized() : ""
                     }.store(in: &cancellable)
-        
     }
     
     override func viewWillAppear() {
@@ -69,32 +72,33 @@ class PremiumViewController: BaseViewController {
         }
     }
     
-    override func viewDidLayout() {
-        super.viewDidLayout()
-        collectionView.collectionViewLayout?.invalidateLayout()
-    }
-    
     override func didChangeLanguage() {
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
-            collectionView.reloadData()
             headingLabel.stringValue = "GET UNLIMITED ACCESS".localized()
-            headingLabel.alignment = .center
-            subheadingLabel.stringValue = "Upgrade to Pro and solve math like a genius!".localized()
-            noCommitmentLabel.stringValue = "No Commitment,Cancel Anytime".localized()
-            descriptionLabel.stringValue = "Your subscription will automatically renew unless auto-renew is turned off at least 24-hours before the end of the current subscription period. Payment will be charged to your iTunes account at confirmation of purchase.".localized()
-            termsButton.title = "Terms of Use".localized()
-            privacyButton.title = "Privacy Policy".localized()
-            continueButton.title = "Continue with Free Plan".localized()
-            restoreButton.title = "Restore Purchase".localized()
-            sideHeadingLabel.stringValue = "Why Choose Premium?".localized()
-            featureLabelOne.stringValue = "Unlimited Snap & Solve Math Problems".localized()
-            featureLabelTwo.stringValue = "Write Math Easily with a Smart Calculator".localized()
-            featureLabelThree.stringValue = "Instant Access to All Math Formulas".localized()
-            featureLabelFour.stringValue = "Ask the Math Assistant Anything".localized()
-            headingLabel.setText(["UNLIMITED".localized()],color: .brand, font: NSFont.systemFont(ofSize: 54, weight: .bold))
+            self.headingLabel.setText(
+                ["UNLIMITED".localized()],
+                color: .brand,
+                font: NSFont.systemFont(ofSize: 54, weight: .bold)
+            )
+
+            self.subheadingLabel.stringValue = "Upgrade to Pro and solve math like a genius!".localized()
+            self.noCommitmentLabel.stringValue = "No Commitment,Cancel Anytime".localized()
+            self.descriptionLabel.stringValue = "Your subscription will automatically renew unless auto-renew is turned off at least 24-hours before the end of the current subscription period. Payment will be charged to your iTunes account at confirmation of purchase.".localized()
+
+            self.termsButton.title = "Terms of Use".localized()
+            self.privacyButton.title = "Privacy Policy".localized()
+            self.continueButton.title = "Continue with Free Plan".localized()
+            self.restoreButton.title = "Restore Purchase".localized()
+
+            self.sideHeadingLabel.stringValue = "Why Choose Premium?".localized()
+            self.featureLabelOne.stringValue = "Unlimited Snap & Solve Math Problems".localized()
+            self.featureLabelTwo.stringValue = "Write Math Easily with a Smart Calculator".localized()
+            self.featureLabelThree.stringValue = "Instant Access to All Math Formulas".localized()
+            self.featureLabelFour.stringValue = "Ask the Math Assistant Anything".localized()
         }
     }
+
     
     func setupCollectionView() {
         configureCollectionView(collectionView, dataSource: self, delegate: self)

@@ -225,7 +225,7 @@
 "or choose a file from finder" = "またはファイルを選択";
 "Choose File" = "ファイルを選択";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "対応形式：JPG, PNG・最大10MB";
-"Keep Track of Activity" = "アクティビティを記録";
+"Keep Track of Activity!" = "アクティビティを記録";
 "No activity yet, let's get started!" = "まだアクティビティがありません – 始めましょう！";
 "Start Now" = "今すぐ開始";
 "Brainify" = "Brainify";
@@ -314,3 +314,6 @@
 "System" = "システム";
 "Light" = "ライト";
 "Dark" = "ダーク";
+
+"Today" = "今日";
+"Yesterday" = "昨日";

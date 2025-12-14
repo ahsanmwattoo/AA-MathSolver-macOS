@@ -37,20 +37,20 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Quick Access to Mathematical Formulas"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtQ-wx-IbS">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="60" horizontalPageScroll="10" verticalLineScroll="60" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtQ-wx-IbS">
                                 <rect key="frame" x="24" y="24" width="952" height="648"/>
                                 <clipView key="contentView" drawsBackground="NO" id="zeP-1o-dMz">
                                     <rect key="frame" x="0.0" y="0.0" width="952" height="648"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" id="K24-84-YNh">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" tableStyle="fullWidth" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="60" viewBased="YES" id="K24-84-YNh">
                                             <rect key="frame" x="0.0" y="0.0" width="952" height="648"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <size key="intercellSpacing" width="17" height="0.0"/>
+                                            <size key="intercellSpacing" width="16" height="0.0"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="gridColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <tableColumns>
-                                                <tableColumn identifier="AutomaticTableColumnIdentifier.0" width="919.5" minWidth="40" maxWidth="12345346364364346" id="JMf-ab-SfA">
+                                                <tableColumn identifier="AutomaticTableColumnIdentifier.0" width="940" minWidth="40" maxWidth="12345346364364346" id="JMf-ab-SfA">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -63,11 +63,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="XnE-gU-zpJ">
-                                                            <rect key="frame" x="18" y="0.0" width="915" height="24"/>
+                                                            <rect key="frame" x="8" y="0.0" width="936" height="24"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5f-0f-Of8">
-                                                                    <rect key="frame" x="0.0" y="4" width="915" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="4" width="936" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="K3u-mU-yqB">
                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -88,7 +88,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="8nL-rg-nfi">
-                                    <rect key="frame" x="0.0" y="564" width="952" height="16"/>
+                                    <rect key="frame" x="0.0" y="632" width="952" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Xed-yk-8N1">

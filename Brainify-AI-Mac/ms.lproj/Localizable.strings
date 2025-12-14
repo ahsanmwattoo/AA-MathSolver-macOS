@@ -225,7 +225,7 @@
 "or choose a file from finder" = "atau pilih fail dari peranti";
 "Choose File" = "Pilih Fail";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Format disokong: JPG, PNG. Saiz maksimum: 10 MB";
-"Keep Track of Activity" = "Jejak Aktiviti";
+"Keep Track of Activity!" = "Jejak Aktiviti";
 "No activity yet, let's get started!" = "Belum ada aktiviti – mari mulakan!";
 "Start Now" = "Mulakan Sekarang";
 "Brainify" = "Brainify";
@@ -313,3 +313,6 @@
 "System" = "Sistem";
 "Light" = "Cerah";
 "Dark" = "Gelap";
+
+"Today" = "Hari ini";
+"Yesterday" = "Semalam";

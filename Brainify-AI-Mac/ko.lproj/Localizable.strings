@@ -225,7 +225,7 @@
 "or choose a file from finder" = "또는 파일을 선택하세요";
 "Choose File" = "파일 선택";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "지원 형식: JPG, PNG. 최대 10MB";
-"Keep Track of Activity" = "활동 기록 보기";
+"Keep Track of Activity!" = "활동 기록 보기";
 "No activity yet, let's get started!" = "아직 활동이 없습니다 – 시작해볼까요!";
 "Start Now" = "지금 시작";
 "Brainify" = "Brainify";
@@ -314,3 +314,6 @@
 "System" = "시스템";
 "Light" = "라이트";
 "Dark" = "다크";
+
+"Today" = "오늘";
+"Yesterday" = "어제";

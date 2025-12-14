@@ -9,12 +9,18 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SettingsViewController" customModule="Brainify_AI_Mac" customModuleProvider="target">
             <connections>
+                <outlet property="customView" destination="rDY-m2-SJd" id="AQz-Zr-C5R"/>
                 <outlet property="gradientBorderBox" destination="mTJ-2l-w8E" id="WHu-wx-OmG"/>
                 <outlet property="headingLabel" destination="TQB-Ct-vp9" id="wBk-Yy-Dah"/>
                 <outlet property="hideAbleBox" destination="ex6-UG-4ei" id="YjZ-1M-VU1"/>
                 <outlet property="imageViewPro" destination="ZOO-d0-3ks" id="qVA-dH-S9M"/>
+                <outlet property="labelTopConstraint" destination="ceI-iy-TlP" id="0R6-sr-qVg"/>
+                <outlet property="proHeadinglLabel" destination="EnN-kV-KnY" id="fwb-vq-7ym"/>
+                <outlet property="proSubheadingLabel" destination="42m-bT-aV9" id="BXh-hg-M5e"/>
                 <outlet property="settingsCollectionView" destination="4If-n3-44L" id="VjE-S5-E7l"/>
+                <outlet property="stackView" destination="NyE-Sa-y3H" id="89X-ii-1fU"/>
                 <outlet property="subHeadingLabel" destination="aKd-Aa-FvX" id="B6z-3w-dET"/>
+                <outlet property="titleLabel" destination="rA6-JS-BoX" id="0z5-Cz-v8L"/>
                 <outlet property="upgardeBox" destination="zva-Pb-NZx" id="GDX-dS-KZK"/>
                 <outlet property="upgardeLabel" destination="iyD-wi-nNn" id="MQ4-e7-APU"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -41,16 +47,16 @@
                                 </textFieldCell>
                             </textField>
                             <box boxType="custom" borderWidth="2" cornerRadius="18" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="mTJ-2l-w8E">
-                                <rect key="frame" x="20" y="578" width="960" height="109"/>
+                                <rect key="frame" x="20" y="577" width="960" height="110"/>
                                 <view key="contentView" id="LxI-ar-FtG">
-                                    <rect key="frame" x="2" y="2" width="956" height="105"/>
+                                    <rect key="frame" x="2" y="2" width="956" height="106"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NyE-Sa-y3H">
-                                            <rect key="frame" x="12" y="11" width="200" height="82"/>
+                                        <stackView hidden="YES" distribution="fill" orientation="vertical" alignment="leading" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NyE-Sa-y3H">
+                                            <rect key="frame" x="0.0" y="11" width="214" height="94"/>
                                             <subviews>
                                                 <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="TQB-Ct-vp9">
-                                                    <rect key="frame" x="-2" y="63" width="204" height="19"/>
+                                                    <rect key="frame" x="12" y="63" width="204" height="19"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Unlock Premium Features" id="5R3-BU-8oG">
                                                         <font key="font" metaFont="systemBold" size="16"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -61,7 +67,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aKd-Aa-FvX">
-                                                    <rect key="frame" x="-2" y="45" width="200" height="13"/>
+                                                    <rect key="frame" x="12" y="48" width="200" height="13"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Get unlimited access to Brainify features" id="lr2-6U-LNn">
                                                         <font key="font" metaFont="system" size="10"/>
                                                         <color key="textColor" name="secondaryTextColor"/>
@@ -72,7 +78,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <box boxType="custom" borderType="none" cornerRadius="12" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="zva-Pb-NZx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="40"/>
+                                                    <rect key="frame" x="14" y="0.0" width="144" height="40"/>
                                                     <view key="contentView" id="de0-pI-qgd">
                                                         <rect key="frame" x="0.0" y="0.0" width="144" height="40"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,6 +122,14 @@
                                                     <color key="fillColor" name="brandColor"/>
                                                 </box>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TQB-Ct-vp9" firstAttribute="leading" secondItem="NyE-Sa-y3H" secondAttribute="leading" constant="14" id="2SD-D1-8dB"/>
+                                                <constraint firstItem="zva-Pb-NZx" firstAttribute="top" secondItem="aKd-Aa-FvX" secondAttribute="bottom" constant="8" id="ASA-0B-Qeq"/>
+                                                <constraint firstItem="zva-Pb-NZx" firstAttribute="leading" secondItem="NyE-Sa-y3H" secondAttribute="leading" constant="14" id="bB1-z5-j8J"/>
+                                                <constraint firstItem="TQB-Ct-vp9" firstAttribute="top" secondItem="NyE-Sa-y3H" secondAttribute="top" constant="12" id="ceI-iy-TlP"/>
+                                                <constraint firstItem="aKd-Aa-FvX" firstAttribute="top" secondItem="TQB-Ct-vp9" secondAttribute="bottom" constant="2" id="eCf-yP-m2V"/>
+                                                <constraint firstItem="aKd-Aa-FvX" firstAttribute="leading" secondItem="NyE-Sa-y3H" secondAttribute="leading" constant="14" id="ugu-7k-aIu"/>
+                                            </constraints>
                                             <visibilityPriorities>
                                                 <integer value="1000"/>
                                                 <integer value="1000"/>
@@ -127,8 +141,37 @@
                                                 <real value="3.4028234663852886e+38"/>
                                             </customSpacing>
                                         </stackView>
+                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="rDY-m2-SJd">
+                                            <rect key="frame" x="14" y="37" width="150" height="50"/>
+                                            <subviews>
+                                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EnN-kV-KnY">
+                                                    <rect key="frame" x="-2" y="24" width="84" height="26"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Brainify" id="oPv-Yb-TlC">
+                                                        <font key="font" metaFont="systemBold" size="22"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="42m-bT-aV9">
+                                                    <rect key="frame" x="-2" y="3" width="110" height="19"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="AI Math Solver" id="9dV-EA-3Uk">
+                                                        <font key="font" metaFont="system" size="16"/>
+                                                        <color key="textColor" name="secondaryTextColor"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EnN-kV-KnY" firstAttribute="top" secondItem="rDY-m2-SJd" secondAttribute="top" id="Bx0-ak-QKr"/>
+                                                <constraint firstAttribute="height" constant="50" id="DaQ-1z-X0Z"/>
+                                                <constraint firstItem="42m-bT-aV9" firstAttribute="leading" secondItem="rDY-m2-SJd" secondAttribute="leading" id="UcM-3z-DxA"/>
+                                                <constraint firstAttribute="width" constant="150" id="jNw-K6-yRx"/>
+                                                <constraint firstItem="42m-bT-aV9" firstAttribute="top" secondItem="EnN-kV-KnY" secondAttribute="bottom" constant="2" id="tUl-8f-rVr"/>
+                                                <constraint firstItem="EnN-kV-KnY" firstAttribute="leading" secondItem="rDY-m2-SJd" secondAttribute="leading" id="ubB-Pi-hUl"/>
+                                            </constraints>
+                                        </customView>
                                         <box boxType="custom" borderType="none" borderWidth="0.0" title="hideableBox" translatesAutoresizingMaskIntoConstraints="NO" id="ex6-UG-4ei">
-                                            <rect key="frame" x="864" y="8" width="78" height="87"/>
+                                            <rect key="frame" x="864" y="20" width="78" height="87"/>
                                             <view key="contentView" id="tGj-fe-SUA">
                                                 <rect key="frame" x="0.0" y="0.0" width="78" height="87"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +198,7 @@
                                             </constraints>
                                         </box>
                                         <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="ZOO-d0-3ks">
-                                            <rect key="frame" x="872" y="16" width="70" height="70"/>
+                                            <rect key="frame" x="872" y="28" width="70" height="70"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="70" id="NMV-3P-hMe"/>
                                                 <constraint firstAttribute="height" constant="70" id="twc-zG-IBw"/>
@@ -165,28 +208,31 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="ZOO-d0-3ks" secondAttribute="trailing" constant="14" id="5jg-nz-xBo"/>
+                                        <constraint firstAttribute="bottom" secondItem="rDY-m2-SJd" secondAttribute="bottom" constant="29" id="9D4-BU-fqS"/>
                                         <constraint firstAttribute="bottom" secondItem="ZOO-d0-3ks" secondAttribute="bottom" constant="19" id="JNh-eL-JhS"/>
+                                        <constraint firstItem="rDY-m2-SJd" firstAttribute="top" secondItem="LxI-ar-FtG" secondAttribute="top" constant="30" id="KIa-4V-W50"/>
                                         <constraint firstAttribute="bottom" secondItem="ex6-UG-4ei" secondAttribute="bottom" constant="10" id="PgL-Di-8Ye"/>
                                         <constraint firstItem="ZOO-d0-3ks" firstAttribute="top" secondItem="LxI-ar-FtG" secondAttribute="top" constant="19" id="Qmg-sF-sle"/>
-                                        <constraint firstItem="NyE-Sa-y3H" firstAttribute="leading" secondItem="LxI-ar-FtG" secondAttribute="leading" constant="12" id="R7f-xB-AXR"/>
+                                        <constraint firstItem="NyE-Sa-y3H" firstAttribute="leading" secondItem="LxI-ar-FtG" secondAttribute="leading" id="R7f-xB-AXR"/>
                                         <constraint firstAttribute="trailing" secondItem="ex6-UG-4ei" secondAttribute="trailing" constant="14" id="aNy-Ow-C8N"/>
                                         <constraint firstItem="ex6-UG-4ei" firstAttribute="top" secondItem="LxI-ar-FtG" secondAttribute="top" constant="10" id="f7O-As-zzp"/>
                                         <constraint firstAttribute="bottom" secondItem="NyE-Sa-y3H" secondAttribute="bottom" constant="11" id="h7a-xd-Hb4"/>
+                                        <constraint firstItem="rDY-m2-SJd" firstAttribute="leading" secondItem="LxI-ar-FtG" secondAttribute="leading" constant="14" id="k4o-Cv-fKG"/>
                                         <constraint firstItem="NyE-Sa-y3H" firstAttribute="top" secondItem="LxI-ar-FtG" secondAttribute="top" constant="12" id="wqF-z7-SB7"/>
                                     </constraints>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="109" id="ykO-D3-nNW"/>
+                                    <constraint firstAttribute="height" constant="110" id="ykO-D3-nNW"/>
                                 </constraints>
                             </box>
                             <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9Y-A3-fSG">
-                                <rect key="frame" x="24" y="20" width="952" height="543"/>
+                                <rect key="frame" x="24" y="20" width="952" height="542"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="5Gt-ov-PRV">
-                                    <rect key="frame" x="0.0" y="0.0" width="952" height="543"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="952" height="542"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView selectable="YES" allowsEmptySelection="NO" id="4If-n3-44L">
-                                            <rect key="frame" x="0.0" y="0.0" width="952" height="543"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="952" height="542"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="JnM-A6-Ll2">
                                                 <size key="itemSize" width="50" height="50"/>
@@ -201,7 +247,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="27G-HQ-dtK">
-                                    <rect key="frame" x="-100" y="-100" width="15" height="143"/>
+                                    <rect key="frame" x="936" y="0.0" width="16" height="542"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>

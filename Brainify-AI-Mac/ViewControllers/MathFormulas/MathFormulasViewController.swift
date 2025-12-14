@@ -26,7 +26,7 @@ class MathFormulasViewController: BaseViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 80
+        tableView.rowHeight = 60
         tableView.hideScrollers()
         tableView.usesAutomaticRowHeights = true
         tableView.intercellSpacing = NSSize(width: 0, height: 16)
@@ -58,9 +58,16 @@ class MathFormulasViewController: BaseViewController {
         } else {
             expandedIndex = clickedRow
         }
-        tableView.reloadData()
         
+        tableView.reloadData()
         tableView.noteHeightOfRows(withIndexesChanged: IndexSet(integer: clickedRow))
+        
+        // Har row expand hone pe visible ho jayegi
+        if expandedIndex == clickedRow {
+            DispatchQueue.main.async { [weak tableView] in
+                tableView?.scrollRowToVisible(clickedRow)
+            }
+        }
     }
 }
 

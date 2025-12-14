@@ -224,7 +224,7 @@
 "or choose a file from finder" = "sau alege un fișier";
 "Choose File" = "Alege fișier";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Formate suportate: JPG, PNG. Dimensiune maximă: 10 MB";
-"Keep Track of Activity" = "Urmărește activitatea";
+"Keep Track of Activity!" = "Urmărește activitatea";
 "No activity yet, let's get started!" = "Nicio activitate încă – hai să începem!";
 "Start Now" = "Începe acum";
 "Brainify" = "Brainify";
@@ -312,3 +312,6 @@
 "System" = "Sistem";
 "Light" = "Deschis";
 "Dark" = "Întunecat";
+
+"Today" = "Astăzi";
+"Yesterday" = "Ieri";

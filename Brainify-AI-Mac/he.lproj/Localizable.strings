@@ -224,7 +224,7 @@
 "or choose a file from finder" = "או בחר קובץ";
 "Choose File" = "בחר קובץ";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "פורמטים נתומכים: JPG, PNG. גודל מקסימלי: 10MB";
-"Keep Track of Activity" = "עקוב אחרי הפעילות";
+"Keep Track of Activity!" = "עקוב אחרי הפעילות";
 "No activity yet, let's get started!" = "עדיין אין פעילות – בואו נתחיל!";
 "Start Now" = "התחל עכשיו";
 "Brainify" = "Brainify";
@@ -313,3 +313,5 @@
 "System" = "מערכת";
 "Light" = "בהיר";
 "Dark" = "כהה";
+"Today" = "היום";
+"Yesterday" = "אתמול";

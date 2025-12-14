@@ -11,7 +11,6 @@ class WindowController: NSWindowController {
 
     override func windowDidLoad() {
         super.windowDidLoad()
-        window?.center()
         removeToolbarButtons()
         let splashVC = SplashViewController(nibName: SplashViewController.identifier, bundle: nil)
         self.window?.contentViewController = splashVC

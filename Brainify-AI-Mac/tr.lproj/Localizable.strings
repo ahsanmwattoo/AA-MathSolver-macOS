@@ -189,7 +189,7 @@
 "or choose a file from finder" = "veya Finder’dan bir dosya seçin";
 "Choose File" = "Dosya Seç";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Desteklenen formatlar: JPG, PNG. Maksimum boyut: 10 MB";
-"Keep Track of Activity" = "Aktiviteyi Takip Et";
+"Keep Track of Activity!" = "Aktiviteyi Takip Et";
 "No activity yet, let's get started!" = "Henüz aktivite yok, başlayalım!";
 "Start Now" = "Şimdi Başla";
 "Brainify" = "Brainify";
@@ -275,3 +275,7 @@
 "System" = "Sistem";
 "Light" = "Açık";
 "Dark" = "Koyu";
+
+
+"Today" = "Bugün";
+"Yesterday" = "Dün";

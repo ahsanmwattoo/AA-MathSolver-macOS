@@ -31,7 +31,7 @@ class TextInputBox: NSBox {
     
     weak var delegate: TextInputBoxDelegate?
     var microphoneIsOn: Bool = false
-    var popover = NSPopover()
+    let popover = NSPopover()
     let synthesizer = AVSpeechSynthesizer()
     private var speechRecognizer: SFSpeechRecognizer? { return SFSpeechRecognizer(locale: Locale(identifier: "en")) }
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -152,14 +152,15 @@ class TextInputBox: NSBox {
         }
     }
     
-    @IBAction func didTapRecord(_ sender: Any) {
+    @IBAction func didTapRecord(_ sender: NSButton) {
         isRecording.toggle()
     }
     
     @IBAction func sendButtonTapped(_ sender: NSButton) {
         if popover.isShown {
-            popover.close()
+            popover.performClose(sender)
         }
+        closeCalculator()
         
         isRecording = false
         guard !placeholderTextView.string.isBlank else { return }
@@ -419,7 +420,7 @@ extension TextInputBox {
         let calculatorVC = CalculatorViewController(nibName: "CalculatorViewController", bundle: nil)
         
         popover.contentViewController = calculatorVC
-        popover.behavior = .applicationDefined
+        popover.behavior = .semitransient
         popover.animates = true
         
         calculatorVC.preferredContentSize = NSSize(width: 980, height: 380)
@@ -432,7 +433,7 @@ extension TextInputBox {
                 basicVC.delegate = self
             }
         }
-
+        
         NotificationCenter.default.addObserver(
             forName: NSPopover.didCloseNotification,
             object: popover,
@@ -447,25 +448,25 @@ extension TextInputBox {
         calculatorVC.view.wantsLayer = true
         calculatorVC.view.layer?.cornerRadius = 16
         calculatorVC.view.layer?.masksToBounds = true
-
+        
         self.calculatorWindow = popover
         self.calculatorViewController = calculatorVC
         isCalculatorOpen = true
         updateCalculatorButtonState()
     }
-
+    
     private func closeCalculator() {
-        calculatorWindow?.close()
-        calculatorWindow = nil
-        calculatorViewController = nil
+        popover.performClose(nil)
         isCalculatorOpen = false
         updateCalculatorButtonState()
+        NotificationCenter.default.post(name: NSPopover.didCloseNotification, object: popover)
     }
 }
 
 extension TextInputBox: BasicCalculatorDelegate {
     func calculatorDidClearText(_ calculator: BasicCalculatorViewController) {
         placeholderTextView.string = ""
+        textViewDidChange()
     }
     
     func calculator(_ calculator: BasicCalculatorViewController, didUpdateExpression text: String) {

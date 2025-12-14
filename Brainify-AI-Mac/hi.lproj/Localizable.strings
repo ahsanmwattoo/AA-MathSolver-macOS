@@ -226,7 +226,7 @@
 "or choose a file from finder" = "या फाइल चुनें";
 "Choose File" = "फाइल चुनें";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "समर्थित फॉर्मेट: JPG, PNG। अधिकतम साइज़: 10 MB";
-"Keep Track of Activity" = "गतिविधि पर नज़र रखें";
+"Keep Track of Activity!" = "गतिविधि पर नज़र रखें";
 "No activity yet, let's get started!" = "अभी तक कोई गतिविधि नहीं – चलो शुरू करते हैं!";
 "Start Now" = "अभी शुरू करें";
 "Brainify" = "Brainify";
@@ -316,3 +316,5 @@
 "System" = "सिस्टम";
 "Light" = "हल्का";
 "Dark" = "डार्क";
+"Today" = "आज";
+"Yesterday" = "कल";

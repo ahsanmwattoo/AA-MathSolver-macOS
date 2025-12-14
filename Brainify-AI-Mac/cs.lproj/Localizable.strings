@@ -236,7 +236,7 @@
 "or choose a file from finder" = "nebo vyberte soubor";
 "Choose File" = "Vybrat soubor";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Podporované formáty: JPG, PNG. Max. velikost: 10 MB";
-"Keep Track of Activity" = "Sledujte aktivitu";
+"Keep Track of Activity!" = "Sledujte aktivitu";
 "No activity yet, let's get started!" = "Zatím žádná aktivita – pojďme začít!";
 "Start Now" = "Začít hned";
 "Brainify" = "Brainify";
@@ -325,3 +325,6 @@
 "System" = "Systém";
 "Light" = "Světlý";
 "Dark" = "Tmavý";
+
+"Today" = "Dnes";
+"Yesterday" = "Včera";

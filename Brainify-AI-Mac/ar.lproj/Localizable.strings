@@ -234,7 +234,7 @@
 "or choose a file from finder" = "أو اختر ملفاً من الجهاز";
 "Choose File" = "اختر ملف";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "الصيغ المدعومة: JPG، PNG. الحد الأقصى: 10 ميغابايت";
-"Keep Track of Activity" = "تابع نشاطك";
+"Keep Track of Activity!" = "تابع نشاطك";
 "No activity yet, let's get started!" = "لا يوجد نشاط بعد، فلنبدأ!";
 "Start Now" = "ابدأ الآن";
 "Brainify" = "برينيفاي";
@@ -324,3 +324,7 @@
 "System" = "النظام";
 "Light" = "فاتح";
 "Dark" = "داكن";
+
+
+"Today" = "اليوم";
+"Yesterday" = "أمس";

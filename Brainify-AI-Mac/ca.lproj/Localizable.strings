@@ -233,7 +233,7 @@
 "or choose a file from finder" = "o tria un fitxer";
 "Choose File" = "Tria fitxer";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Formats permesos: JPG, PNG. Mida màxima: 10 MB";
-"Keep Track of Activity" = "Segueix l'activitat";
+"Keep Track of Activity!" = "Segueix l'activitat";
 "No activity yet, let's get started!" = "Encara no hi ha activitat, comencem!";
 "Start Now" = "Començar ara";
 "Brainify" = "Brainify";
@@ -321,3 +321,5 @@
 "System" = "Sistema";
 "Light" = "Clar";
 "Dark" = "Fosc";
+"Today" = "Avui";
+"Yesterday" = "Ahir";

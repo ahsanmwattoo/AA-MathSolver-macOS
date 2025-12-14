@@ -6,6 +6,7 @@
 //
 
 import Cocoa
+import SwiftMath
 
 class FormulaCell: NSTableCellView {
     
@@ -56,37 +57,76 @@ class FormulaCell: NSTableCellView {
             
             for (index, formula) in formulas.enumerated() {
                 let numberLabel = NSTextField(labelWithString: "\(index + 1).")
-                numberLabel.font = NSFont.systemFont(ofSize: 16)
+                numberLabel.font = NSFont.systemFont(ofSize: 16, weight: .medium)
                 numberLabel.textColor = .brand
-                let name = formula.name.localized()
-                let cleanName = name.replacingOccurrences(of: ":", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+                
+                let cleanName = formula.name.localized()
+                    .replacingOccurrences(of: ":", with: "")
+                    .trimmingCharacters(in: .whitespacesAndNewlines)
+                
                 let nameLabel = NSTextField(wrappingLabelWithString: cleanName)
-                nameLabel.font = NSFont.systemFont(ofSize: 16)
+                nameLabel.font = NSFont.systemFont(ofSize: 16, weight: .semibold)
                 nameLabel.textColor = .brand
                 
-                let hStack = NSStackView(views: [numberLabel, nameLabel])
-                hStack.spacing = 2
-                hStack.alignment = .centerY
-                hStack.distribution = .fill
+                let headerStack = NSStackView(views: [numberLabel, nameLabel])
+                headerStack.spacing = 8
+                headerStack.alignment = .centerY
                 
-                let formulaLabel = NSTextField(wrappingLabelWithString: formula.formula.prettyText())
-                formulaLabel.font = NSFont.systemFont(ofSize: 16)
-                formulaLabel.textColor = .labelColor
-                formulaLabel.maximumNumberOfLines = 0
+                // SwiftMath Label
+                let mathLabel = MTMathUILabel()
+                mathLabel.latex = formula.formula
+                mathLabel.fontSize = 17
+                mathLabel.textColor = NSColor.labelColor
+                mathLabel.labelMode = .display
+                mathLabel.textAlignment = .left
+                mathLabel.contentInsets = NSEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
                 
-                let vStack = NSStackView(views: [hStack, formulaLabel])
+                DispatchQueue.main.async { [weak mathLabel, weak self] in
+                    guard let mathLabel = mathLabel, let self = self else { return }
+                    
+                    mathLabel.layout()
+                    
+                    let fittingHeight = mathLabel.fittingSize.height
+                    
+                    if fittingHeight > 0 {
+                        mathLabel.constraints.forEach { $0.isActive = false }
+                        
+                        let heightConstraint = mathLabel.heightAnchor.constraint(equalToConstant: fittingHeight)
+                        heightConstraint.priority = .required
+                        heightConstraint.isActive = true
+                    } else {
+                        mathLabel.latex = "\\text{Error parsing formula}"
+                        mathLabel.layout()
+                    }
+                    self.layoutSubtreeIfNeeded()
+                }
+                // Indent
+                let indentView = NSView()
+                indentView.translatesAutoresizingMaskIntoConstraints = false
+                indentView.widthAnchor.constraint(equalToConstant: 5).isActive = true
+                
+                let indentedStack = NSStackView(views: [indentView, mathLabel])
+                indentedStack.spacing = 0
+                indentedStack.alignment = .top
+                
+                // Vertical Stack
+                let vStack = NSStackView(views: [headerStack, indentedStack])
                 vStack.orientation = .vertical
-                vStack.spacing = 6
+                vStack.spacing = 14
                 vStack.alignment = .leading
                 
                 formulasStackView.addArrangedSubview(vStack)
             }
-        
+            
             formulasStackView.isHidden = false
-        formulaStackBottomConstraint?.constant = -20
-            self.setNeedsDisplay(self.bounds)
+            formulaStackBottomConstraint?.constant = -20
+            
+            // Extra layout pass
+            DispatchQueue.main.async {
+                self.layoutSubtreeIfNeeded()
+            }
         }
-        
+    
         func hideFormulas() {
             formulasStackView?.isHidden = true
             formulaStackBottomConstraint?.constant = -10

@@ -48,8 +48,7 @@ class ContentViewController: BaseViewController {
         let nib = NSNib(nibNamed: "SideMenuCollectionViewCell", bundle: nil)
         collectionView.register(nib, forItemWithIdentifier: NSUserInterfaceItemIdentifier(rawValue: "SideMenuCollectionViewCell"))
         collectionView.selectItem(index: 0, section: 0)
-        hideAbleBox.isHidden = App.isPro
-
+        hideAbleBox?.isHidden = App.isPro
     }
 
     override func didChangeLanguage() {
@@ -82,6 +81,14 @@ class ContentViewController: BaseViewController {
             self?.collectionView.reloadData()
             self?.tabView.selectTabViewItem(at: 0)
             self?.collectionView.selectItem(index: 0, section: 0)
+            if let mathVC = self?.tabView.tabViewItems[0].viewController as? AIMathViewController {
+                mathVC.removeAllChildViewControllers()
+                mathVC.textView.string = ""
+                mathVC.textInputBox.updateSendButtonEnabled(false)
+                if let presentedVC = mathVC.presentedViewControllers?.first {
+                    presentedVC.dismiss(nil)
+                }
+            }
         }
     }
 
@@ -157,7 +164,7 @@ extension ContentViewController: NSCollectionViewDataSource, NSCollectionViewDel
 
 extension ContentViewController: NSCollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 40)
+        return CGSize(width: 210, height: 40)
     }
     
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

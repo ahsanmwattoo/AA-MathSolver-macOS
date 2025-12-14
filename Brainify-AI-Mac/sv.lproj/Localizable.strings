@@ -214,7 +214,7 @@
 "or choose a file from finder" = "eller välj en fil från Finder";
 "Choose File" = "Välj fil";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Stödda format: JPG, PNG. Maxstorlek: 10 MB";
-"Keep Track of Activity" = "Håll koll på aktiviteten";
+"Keep Track of Activity!" = "Håll koll på aktiviteten";
 "No activity yet, let's get started!" = "Ingen aktivitet ännu, låt oss komma igång!";
 "Start Now" = "Starta nu";
 "Brainify" = "Brainify";
@@ -303,3 +303,7 @@
 "System" = "System";
 "Light" = "Ljus";
 "Dark" = "Mörk";
+
+
+"Today" = "Idag";
+"Yesterday" = "Igår";

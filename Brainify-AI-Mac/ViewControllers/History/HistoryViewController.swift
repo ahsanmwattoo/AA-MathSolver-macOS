@@ -44,6 +44,7 @@ class HistoryViewController: BaseViewController {
         setupCollectionView()
         bindViewmodel()
         updateViews()
+
     }
     
     override func viewWillAppear() {
@@ -56,7 +57,7 @@ class HistoryViewController: BaseViewController {
         DispatchQueue.main.async {
             [weak self] in
             guard let self else { return }
-            titleLabel.stringValue = "Keep Track of Activity".localized() + "!"
+            titleLabel.stringValue = "Keep Track of Activity!".localized()
             emptyViewLabel.stringValue = "No activity yet, let's get started!".localized()
             startNowLabel.stringValue = "Start Now".localized()
         }
@@ -203,7 +204,6 @@ extension HistoryViewController {
         sharingPicker.show(relativeTo: sourceView.bounds, of: sourceView, preferredEdge: .maxX)
 
     }
-
 
     func handleDeleteAction(math: CDMath) {
         showLoading()

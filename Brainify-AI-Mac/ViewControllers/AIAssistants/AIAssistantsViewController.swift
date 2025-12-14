@@ -146,10 +146,7 @@ extension AIAssistantsViewController {
                 textInputBox.sendButtonState = .canStop
                 startStreamTimer()
                 
-                let response = try await api.funcionsCall(text: prompt, model: GPTService.Constants.GPT4o, systemText: """
-                    You are MathBot, a precise artificial intelligence that exists solely to help with mathematics.
-                    // ... (your full system prompt)
-                """)
+                let response = try await api.funcionsCall(text: prompt, model: GPTService.Constants.GPT4o, systemText: "You are an expert mathematics assistant. Solve any math problem accurately with clear, step-by-step explanations using proper LaTeX notation. Stay focused only on mathematics.")
                 
                 await MainActor.run {
                     self.responseString = response
@@ -377,14 +374,17 @@ extension AIAssistantsViewController: TextInputBoxDelegate {
     func textInputBoxDidTapStop(_ box: TextInputBox) {
         task?.cancel()
         api.task?.cancel()
+        
+        DispatchQueue.main.async {
+            self.stopAllStreaming()
+            box.sendButtonState = .canSend
             
-            stopAllStreaming()
-            textInputBox.sendButtonState = .canSend
-            
-            // Finalize partial message so copy/share/speak work
-            let lastRow = messages.count - 1
-            if lastRow >= 0 {
-                tableView.reloadData(forRowIndexes: IndexSet(integer: lastRow), columnIndexes: IndexSet(integer: 0))
+            let lastIndex = self.messages.count - 1
+            if lastIndex >= 0 {
+                let cell = self.tableView.view(atColumn: 0, row: lastIndex, makeIfNecessary: true) as? AssistantTableCellView
+                cell?.hideAndStop()
+                self.tableView.reloadData(forRowIndexes: IndexSet(integer: lastIndex), columnIndexes: IndexSet(integer: 0))
             }
+        }
     }
 }

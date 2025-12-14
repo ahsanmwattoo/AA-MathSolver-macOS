@@ -19,6 +19,7 @@
 		D8ED79692EEAA55C007DB36C /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = D8ED79682EEAA55C007DB36C /* FirebaseCore */; };
 		D8ED796B2EEAA55C007DB36C /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D8ED796A2EEAA55C007DB36C /* FirebaseCrashlytics */; };
 		D8ED796D2EEAA55C007DB36C /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = D8ED796C2EEAA55C007DB36C /* FirebaseFunctions */; };
+		D8EE8FFE2EEEA58D007AB3C4 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = D8EE8FFD2EEEA58D007AB3C4 /* SwiftMath */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8EE8FFE2EEEA58D007AB3C4 /* SwiftMath in Frameworks */,
 				D892DB9D2EDEAE0300CBECD2 /* Markdown in Frameworks */,
 				D8ED79652EEAA55C007DB36C /* FirebaseAnalytics in Frameworks */,
 				D8ED796D2EEAA55C007DB36C /* FirebaseFunctions in Frameworks */,
@@ -117,6 +119,7 @@
 				D8ED796A2EEAA55C007DB36C /* FirebaseCrashlytics */,
 				D8ED796C2EEAA55C007DB36C /* FirebaseFunctions */,
 				D865C8A02EEAB08400C8AE9B /* Lottie */,
+				D8EE8FFD2EEEA58D007AB3C4 /* SwiftMath */,
 			);
 			productName = "Brainify-AI-Mac";
 			productReference = D886BB052ED6284900594C26 /* Brainify-AI-Mac.app */;
@@ -189,6 +192,7 @@
 				D8C609302EE7311000979BC7 /* XCRemoteSwiftPackageReference "Expression" */,
 				D8ED79632EEAA55C007DB36C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				D865C89F2EEAB08400C8AE9B /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				D8EE8FFC2EEEA58D007AB3C4 /* XCRemoteSwiftPackageReference "SwiftMath" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D886BB062ED6284900594C26 /* Products */;
@@ -495,6 +499,14 @@
 				minimumVersion = 12.7.0;
 			};
 		};
+		D8EE8FFC2EEEA58D007AB3C4 /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mgriebling/SwiftMath";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -557,6 +569,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D8ED79632EEAA55C007DB36C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFunctions;
+		};
+		D8EE8FFD2EEEA58D007AB3C4 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8EE8FFC2EEEA58D007AB3C4 /* XCRemoteSwiftPackageReference "SwiftMath" */;
+			productName = SwiftMath;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

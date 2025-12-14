@@ -225,7 +225,7 @@
 "or choose a file from finder" = "atau pilih file dari perangkat";
 "Choose File" = "Pilih File";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Format yang didukung: JPG, PNG. Ukuran maks: 10 MB";
-"Keep Track of Activity" = "Pantau Aktivitas";
+"Keep Track of Activity!" = "Pantau Aktivitas";
 "No activity yet, let's get started!" = "Belum ada aktivitas – ayo mulai!";
 "Start Now" = "Mulai Sekarang";
 "Brainify" = "Brainify";
@@ -314,3 +314,6 @@
 "System" = "Sistem";
 "Light" = "Terang";
 "Dark" = "Gelap";
+
+"Today" = "Hari ini";
+"Yesterday" = "Kemarin";

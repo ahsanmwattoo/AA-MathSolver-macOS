@@ -80,7 +80,6 @@ class AIMathViewController: BaseViewController {
         uploadView.fileUrlCallback = { [weak self] url in
             guard let self = self else { return }
             
-            // Check file size first (10 MB = 10 * 1024 * 1024 bytes)
             if !self.isFileSizeValid(url: url, maxSizeMB: 10) {
                 return
             }
@@ -174,11 +173,19 @@ class AIMathViewController: BaseViewController {
     }
     
     func solveImage(_ image: NSImage, viewController: ResultViewController) {
-        guard let imageString = image.toBase64() else {
+        guard App.isPro || App.canSendQuery else {
+            showPremiumScreen()
             return
         }
+        
+        guard let imageString = image.toBase64() else { return }
+        
         if isNetConnected {
-            task = Task {
+            weak var weakResultVC = viewController
+            
+            task = Task { [weak self] in
+                guard let self else { return }
+                
                 do {
                     let input: InputOutput = .init(
                         role: .user,
@@ -188,19 +195,18 @@ class AIMathViewController: BaseViewController {
                     let instructions = "Solve this math problem and provide steps, with proper formatting, if it isn't math problem, just reply with: Kindly provide a math problem image."
                     
                     let response = try await service.getResponse(model: GPTService.Constants.GPT4o, input: [input], instructions: instructions)
-                    AppConstants.requestCount += 1
                     
+                    AppConstants.requestCount += 1
                     App.incrementFreeAIMathCount()
                     if AppConstants.requestCount.isEven, AppConstants.requestCount > 0 {
                         SKStoreReviewController.requestReview()
                     }
-                    // Prepare data for CoreData
+                    
                     let id = UUID().uuidString
                     let problemText = "Image-based Math Problem"
                     let problemImageData = image.jpegData(compressionQuality: 0.8) ?? Data()
                     let date = Date()
                     
-                    // Save to CoreData
                     _ = try MathRepository.shared.createNewChat(
                         id: id,
                         problemText: problemText,
@@ -209,17 +215,24 @@ class AIMathViewController: BaseViewController {
                         date: date
                     )
                     
-                    // Proceed to show result
-                    DispatchQueue.main.async {
-                        viewController.dismiss(nil)
+                    await MainActor.run {
+                        if weakResultVC?.presentingViewController == nil && weakResultVC?.isViewLoaded == true {
+                            // ResultVC already dismissed → user cancelled → mat dikhao result
+                            return
+                        }
+                        
                         self.showResult(problemImage: image, soltutionText: response)
                     }
+                    
                 } catch {
-                    DispatchQueue.main.async {
-                        viewController.dismiss(nil)
+                    await MainActor.run {
+                        // Error case mein bhi dismiss kar do agar abhi presented hai
+                        if weakResultVC?.presentingViewController != nil {
+                            viewController.dismiss(nil)
+                        }
                     }
                     print("Error: \(error)")
-                    showAlert(title: "Error".localized(), message: "Failed to connect to server. Please check your internet connection.".localized())
+                    self.showAlert(title: "Error".localized(), message: "Failed to connect to server. Please check your internet connection.".localized())
                 }
             }
         } else {
@@ -292,11 +305,8 @@ class AIMathViewController: BaseViewController {
 
 extension AIMathViewController: ResultViewControllerDelegate {
     func resultViewControllerDidTapBack(_ controller: ResultViewController) {
-        DispatchQueue.main.async { [weak self] in
-            guard let self else { return }
-            task?.cancel()
-            service.task?.cancel()
-        }
+        task?.cancel()
+        service.task?.cancel()
     }
     
     func resultViewControllerDidSolve(_ controller: ResultViewController, image: NSImage) {

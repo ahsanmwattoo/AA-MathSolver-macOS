@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XUf-AV-7gC">
-                                <rect key="frame" x="8" y="10" width="20" height="20"/>
+                                <rect key="frame" x="6" y="10" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="0gH-FE-NT0"/>
                                     <constraint firstAttribute="height" constant="20" id="SfB-Eg-B1N"/>
@@ -33,7 +33,7 @@
                                 <color key="contentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="reX-Yj-ydf">
-                                <rect key="frame" x="30" y="11" width="173" height="19"/>
+                                <rect key="frame" x="28" y="11" width="177" height="19"/>
                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" alignment="left" title="AI Math" id="cXq-n4-pfq">
                                     <font key="font" metaFont="systemMedium" size="16"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -44,9 +44,9 @@
                         <constraints>
                             <constraint firstItem="reX-Yj-ydf" firstAttribute="centerY" secondItem="cA2-le-oVg" secondAttribute="centerY" id="cyK-Ma-1WM"/>
                             <constraint firstItem="XUf-AV-7gC" firstAttribute="centerY" secondItem="cA2-le-oVg" secondAttribute="centerY" id="fnQ-iU-zaE"/>
-                            <constraint firstAttribute="trailing" secondItem="reX-Yj-ydf" secondAttribute="trailing" constant="8" id="hTN-C1-7vC"/>
+                            <constraint firstAttribute="trailing" secondItem="reX-Yj-ydf" secondAttribute="trailing" constant="6" id="hTN-C1-7vC"/>
                             <constraint firstItem="reX-Yj-ydf" firstAttribute="leading" secondItem="XUf-AV-7gC" secondAttribute="trailing" constant="4" id="mUb-xZ-PB3"/>
-                            <constraint firstItem="XUf-AV-7gC" firstAttribute="leading" secondItem="cA2-le-oVg" secondAttribute="leading" constant="8" id="tns-Y3-Pdw"/>
+                            <constraint firstItem="XUf-AV-7gC" firstAttribute="leading" secondItem="cA2-le-oVg" secondAttribute="leading" constant="6" id="tns-Y3-Pdw"/>
                         </constraints>
                     </view>
                 </box>

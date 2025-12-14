@@ -224,7 +224,7 @@
 "or choose a file from finder" = "eller velg en fil";
 "Choose File" = "Velg fil";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Støttede formater: JPG, PNG. Maks størrelse: 10 MB";
-"Keep Track of Activity" = "Følg med på aktiviteten";
+"Keep Track of Activity!" = "Følg med på aktiviteten";
 "No activity yet, let's get started!" = "Ingen aktivitet ennå – la oss komme i gang!";
 "Start Now" = "Start nå";
 "Brainify" = "Brainify";
@@ -313,3 +313,6 @@
 "System" = "System";
 "Light" = "Lys";
 "Dark" = "Mørk";
+
+"Today" = "I dag";
+"Yesterday" = "I går";

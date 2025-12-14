@@ -236,7 +236,7 @@
 "or choose a file from finder" = "tai valitse tiedosto";
 "Choose File" = "Valitse tiedosto";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Tuetut tiedostotyypit: JPG, PNG. Enimmäiskoko: 10 Mt";
-"Keep Track of Activity" = "Seuraa toimintaa";
+"Keep Track of Activity!" = "Seuraa toimintaa";
 "No activity yet, let's get started!" = "Ei vielä toimintaa – aloitetaan!";
 "Start Now" = "Aloita nyt";
 "Brainify" = "Brainify";
@@ -324,3 +324,5 @@
 "System" = "Järjestelmä";
 "Light" = "Vaalea";
 "Dark" = "Tumma";
+"Today" = "Tänään";
+"Yesterday" = "Eilen";

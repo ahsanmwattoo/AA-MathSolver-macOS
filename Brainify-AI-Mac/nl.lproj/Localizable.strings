@@ -237,7 +237,7 @@
 "or choose a file from finder" = "of kies een bestand";
 "Choose File" = "Bestand kiezen";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Ondersteunde formaten: JPG, PNG. Max. 10 MB";
-"Keep Track of Activity" = "Activiteit bijhouden";
+"Keep Track of Activity!" = "Activiteit bijhouden";
 "No activity yet, let's get started!" = "Nog geen activiteit – laten we beginnen!";
 "Start Now" = "Nu beginnen";
 "Brainify" = "Brainify";
@@ -325,3 +325,7 @@
 "System" = "Systeem";
 "Light" = "Licht";
 "Dark" = "Donker";
+
+
+"Today" = "Vandaag";
+"Yesterday" = "Gisteren";

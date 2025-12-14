@@ -225,7 +225,7 @@
 "or choose a file from finder" = "или выбери файл";
 "Choose File" = "Выбрать файл";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Поддерживаемые форматы: JPG, PNG. Макс. размер: 10 МБ";
-"Keep Track of Activity" = "Отслеживать активность";
+"Keep Track of Activity!" = "Отслеживать активность";
 "No activity yet, let's get started!" = "Пока нет активности — давай начнём!";
 "Start Now" = "Начать сейчас";
 "Brainify" = "Brainify";
@@ -315,3 +315,7 @@
 "System" = "Система";
 "Light" = "Светлая";
 "Dark" = "Тёмная";
+
+
+"Today" = "Сегодня";
+"Yesterday" = "Вчера";

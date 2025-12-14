@@ -86,6 +86,7 @@ extension NSViewController {
 //            removeFromParent()
 //        })
 //    }
+    
     func removeChildFromNavigation() {
         // Set the view's alpha to 1 before starting the animation (in case it's already changed)
         view.alphaValue = 1.0

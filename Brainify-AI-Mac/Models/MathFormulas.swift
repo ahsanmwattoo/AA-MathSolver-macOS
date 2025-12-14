@@ -33,13 +33,19 @@ struct Formula: Equatable {
     let formula: String
     
     static var complexFunction: [Formula] = [
-        Formula(name: "Euler's Formula:", formula: "eix=cos⁡(x)+isin⁡(x)e^{ix} = \\cos(x) + i\\sin(x)eix=cos(x)+isin(x)"),
-        Formula(name: "Complex Number in Polar Form:", formula: "z=r(cos⁡θ+isin⁡θ)z = r(\\cos \\theta + i \\sin \\theta)z=r(cosθ+isinθ)"),
-        Formula(name: "Addition of Complex Numbers:", formula: "(a+bi)+(c+di)=(a+c)+(b+d)i(a + bi) + (c + di) = (a + c) + (b + d)i(a+bi)+(c+di)=(a+c)+(b+d)i"),
-        Formula(name: "Multiplication of Complex Numbers:", formula: "(a+bi)(c+di)=(ac−bd)+(ad+bc)i(a + bi)(c + di) = (ac - bd) + (ad + bc)i(a+bi)(c+di)=(ac−bd)+(ad+bc)i"),
-        Formula(name: "Modulus of a Complex Number:", formula: "∣z∣=a2+b2|z| = \\sqrt{a^2 + b^2}∣z∣=a2+b2"),
-        Formula(name: "Argument of a Complex Number:", formula: "arg⁡(z)=tan⁡−1(ba)\\arg(z) = \\tan^{-1}\\left(\\frac{b}{a}\\right)arg(z)=tan−1(ab​)"),
-        Formula(name: "Complex Conjugate:", formula: "zˉ=a−bi\\bar{z} = a - bizˉ=a−bi")
+        Formula(name: "Euler's Formula:", formula: "e^{ix} = \\cos x + i \\sin x"),
+        
+        Formula(name: "Complex Number in Polar Form:", formula: "z = r (\\cos \\theta + i \\sin \\theta)"),
+        
+        Formula(name: "Addition of Complex Numbers:", formula: "(a + bi) + (c + di) = (a + c) + (b + d)i"),
+        
+        Formula(name: "Multiplication of Complex Numbers:", formula: "(a + bi)(c + di) = (ac - bd) + (ad + bc)i"),
+        
+        Formula(name: "Modulus of a Complex Number:", formula: "|z| = \\sqrt{a^2 + b^2}"),
+        
+        Formula(name: "Argument of a Complex Number:", formula: "\\arg(z) = \\tan^{-1} \\left( \\frac{b}{a} \\right)"),
+        
+        Formula(name: "Complex Conjugate:", formula: "\\bar{z} = a - bi")
     ]
     
     static var powerFunction: [Formula] = [
@@ -94,27 +100,33 @@ struct Formula: Equatable {
     ]
     
     static var limit: [Formula] = [
-        Formula(name: "Limit of a Function as x Approaches a:", formula: "lim⁡x→af(x)\\lim_{x \\to a} f(x)limx→a​f(x)"),
-        Formula(name: "Limit of a Sequence:", formula: "lim⁡n→∞an\\lim_{n \\to \\infty} a_nlimn→∞​an"),
-        Formula(name: "Indeterminate Form:", formula: "lim⁡x→0sin⁡(x)x=1\\lim_{x \\to 0} \\frac{\\sin(x)}{x} = 1limx→0​xsin(x)​=1"),
-        Formula(name: "Limit of Rational Functions:", formula: """
-                lim⁡x→∞P(x)Q(x)where P and Q are polynomials\\lim_{x \\to \\infty} \\frac{P(x)}{Q(x)} \\quad \\text
-                {where P and Q are polynomials}limx→∞​Q(x)P(x)​where P and Q are polynomials
-        """)
+        Formula(name: "Limit of a Function as x Approaches a:", formula: "\\lim_{x \\to a} f(x)"),
+        
+        Formula(name: "Limit of a Sequence:", formula: "\\lim_{n \\to \\infty} a_n"),
+        
+        Formula(name: "Indeterminate Form:", formula: "\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1"),
+        
+        Formula(name: "Limit of Rational Functions:", formula: "\\lim_{x \\to \\infty} \\frac{P(x)}{Q(x)} \\quad (\\text{where } P \\text{ and } Q \\text{ are polynomials})")
     ]
     
     static var derivative: [Formula] = [
-        Formula(name: "Derivative of Power Function:", formula: "f′(x)=a⋅n⋅xn−1f'(x) = a \\cdot n \\cdot x^{n-1}f′(x)=a⋅n⋅xn−1"),
-        Formula(name: "Product Rule:", formula: "(f⋅g)′=f′⋅g+f⋅g′(f \\cdot g)' = f' \\cdot g + f \\cdot g'(f⋅g)′=f′⋅g+f⋅g′"),
-        Formula(name: "Quotient Rule:", formula: "(fg)′=f′⋅g−f⋅g′g2\\left( \\frac{f}{g} \\right)' = \\frac{f' \\cdot g - f \\cdot g'}{g^2}(gf​)′=g2f′⋅g−f⋅g′"),
-        Formula(name: "Chain Rule:", formula: "ddxf(g(x))=f′(g(x))⋅g′(x)\\frac{d}{dx} f(g(x)) = f'(g(x)) \\cdot g'(x)dxd​f(g(x))=f′(g(x))⋅g′(x)")
+        Formula(name: "Derivative of Power Function:", formula: "f'(x) = a \\cdot n \\cdot x^{n-1}"),
+        Formula(name: "Product Rule:", formula: "(f \\cdot g)' = f' \\cdot g + f \\cdot g'"),
+        Formula(name: "Quotient Rule:", formula: "\\left( \\frac{f}{g} \\right)' = \\frac{f' \\cdot g - f \\cdot g'}{g^2}"),
+        Formula(name: "Chain Rule:", formula: "\\frac{d}{dx} f(g(x)) = f'(g(x)) \\cdot g'(x)")
     ]
     
     static var indefiniteIntegral: [Formula] = [
-        Formula(name: "Indefinite Integral of Power Function:", formula: "∫xn dx=xn+1n+1+C\\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C∫xndx=n+1xn+1​+C"),
-        Formula(name: "Indefinite Integral of Exponential Function:", formula: "∫ex dx=ex+C\\int e^x \\, dx = e^x + C∫exdx=ex+C"),
-        Formula(name: "Indefinite Integral of Trigonometric Functions:", formula: "∫sin⁡(x) dx=−cos⁡(x)+C\\int \\sin(x) \\, dx = -\\cos(x) + C∫sin(x)dx=−cos(x)+C ∫cos⁡(x) dx=sin⁡(x)+C\\int \\cos(x) \\, dx = \\sin(x) + C∫cos(x)dx=sin(x)+C"),
-        Formula(name: "Indefinite Integral of Rational Function:", formula: "∫1x dx=ln⁡∣x∣+C\\int \\frac{1}{x} \\, dx = \\ln|x| + C∫x1​dx=ln∣x∣+C"),
+        Formula(name: "Indefinite Integral of Power Function:", formula: "\\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C"),
+        
+        Formula(name: "Indefinite Integral of Exponential Function:", formula: "\\int e^x \\, dx = e^x + C"),
+        
+        Formula(name: "Indefinite Integral of Trigonometric Functions:", formula: """
+            \\int \\sin x \\, dx = -\\cos x + C \\\\
+            \\int \\cos x \\, dx = \\sin x + C
+            """),
+        
+        Formula(name: "Indefinite Integral of Rational Function:", formula: "\\int \\frac{1}{x} \\, dx = \\ln |x| + C")
     ]
     
     static var definiteIntegral: [Formula] = [
@@ -122,17 +134,29 @@ struct Formula: Equatable {
         Formula(name: "Fundamental Theorem of Calculus:", formula: "∫abf(x) dx=F(b)−F(a)\\int_a^b f(x) \\, dx = F(b) - F(a)∫ab​f(x)dx=F(b)−F(a)"),
         Formula(name: "Area Under a Curve:", formula: "A=∫abf(x) dxA = \\int_a^b f(x) \\, dxA=∫ab​f(x)dx")
     ]
-    static var rationalFunction: [Formula] = [
-        Formula(name: "General Rational Function:", formula: "f(x)=P(x)Q(x)f(x) = \\frac{P(x)}{Q(x)}f(x)=Q(x)P(x)"),
-        Formula(name: "Vertical Asymptote:", formula: "If Q(x)=0, the function has a vertical asymptote at x=a.\\text{If } Q(x) = 0, \\text{ the function has a vertical asymptote at } x = a.If Q(x)=0, the function has a vertical asymptote at x=a."),
-        Formula(name: "Horizontal Asymptote:", formula: " If degree of P(x)<Q(x),y=0\\text{If degree of } P(x) < Q(x), \\quad y = 0If degree of P(x)<Q(x),y=0If degree of P(x)=Q(x),y=ab\\text{If degree of } P(x) = Q(x), \\quad y = \\frac{a}{b}If degree of P(x)=Q(x),y=ba"),
-        Formula(name: "Oblique Asymptote:", formula: "If degree of P(x)=degree of Q(x)+1,y=P(x)Q(x)\\text{If degree of } P(x) = \\text{degree of } Q(x) + 1, \\quad y = \\frac{P(x)}{Q(x)}If degree of P(x)=degree of Q(x)+1,y=Q(x)P(x)"),
-        Formula(name: "Simplifying Rational Functions:", formula: "f(x)=P(x)Q(x)can be simplified by canceling common factors in P(x) and Q(x).f(x) = \\frac{P(x)}{Q(x)} \\quad \\text{can be simplified by canceling common factors in } P(x) \\text{ and } Q(x).f(x)=Q(x)P(x)​can be simplified by canceling common factors in P(x) and Q(x)."),
-        Formula(name: "Horizontal Asymptote for Large x:", formula: "f(x)=axn,as x→∞, f(x)→0f(x) = \\frac{a}{x^n}, \\quad \\text{as } x \\to \\infty, \\, f(x) \\to 0f(x)=xna​,as x→∞,f(x)→0"),
-        Formula(name: "End Behavior:", formula: "If deg⁡(P)>deg⁡(Q),the function has an oblique asymptote.\\text{If } \\deg(P) > \\deg(Q), \\quad \\text{the function has an oblique asymptote}.If deg(P)>deg(Q),the function has an oblique asymptote."),
-        Formula(name: "Hole in the Graph:", formula: "If P(x) and Q(x) share a common factor, then there is a hole at x=a.\\text{If } P(x) \\text{ and } Q(x) \\text{ share a common factor, then there is a hole at } x = a.If P(x) and Q(x) share a common factor, then there is a hole at x=a."),
-    ]
     
+    static var rationalFunction: [Formula] = [
+        Formula(name: "General Rational Function:", formula: "f(x) = \\frac{P(x)}{Q(x)}"),
+        
+        Formula(name: "Vertical Asymptote:", formula: "x = a \\quad (\\text{if } Q(x) = 0)"),
+        
+        Formula(name: "Horizontal Asymptote:", formula: """
+            \\begin{cases}
+            y = 0 & \\text{if degree of } P(x) < Q(x) \\\\
+            y = \\frac{a}{b} & \\text{if degree of } P(x) = Q(x)
+            \\end{cases}
+            """),
+        
+        Formula(name: "Oblique Asymptote:", formula: "\\text{if degree of } P(x) = \\text{degree of } Q(x) + 1, \\quad y = \\frac{P(x)}{Q(x)}"),
+        
+        Formula(name: "Simplifying Rational Functions:", formula: "f(x) = \\frac{P(x)}{Q(x)} \\quad (\\text{can be simplified by canceling common factors in } P(x) \\text{ and } Q(x))"),
+        
+        Formula(name: "Horizontal Asymptote for Large x:", formula: "f(x) = \\frac{a}{x^n}, \\quad \\text{as } x \\to \\infty, \\, f(x) \\to 0"),
+        
+        Formula(name: "End Behavior:", formula: "\\text{if } \\deg(P) > \\deg(Q), \\quad \\text{the function has an oblique asymptote}"),
+        
+        Formula(name: "Hole in the Graph:", formula: "x = a \\quad (\\text{if } P(x) \\text{ and } Q(x) \\text{ share a common factor})")
+    ]
     static var logarithms: [Formula] = [
         Formula(name: "General Logarithmic Function:", formula: "f(x)=a⋅log⁡b(x−h)+kf(x) = a \\cdot \\log_b(x - h) + kf(x)=a⋅logb​(x−h)+k"),
         Formula(name: "Change of Base Formula:", formula: "log⁡b(x)=log⁡k(x)log⁡k(b)\\log_b(x) = \\frac{\\log_k(x)}{\\log_k(b)}logb​(x)=logk​(b)logk​(x)"),

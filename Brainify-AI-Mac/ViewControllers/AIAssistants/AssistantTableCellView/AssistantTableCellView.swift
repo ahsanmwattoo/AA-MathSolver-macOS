@@ -38,8 +38,13 @@ class AssistantTableCellView: NSTableCellView {
         processingAnimationView.loopMode = .loop
     }
     func configure(with message: Message) {
-        let document = Document(parsing: message.content)
-        streamLabel.attributedStringValue = parser.attributedString(from: document)
+        if message.content.isEmpty {
+                showAndPlay()
+            } else {
+                hideAndStop()
+                let document = Document(parsing: message.content)
+                streamLabel.attributedStringValue = parser.attributedString(from: document)
+            }
     }
     
     func stream(_ message: String) {

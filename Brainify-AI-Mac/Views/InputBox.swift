@@ -23,6 +23,7 @@ class InputBox: NSBox {
     @IBOutlet weak var sendButton: NSButton!
     @IBOutlet weak var calculator: NSButton!
     @IBOutlet weak var attachmentsButton: NSButton!
+    @IBOutlet weak var stopButton: NSButton!
     weak var delegate: InputBoxDelegate?
     
     private var calculatorPopup: NSView?
@@ -66,11 +67,12 @@ class InputBox: NSBox {
     func updateSendButtonState() {
         switch sendButtonState {
         case .canSend:
-            sendButton.isEnabled = true
+            sendButton.isHidden = false
+            stopButton.isHidden = true
             textViewDidChange()
         case .canStop:
-            sendButton.isEnabled = false
-            borderColor = .stroke
+            sendButton.isHidden = true
+            stopButton.isHidden = false
         }
     }
     
@@ -87,6 +89,10 @@ class InputBox: NSBox {
     func setText(_ text: String) {
         placeholderTextView.string = text
         textViewDidChange()
+    }
+    
+    @IBAction func didTapStop(_ sender: NSButton) {
+        delegate?.textInputBoxDidTapStop(self)
     }
     
     @IBAction func didTapAttachment(_ sender: NSButton) {
@@ -111,8 +117,9 @@ class InputBox: NSBox {
     }
     @IBAction func sendButtonTapped(_ sender: NSButton) {
         if popover.isShown {
-            popover.close()
+            popover.performClose(sender)
         }
+        closeCalculator()
         guard !placeholderTextView.string.isBlank else { return }
         let sendableText = placeholderTextView.string.trimmingCharacters(in: .whitespacesAndNewlines)
         delegate?.textInputBox(self, didTapSendWithText: sendableText)
@@ -257,7 +264,7 @@ extension InputBox {
     private func openCalculatorPopover(from button: NSButton) {
         let calculatorVC = CalculatorViewController(nibName: "CalculatorViewController", bundle: nil)
         popover.contentViewController = calculatorVC
-        popover.behavior = .applicationDefined
+        popover.behavior = .semitransient
         popover.animates = true
         
         calculatorVC.preferredContentSize = NSSize(width: 980, height: 380)
@@ -298,11 +305,10 @@ extension InputBox {
     }
     
     private func closeCalculator() {
-        calculatorWindow?.close()
-        calculatorWindow = nil
-        calculatorViewController = nil
+        popover.performClose(nil)
         isCalculatorOpen = false
         updateCalculatorButtonState()
+        NotificationCenter.default.post(name: NSPopover.didCloseNotification, object: popover)
     }
 }
 

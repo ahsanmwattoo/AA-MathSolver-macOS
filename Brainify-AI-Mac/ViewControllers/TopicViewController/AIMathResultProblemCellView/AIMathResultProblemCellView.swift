@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import SwiftUI
 
 class AIMathResultProblemCellView: NSTableCellView {
     

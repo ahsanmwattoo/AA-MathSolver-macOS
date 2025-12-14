@@ -360,24 +360,33 @@ extension BasicCalculatorViewController {
 
 extension BasicCalculatorViewController: NSTextViewDelegate {
     
-    // Yeh method NSTextView ke liye kaam karta hai (PlaceHolderTextView agar NSTextView subclass hai toh)
     func textView(_ textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
-        
-        if commandSelector == #selector(deleteBackward(_:)) ||
-           commandSelector == #selector(deleteForward(_:)) {
-            
-            if isResultShown {
-                resetCalculator()
-                delegate?.calculatorDidClearText(self)
-            } else if !currentExpression.isEmpty {
-                currentExpression.removeLast()
-                updateDisplay()
-                updateClearButtonTitle()
-                delegate?.calculator(self, didUpdateExpression: currentExpression)
-            }
-            return true // Event ko "consume" kar diya, textView khud delete na kare
+
+        if isResultShown {
+            resetCalculator()
+            delegate?.calculatorDidClearText(self)
+            return true
         }
-        
-        return false // Baaki commands normally jaane do
+
+        if commandSelector == #selector(deleteBackward(_:)) {
+            // ⌫ Backspace
+            textView.deleteBackward(nil)
+
+        } else if commandSelector == #selector(deleteForward(_:)) {
+            // Fn + Delete
+            textView.deleteForward(nil)
+
+        } else {
+            return false
+        }
+
+        // ✅ Always sync AFTER deletion
+        let updatedText = textView.string
+        currentExpression = updatedText
+        updateClearButtonTitle()
+        delegate?.calculator(self, didUpdateExpression: updatedText)
+
+        return true
     }
+
 }

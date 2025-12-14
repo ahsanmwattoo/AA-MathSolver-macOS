@@ -189,7 +189,7 @@
 "or choose a file from finder" = "або виберіть файл";
 "Choose File" = "Вибрати файл";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Підтримувані формати: JPG, PNG. Максимальний розмір: 10 МБ";
-"Keep Track of Activity" = "Відстежуйте активність";
+"Keep Track of Activity!" = "Відстежуйте активність";
 "No activity yet, let's get started!" = "Активності ще немає — почнімо!";
 "Start Now" = "Почати зараз";
 "Brainify" = "Brainify";
@@ -280,3 +280,7 @@
 "System" = "Система";
 "Light" = "Світла";
 "Dark" = "Темна";
+
+
+"Today" = "Сьогодні";
+"Yesterday" = "Вчора";

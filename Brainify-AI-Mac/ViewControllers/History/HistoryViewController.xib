@@ -31,14 +31,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Uh-Z2-Ex4">
-                                <rect key="frame" x="22" y="697" width="288" height="33"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Keep Track of Activity" id="AQi-sN-BYX">
+                                <rect key="frame" x="22" y="697" width="298" height="33"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Keep Track of Activity!" id="AQi-sN-BYX">
                                     <font key="font" metaFont="systemBold" size="28"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Keep Track of Activity"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Keep Track of Activity!"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <scrollView hidden="YES" wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M00-2x-TUi">

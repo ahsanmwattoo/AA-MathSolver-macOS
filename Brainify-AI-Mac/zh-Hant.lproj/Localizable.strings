@@ -234,7 +234,7 @@
 "or choose a file from finder" = "或從資料夾選擇檔案";
 "Choose File" = "選擇檔案";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "支援格式：JPG、PNG，最大 10 MB";
-"Keep Track of Activity" = "追蹤活動紀錄";
+"Keep Track of Activity!" = "追蹤活動紀錄";
 "No activity yet, let's get started!" = "還沒有活動，立即開始吧！";
 "Start Now" = "立即開始";
 "Brainify" = "Brainify";
@@ -322,3 +322,6 @@
 "System" = "系統";
 "Light" = "淺色";
 "Dark" = "深色";
+
+"Today" = "今天";
+"Yesterday" = "昨天";

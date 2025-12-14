@@ -651,6 +651,14 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="227" height="68"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
+                                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bit-A4-PvD">
+                                                                        <rect key="frame" x="104" y="21" width="19" height="26"/>
+                                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="3" id="mIe-S7-n2n">
+                                                                            <font key="font" metaFont="systemBold" size="22"/>
+                                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                        </textFieldCell>
+                                                                    </textField>
                                                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="fYL-fg-Mkd">
                                                                         <rect key="frame" x="0.0" y="0.0" width="227" height="68"/>
                                                                         <buttonCell key="cell" type="bevel" title="3" bezelStyle="rounded" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="3S0-Er-huA">
@@ -662,14 +670,6 @@
                                                                             <action selector="numberPressed:" target="-2" id="nX5-0H-9pq"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bit-A4-PvD">
-                                                                        <rect key="frame" x="104" y="21" width="19" height="26"/>
-                                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="3" id="mIe-S7-n2n">
-                                                                            <font key="font" metaFont="systemBold" size="22"/>
-                                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                        </textFieldCell>
-                                                                    </textField>
                                                                 </subviews>
                                                                 <constraints>
                                                                     <constraint firstItem="fYL-fg-Mkd" firstAttribute="leading" secondItem="snc-vc-UBb" secondAttribute="leading" id="FVb-OE-neS"/>

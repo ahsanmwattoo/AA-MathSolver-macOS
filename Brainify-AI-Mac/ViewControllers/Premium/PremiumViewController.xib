@@ -18,7 +18,7 @@
                 <outlet property="featureLabelOne" destination="rfZ-vh-vOY" id="mLp-A2-iY7"/>
                 <outlet property="featureLabelThree" destination="QA2-yd-jKG" id="gJa-0B-7N9"/>
                 <outlet property="featureLabelTwo" destination="9eg-Xc-hSY" id="hAi-AK-XQ0"/>
-                <outlet property="headingLabel" destination="sge-Rw-60g" id="5yW-8A-YhM"/>
+                <outlet property="headingLabel" destination="408-sJ-7uV" id="BQI-VU-66P"/>
                 <outlet property="noCommitmentLabel" destination="iMR-ec-b3H" id="P4x-D3-Nny"/>
                 <outlet property="pageView" destination="dOe-TX-TkU" id="fzb-bj-vYj"/>
                 <outlet property="planInfoLabel" destination="7oy-OL-Ofy" id="sqO-oM-Urb"/>
@@ -281,22 +281,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="659" height="612"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sge-Rw-60g">
-                                            <rect key="frame" x="11" y="495" width="625" height="68"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="68" id="VE1-rI-sTo"/>
-                                            </constraints>
-                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" alignment="center" title="GET UNLIMITED ACCESS" id="AAF-FS-QG4">
-                                                <font key="font" metaFont="systemBold" size="52"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="GET UNLIMITED ACCESS"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </textField>
                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="myV-5i-JOP">
-                                            <rect key="frame" x="23" y="468" width="613" height="21"/>
+                                            <rect key="frame" x="23" y="473" width="613" height="21"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Upgrade to Pro and solve math like a genius!" id="baL-O3-rOs">
                                                 <font key="font" metaFont="system" size="18"/>
                                                 <color key="textColor" name="secondaryTextColor"/>
@@ -307,7 +293,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iMR-ec-b3H">
-                                            <rect key="frame" x="11" y="136" width="620" height="13"/>
+                                            <rect key="frame" x="11" y="141" width="620" height="13"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="No Commitment,Cancel Anytime" id="eht-fp-8xl">
                                                 <font key="font" metaFont="system" size="10"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -318,7 +304,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <box boxType="custom" borderType="none" borderWidth="0.0" cornerRadius="10" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="cJZ-3s-51b">
-                                            <rect key="frame" x="178" y="154" width="303" height="47"/>
+                                            <rect key="frame" x="178" y="159" width="303" height="47"/>
                                             <view key="contentView" id="kb1-hD-ywR">
                                                 <rect key="frame" x="0.0" y="0.0" width="303" height="47"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -358,12 +344,12 @@
                                             </constraints>
                                             <color key="fillColor" name="brandColor"/>
                                         </box>
-                                        <stackView distribution="fillProportionally" orientation="horizontal" alignment="top" spacing="12" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JvG-Ll-UJ0">
-                                            <rect key="frame" x="13" y="39" width="616" height="17"/>
+                                        <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JvG-Ll-UJ0">
+                                            <rect key="frame" x="10" y="44" width="624" height="17"/>
                                             <subviews>
                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="ddg-DO-SNZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="106" height="17"/>
-                                                    <buttonCell key="cell" type="bevel" title="Terms of Use" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="qBD-Rp-kda">
+                                                    <rect key="frame" x="0.0" y="0.0" width="133" height="17"/>
+                                                    <buttonCell key="cell" type="bevel" title="Terms of Use" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="qBD-Rp-kda">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="systemSemibold" size="14"/>
                                                     </buttonCell>
@@ -376,14 +362,14 @@
                                                     </connections>
                                                 </button>
                                                 <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="8Xy-IR-DLC">
-                                                    <rect key="frame" x="116" y="5" width="4" height="12"/>
+                                                    <rect key="frame" x="141" y="3" width="4" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" id="U8P-xv-fJ5"/>
                                                         <constraint firstAttribute="height" constant="12" id="nOT-cg-BZl"/>
                                                     </constraints>
                                                 </box>
                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="KRf-Jw-dfo">
-                                                    <rect key="frame" x="130" y="0.0" width="111" height="17"/>
+                                                    <rect key="frame" x="153" y="0.0" width="134" height="17"/>
                                                     <buttonCell key="cell" type="bevel" title="Privacy Policy" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="1hz-8i-xzw">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="systemSemibold" size="14"/>
@@ -397,15 +383,15 @@
                                                     </connections>
                                                 </button>
                                                 <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Llh-JQ-LwT">
-                                                    <rect key="frame" x="251" y="5" width="4" height="12"/>
+                                                    <rect key="frame" x="295" y="3" width="4" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" id="mbB-Nb-0du"/>
                                                         <constraint firstAttribute="height" constant="12" id="n76-Cv-Fo6"/>
                                                     </constraints>
                                                 </box>
                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="nu5-q5-cF9">
-                                                    <rect key="frame" x="265" y="0.0" width="187" height="17"/>
-                                                    <buttonCell key="cell" type="bevel" title="Continue with Free Plan" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="mMv-zO-49y">
+                                                    <rect key="frame" x="307" y="0.0" width="164" height="17"/>
+                                                    <buttonCell key="cell" type="bevel" title="Continue with Free Plan" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="mMv-zO-49y">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="systemSemibold" size="14"/>
                                                     </buttonCell>
@@ -418,15 +404,15 @@
                                                     </connections>
                                                 </button>
                                                 <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="ens-nB-bUX">
-                                                    <rect key="frame" x="462" y="5" width="4" height="12"/>
+                                                    <rect key="frame" x="479" y="3" width="4" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" id="KOd-VQ-Xiy"/>
                                                         <constraint firstAttribute="height" constant="12" id="nsn-y4-49r"/>
                                                     </constraints>
                                                 </box>
                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="2Ng-b8-K2l">
-                                                    <rect key="frame" x="476" y="0.0" width="140" height="17"/>
-                                                    <buttonCell key="cell" type="bevel" title="Restore Purchase" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="Lpx-pO-X4T">
+                                                    <rect key="frame" x="491" y="0.0" width="133" height="17"/>
+                                                    <buttonCell key="cell" type="bevel" title="Restore Purchase" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="Lpx-pO-X4T">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="systemSemibold" size="14"/>
                                                     </buttonCell>
@@ -439,6 +425,11 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Llh-JQ-LwT" firstAttribute="centerY" secondItem="JvG-Ll-UJ0" secondAttribute="centerY" id="Hvd-E4-Jt7"/>
+                                                <constraint firstItem="ens-nB-bUX" firstAttribute="centerY" secondItem="JvG-Ll-UJ0" secondAttribute="centerY" id="NlH-Tx-fem"/>
+                                                <constraint firstItem="8Xy-IR-DLC" firstAttribute="centerY" secondItem="JvG-Ll-UJ0" secondAttribute="centerY" id="XwO-rw-HmC"/>
+                                            </constraints>
                                             <visibilityPriorities>
                                                 <integer value="1000"/>
                                                 <integer value="1000"/>
@@ -459,7 +450,7 @@
                                             </customSpacing>
                                         </stackView>
                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7oy-OL-Ofy">
-                                            <rect key="frame" x="11" y="215" width="620" height="19"/>
+                                            <rect key="frame" x="11" y="220" width="620" height="19"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="3 Days Free Trial, then $12.99 per month" id="HFF-i1-NkF">
                                                 <font key="font" metaFont="systemSemibold" size="16"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -467,7 +458,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqi-ER-tkr">
-                                            <rect key="frame" x="13" y="254" width="616" height="184"/>
+                                            <rect key="frame" x="13" y="259" width="616" height="184"/>
                                             <clipView key="contentView" drawsBackground="NO" id="uks-Zd-Rw9">
                                                 <rect key="frame" x="0.0" y="0.0" width="616" height="184"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -496,7 +487,7 @@
                                             </scroller>
                                         </scrollView>
                                         <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="HEm-Qr-9lq">
-                                            <rect key="frame" x="11" y="68" width="620" height="48"/>
+                                            <rect key="frame" x="11" y="73" width="620" height="48"/>
                                             <textFieldCell key="cell" selectable="YES" alignment="center" id="xKy-WR-CG9">
                                                 <font key="font" metaFont="system"/>
                                                 <string key="title">Your subscription will automatically renew unless auto-renew is turned off at least 24-hours before the end of the current subscription period. Payment will be charged to your iTunes account at confirmation of purchase.</string>
@@ -509,31 +500,42 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
+                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="408-sJ-7uV">
+                                            <rect key="frame" x="11" y="500" width="630" height="63"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="GET UNLIMITED ACCESS" id="2LP-hD-FX8">
+                                                <font key="font" metaFont="systemBold" size="54"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="GET UNLIMITED ACCESS"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="iMR-ec-b3H" secondAttribute="trailing" constant="30" id="1Eb-2A-o3Z"/>
                                         <constraint firstItem="7oy-OL-Ofy" firstAttribute="leading" secondItem="gW0-iZ-HS6" secondAttribute="leading" constant="13" id="2XQ-Mf-hak"/>
                                         <constraint firstItem="HEm-Qr-9lq" firstAttribute="leading" secondItem="gW0-iZ-HS6" secondAttribute="leading" constant="13" id="7st-q4-Raf"/>
                                         <constraint firstItem="iMR-ec-b3H" firstAttribute="leading" secondItem="gW0-iZ-HS6" secondAttribute="leading" constant="13" id="8bJ-i4-EaX"/>
+                                        <constraint firstItem="myV-5i-JOP" firstAttribute="top" secondItem="408-sJ-7uV" secondAttribute="bottom" constant="6" id="9M7-4Y-4ZV"/>
+                                        <constraint firstAttribute="trailing" secondItem="408-sJ-7uV" secondAttribute="trailing" constant="20" id="E8T-93-lOG"/>
                                         <constraint firstItem="myV-5i-JOP" firstAttribute="centerX" secondItem="gW0-iZ-HS6" secondAttribute="centerX" id="FaU-iw-q9a"/>
                                         <constraint firstItem="bqi-ER-tkr" firstAttribute="leading" secondItem="gW0-iZ-HS6" secondAttribute="leading" constant="13" id="IHs-dT-qB5"/>
                                         <constraint firstItem="HEm-Qr-9lq" firstAttribute="top" secondItem="iMR-ec-b3H" secondAttribute="bottom" constant="20" id="Izu-9F-Blr"/>
                                         <constraint firstItem="cJZ-3s-51b" firstAttribute="top" secondItem="7oy-OL-Ofy" secondAttribute="bottom" constant="14" id="MUf-oe-ZPv"/>
-                                        <constraint firstItem="JvG-Ll-UJ0" firstAttribute="leading" secondItem="gW0-iZ-HS6" secondAttribute="leading" constant="13" id="TWR-CO-pkP"/>
-                                        <constraint firstItem="sge-Rw-60g" firstAttribute="top" secondItem="gW0-iZ-HS6" secondAttribute="top" constant="49" id="VK5-mW-JMM"/>
+                                        <constraint firstItem="408-sJ-7uV" firstAttribute="top" secondItem="gW0-iZ-HS6" secondAttribute="top" constant="49" id="Sad-x8-K7D"/>
+                                        <constraint firstItem="JvG-Ll-UJ0" firstAttribute="leading" secondItem="gW0-iZ-HS6" secondAttribute="leading" constant="10" id="TWR-CO-pkP"/>
                                         <constraint firstItem="7oy-OL-Ofy" firstAttribute="top" secondItem="bqi-ER-tkr" secondAttribute="bottom" constant="20" id="Wzd-uF-i4m"/>
-                                        <constraint firstAttribute="trailing" secondItem="sge-Rw-60g" secondAttribute="trailing" constant="25" id="a9c-jU-ltu"/>
                                         <constraint firstItem="iMR-ec-b3H" firstAttribute="top" secondItem="cJZ-3s-51b" secondAttribute="bottom" constant="5" id="aTu-l2-xIF"/>
                                         <constraint firstAttribute="trailing" secondItem="HEm-Qr-9lq" secondAttribute="trailing" constant="30" id="atN-VH-CDY"/>
                                         <constraint firstItem="bqi-ER-tkr" firstAttribute="top" secondItem="myV-5i-JOP" secondAttribute="bottom" constant="30" id="bNm-dQ-FKE"/>
-                                        <constraint firstItem="myV-5i-JOP" firstAttribute="top" secondItem="sge-Rw-60g" secondAttribute="bottom" constant="6" id="daX-We-SSH"/>
                                         <constraint firstItem="JvG-Ll-UJ0" firstAttribute="top" secondItem="HEm-Qr-9lq" secondAttribute="bottom" constant="12" id="dsK-qh-Mua"/>
                                         <constraint firstAttribute="trailing" secondItem="7oy-OL-Ofy" secondAttribute="trailing" constant="30" id="f2S-nS-Pez"/>
+                                        <constraint firstItem="408-sJ-7uV" firstAttribute="leading" secondItem="gW0-iZ-HS6" secondAttribute="leading" constant="13" id="jEc-HL-zpJ"/>
                                         <constraint firstAttribute="trailing" secondItem="bqi-ER-tkr" secondAttribute="trailing" constant="30" id="jJD-06-zvA"/>
-                                        <constraint firstItem="sge-Rw-60g" firstAttribute="leading" secondItem="gW0-iZ-HS6" secondAttribute="leading" constant="13" id="k3D-kD-zJS"/>
                                         <constraint firstItem="myV-5i-JOP" firstAttribute="leading" secondItem="gW0-iZ-HS6" secondAttribute="leading" constant="25" id="kMp-T9-FsZ"/>
                                         <constraint firstItem="cJZ-3s-51b" firstAttribute="centerX" secondItem="gW0-iZ-HS6" secondAttribute="centerX" id="lnr-Up-MTs"/>
-                                        <constraint firstAttribute="trailing" secondItem="JvG-Ll-UJ0" secondAttribute="trailing" constant="30" id="pA8-Vh-4Jn"/>
+                                        <constraint firstAttribute="trailing" secondItem="JvG-Ll-UJ0" secondAttribute="trailing" constant="25" id="pA8-Vh-4Jn"/>
                                         <constraint firstAttribute="trailing" secondItem="myV-5i-JOP" secondAttribute="trailing" constant="25" id="zvA-F4-AOi"/>
                                     </constraints>
                                 </view>

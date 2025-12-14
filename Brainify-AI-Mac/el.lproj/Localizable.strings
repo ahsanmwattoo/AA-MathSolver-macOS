@@ -235,7 +235,7 @@
 "or choose a file from finder" = "ή επίλεξε αρχείο";
 "Choose File" = "Επιλογή αρχείου";
 "Supported formats: JPG, PNG. Maximum size: 10 MB" = "Υποστηριζόμενες μορφές: JPG, PNG. Μέγιστο μέγεθος: 10 MB";
-"Keep Track of Activity" = "Παρακολούθηση δραστηριότητας";
+"Keep Track of Activity!" = "Παρακολούθηση δραστηριότητας";
 "No activity yet, let's get started!" = "Καμία δραστηριότητα ακόμα – ας ξεκινήσουμε!";
 "Start Now" = "Ξεκίνα τώρα";
 "Brainify" = "Brainify";
@@ -323,3 +323,6 @@
 "System" = "Σύστημα";
 "Light" = "Φωτεινό";
 "Dark" = "Σκοτεινό";
+
+"Today" = "Σήμερα";
+"Yesterday" = "Χθες";
