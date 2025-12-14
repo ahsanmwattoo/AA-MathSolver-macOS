@@ -10,6 +10,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="TopicViewController" customModule="Brainify_AI_Mac" customModuleProvider="target">
             <connections>
                 <outlet property="clearChatBox" destination="UD1-FL-vz6" id="hzK-6B-pOV"/>
+                <outlet property="clearChatLabel" destination="QZh-Tx-eg9" id="0dx-rq-V88"/>
                 <outlet property="copyButton" destination="L3A-XB-emh" id="dPd-Qv-PO2"/>
                 <outlet property="emptyStackView" destination="P9f-wL-zHj" id="C0n-Hj-XPK"/>
                 <outlet property="imageIcon" destination="TOT-Tj-NTV" id="53i-W5-kz3"/>

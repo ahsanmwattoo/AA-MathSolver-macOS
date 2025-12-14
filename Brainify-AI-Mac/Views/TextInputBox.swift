@@ -103,6 +103,7 @@ class TextInputBox: NSBox {
             sendButton.isHidden = true
             stopButton.isHidden = false
             sendBox?.alphaValue = 0.5
+            self.borderColor = .stroke
         }
     }
     

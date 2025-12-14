@@ -21,6 +21,7 @@ class AIAssistantsViewController: BaseViewController {
     @IBOutlet weak var titleLabel: NSTextField!
     @IBOutlet weak var clearChatBox: NSBox!
     @IBOutlet weak var clearChatLabel: NSTextField!
+    @IBOutlet weak var titleConstraint: NSLayoutConstraint!
     
     private var streamingTimer: Timer?
     private var completionCheckTimer: Timer?
@@ -43,7 +44,7 @@ class AIAssistantsViewController: BaseViewController {
         textView.font = .systemFont(ofSize: 16)
         configureTableView()
         textInputBox.delegate = self
-        
+        titleConstraint?.isActive = false
     }
     
     override func viewDidLayout() {
@@ -64,6 +65,7 @@ class AIAssistantsViewController: BaseViewController {
     
     @IBAction func didTapClearChat(_ sender: Any) {
         clearChatBox.isHidden = true
+        titleConstraint?.isActive = false
         messages = []
         emptyStackView.isHidden = false
         tableView.reloadData()
@@ -142,6 +144,7 @@ extension AIAssistantsViewController {
                 
                 textView.string = ""
                 clearChatBox.isHidden = false
+                titleConstraint?.isActive = true
                 emptyStackView.isHidden = true
                 textInputBox.sendButtonState = .canStop
                 startStreamTimer()
@@ -156,9 +159,7 @@ extension AIAssistantsViewController {
                 
                 AppConstants.requestCount += 1
                 App.incrementFreeAICount()
-                if AppConstants.requestCount.isEven, AppConstants.requestCount > 0 {
-                    SKStoreReviewController.requestReview()
-                }
+                SKStoreReviewController.requestReview()
                 
             } catch {
                 await MainActor.run {

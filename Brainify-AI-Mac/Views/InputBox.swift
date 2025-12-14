@@ -73,6 +73,7 @@ class InputBox: NSBox {
         case .canStop:
             sendButton.isHidden = true
             stopButton.isHidden = false
+            self.borderColor = .stroke
         }
     }
     

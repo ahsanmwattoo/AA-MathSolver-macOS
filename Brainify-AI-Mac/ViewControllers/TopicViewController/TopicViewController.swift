@@ -25,6 +25,7 @@ class TopicViewController: BaseViewController {
     @IBOutlet weak var playButton: NSButton!
     @IBOutlet weak var shareButton: NSButton!
     @IBOutlet weak var clearChatBox: NSBox!
+    @IBOutlet weak var clearChatLabel: NSTextField!
     
     var image: NSImage?
     var titleText: String?
@@ -66,6 +67,7 @@ class TopicViewController: BaseViewController {
             titleLabel.stringValue = titleText?.localized() ?? ""
             subtitleLabel.stringValue = subtitle?.localized() ?? ""
             textView.placeholderString = placeholder?.localized() ?? "Write your equation here...".localized()
+            clearChatLabel.stringValue = "Clear Chat".localized()
         }
     }
     
@@ -96,6 +98,7 @@ class TopicViewController: BaseViewController {
         messages = []
         emptyStackView.isHidden = false
         tableView.reloadData()
+        textInputBox.updateSendButtonEnabled(false)
     }
     
     @IBAction func didTapBack(_ sender: Any) {
@@ -174,10 +177,8 @@ extension TopicViewController {
                 
                 AppConstants.requestCount += 1
                 App.incrementFreeAICount()
-                if AppConstants.requestCount.isEven, AppConstants.requestCount > 0 {
-                    SKStoreReviewController.requestReview()
-                }
-                
+                SKStoreReviewController.requestReview()
+
             } catch {
                 await MainActor.run {
                     stopAllStreaming()

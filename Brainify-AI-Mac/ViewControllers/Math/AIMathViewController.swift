@@ -198,9 +198,7 @@ class AIMathViewController: BaseViewController {
                     
                     AppConstants.requestCount += 1
                     App.incrementFreeAIMathCount()
-                    if AppConstants.requestCount.isEven, AppConstants.requestCount > 0 {
-                        SKStoreReviewController.requestReview()
-                    }
+                    SKStoreReviewController.requestReview()
                     
                     let id = UUID().uuidString
                     let problemText = "Image-based Math Problem"
@@ -257,10 +255,7 @@ class AIMathViewController: BaseViewController {
                     AppConstants.requestCount += 1
                     
                     App.incrementFreeAIMathCount()
-                    if AppConstants.requestCount.isEven, AppConstants.requestCount > 0 {
-                        SKStoreReviewController.requestReview()
-                    }
-                    // Prepare data for CoreData
+                    SKStoreReviewController.requestReview()                    // Prepare data for CoreData
                     let id = UUID().uuidString
                     let problemImageData = Data()
                     let date = Date()
